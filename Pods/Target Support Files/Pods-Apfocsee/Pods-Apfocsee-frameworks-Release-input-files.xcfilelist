@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Apfocsee/Pods-Apfocsee-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CollectionViewPagingLayout/CollectionViewPagingLayout.framework
 ${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/Player/Player.framework

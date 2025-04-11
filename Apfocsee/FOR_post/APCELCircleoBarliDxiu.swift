@@ -6,25 +6,47 @@
 //
 
 import UIKit
+import CollectionViewPagingLayout
 
-class APCELCircleoBarliDxiu: APCENEvcer {
+class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionViewDelegate, CollectionViewPagingLayoutDelegate {
+    
+   
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let forcce = collectionView.dequeueReusableCell(withReuseIdentifier: "APCAionsultViodeCell", for: indexPath) as! APCAionsultViodeCell
+        return forcce
+    }
+    
 
+    @IBOutlet weak var maFooceViedeView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        confSeintgFocceCollectionView()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func confSeintgFocceCollectionView() {
+        maFooceViedeView.register(APCAionsultViodeCell.self, forCellWithReuseIdentifier: "APCAionsultViodeCell")
+        maFooceViedeView.isPagingEnabled = true
+        maFooceViedeView.dataSource = self
+        let layout = CollectionViewPagingLayout()
+        layout.numberOfVisibleItems = 6
+        layout.scrollDirection = .horizontal
+        layout.zPositionHandler = .cellLayer
+        
+        maFooceViedeView.collectionViewLayout = layout
+        maFooceViedeView.showsHorizontalScrollIndicator = false
+        maFooceViedeView.clipsToBounds = false
+      
+        
     }
-    */
+   
 
 }
 

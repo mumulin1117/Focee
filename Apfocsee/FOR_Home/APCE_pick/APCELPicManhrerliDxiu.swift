@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//选择盲盒
 class APCELPicManhrerliDxiu: UIViewController {
 
     override func viewDidLoad() {

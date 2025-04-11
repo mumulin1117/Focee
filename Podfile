@@ -14,4 +14,5 @@ pod "IQKeyboardManager"
 pod "SwiftyStoreKit"
 pod 'Hero'
 pod "Player"
+pod 'CollectionViewPagingLayout'
 end
