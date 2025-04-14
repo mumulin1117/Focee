@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCELPicManhrerliDxiu" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="MangheBOX" destination="xYC-Id-FPy" id="YOx-pa-vG0"/>
+                <outlet property="MatrixButon" destination="tjf-iJ-8FW" id="3r4-Go-8Qf"/>
+                <outlet property="constrainest" destination="Ayq-SL-pnb" id="qfP-De-Oy9"/>
+                <outlet property="openBuuton" destination="GDd-MP-W9S" id="Twc-7h-2tW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,17 +51,23 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuadrgmhbg_top" translatesAutoresizingMaskIntoConstraints="NO" id="xYC-Id-FPy">
                     <rect key="frame" x="17" y="182" width="341" height="327"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqg-tv-Qle">
+                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqg-tv-Qle">
                     <rect key="frame" x="77.5" y="298" width="80" height="80"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="FoBlind box_"/>
                     <state key="selected" backgroundImage="FoBlind box_Sele"/>
+                    <connections>
+                        <action selector="shaiZEW1:" destination="-1" eventType="touchUpInside" id="vBw-GQ-QQq"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Gc-Rqw">
+                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Gc-Rqw">
                     <rect key="frame" x="217.5" y="298" width="80" height="80"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="FoBlind box_"/>
                     <state key="selected" backgroundImage="FoBlind box_Sele"/>
+                    <connections>
+                        <action selector="shaiZEW1:" destination="-1" eventType="touchUpInside" id="WZ3-45-RET"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyitemsmb" translatesAutoresizingMaskIntoConstraints="NO" id="Na2-YD-Znk">
                     <rect key="frame" x="46" y="478" width="283" height="15"/>
@@ -83,6 +93,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="chouopen"/>
+                    <connections>
+                        <action selector="openHouManHeBox:" destination="-1" eventType="touchUpInside" id="vQg-Hw-9kk"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyitemsmb" translatesAutoresizingMaskIntoConstraints="NO" id="05S-AR-apB">
                     <rect key="frame" x="46" y="378" width="283" height="15"/>
@@ -90,36 +103,48 @@
                         <constraint firstAttribute="height" constant="15" id="R29-80-sQe"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wa-66-TFI">
-                    <rect key="frame" x="77.5" y="222" width="80" height="80"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="FoBlind box_"/>
-                    <state key="selected" backgroundImage="FoBlind box_Sele"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YA-Ua-C75">
+                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YA-Ua-C75">
                     <rect key="frame" x="217.5" y="222" width="80" height="80"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="FoBlind box_"/>
                     <state key="selected" backgroundImage="FoBlind box_Sele"/>
+                    <connections>
+                        <action selector="shaiZEW1:" destination="-1" eventType="touchUpInside" id="bqb-HR-IZn"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAb-wZ-5n3">
+                <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAb-wZ-5n3">
                     <rect key="frame" x="217.5" y="398" width="80" height="80"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="FoBlind box_"/>
                     <state key="selected" backgroundImage="FoBlind box_Sele"/>
+                    <connections>
+                        <action selector="shaiZEW1:" destination="-1" eventType="touchUpInside" id="sLl-Id-yc3"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-F7-xde">
+                <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-F7-xde">
                     <rect key="frame" x="77.5" y="398" width="80" height="80"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="FoBlind box_"/>
                     <state key="selected" backgroundImage="FoBlind box_Sele"/>
+                    <connections>
+                        <action selector="shaiZEW1:" destination="-1" eventType="touchUpInside" id="9S2-mr-bNS"/>
+                    </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received 12 surprises" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-uy-s8D">
-                    <rect key="frame" x="127" y="623.5" width="121" height="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received 6 surprises" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-uy-s8D">
+                    <rect key="frame" x="130.5" y="623.5" width="114" height="15"/>
                     <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wa-66-TFI">
+                    <rect key="frame" x="77.5" y="222" width="80" height="80"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="FoBlind box_"/>
+                    <state key="selected" backgroundImage="FoBlind box_Sele"/>
+                    <connections>
+                        <action selector="shaiZEW1:" destination="-1" eventType="touchUpInside" id="Kwc-XZ-9lt"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

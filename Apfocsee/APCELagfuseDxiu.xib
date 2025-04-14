@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCELagfuseDxiu" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="Prankif" destination="oXe-eg-ejS" id="OTJ-3l-GCQ"/>
+                <outlet property="PrankifyAICore" destination="TX3-0n-hKs" id="raG-Wp-KPm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,9 +47,12 @@
                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="27"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Get Started" backgroundImage="hipopLaobg"/>
+                    <connections>
+                        <action selector="syncRealTimePrankWave:" destination="-1" eventType="touchUpInside" id="ZIE-sX-gyZ"/>
+                    </connections>
                 </button>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing you agree to our Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9R-Eo-q2B">
-                    <rect key="frame" x="41" y="776" width="311" height="30"/>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing you agree to our Terms of Service and Privacy Policy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9R-Eo-q2B">
+                    <rect key="frame" x="61" y="776" width="291" height="30"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -61,6 +66,19 @@
                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="   ELUA" image="readyuiback"/>
+                    <connections>
+                        <action selector="BlindBoxVaultDorp:" destination="-1" eventType="touchUpInside" id="U0s-bT-aaJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXe-eg-ejS">
+                    <rect key="frame" x="24" y="776" width="18" height="18"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="npO-iI-DWg"/>
+                        <constraint firstAttribute="width" constant="18" id="war-JY-sr0"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="selected" backgroundImage="gouballowed"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -68,17 +86,19 @@
             <constraints>
                 <constraint firstItem="yFg-ng-9C1" firstAttribute="top" secondItem="umG-Ol-F8R" secondAttribute="bottom" constant="52" id="0yH-uB-MPJ"/>
                 <constraint firstItem="z8S-AN-QuV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="68K-NC-ly0"/>
+                <constraint firstItem="oXe-eg-ejS" firstAttribute="top" secondItem="L9R-Eo-q2B" secondAttribute="top" id="8mH-Sg-C4M"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="L9R-Eo-q2B" secondAttribute="bottom" constant="12" id="JcV-9M-DfV"/>
                 <constraint firstItem="umG-Ol-F8R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PUT-KW-0pZ"/>
                 <constraint firstItem="umG-Ol-F8R" firstAttribute="top" secondItem="TX3-0n-hKs" secondAttribute="bottom" constant="26" id="Qj7-0G-ilN"/>
                 <constraint firstItem="z8S-AN-QuV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RMc-cK-582"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qTb-ZG-dc0" secondAttribute="trailing" constant="20" id="XAA-6m-xrN"/>
                 <constraint firstItem="TX3-0n-hKs" firstAttribute="centerX" secondItem="umG-Ol-F8R" secondAttribute="centerX" id="bBD-rZ-LpP"/>
-                <constraint firstItem="L9R-Eo-q2B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="41" id="c2t-PY-keu"/>
+                <constraint firstItem="L9R-Eo-q2B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="61" id="c2t-PY-keu"/>
                 <constraint firstItem="qTb-ZG-dc0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="3" id="gC9-rK-8pv"/>
                 <constraint firstItem="z8S-AN-QuV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iVZ-cM-SUJ"/>
                 <constraint firstItem="yFg-ng-9C1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jiu-Bg-6nr"/>
                 <constraint firstAttribute="bottom" secondItem="z8S-AN-QuV" secondAttribute="bottom" id="jnI-fP-hJe"/>
+                <constraint firstItem="oXe-eg-ejS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="nx3-Fc-Qmd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L9R-Eo-q2B" secondAttribute="trailing" constant="41" id="uwx-uJ-dcP"/>
                 <constraint firstItem="L9R-Eo-q2B" firstAttribute="top" secondItem="yFg-ng-9C1" secondAttribute="bottom" constant="58" id="vFx-rj-SdV"/>
             </constraints>
@@ -87,6 +107,7 @@
     </objects>
     <resources>
         <image name="Foceetitle" width="81.666664123535156" height="27.333333969116211"/>
+        <image name="gouballowed" width="36" height="36"/>
         <image name="hipopLaobg" width="300" height="60"/>
         <image name="mainfucjl" width="341.33334350585938" height="341.33334350585938"/>
         <image name="readyuiback" width="16" height="16"/>

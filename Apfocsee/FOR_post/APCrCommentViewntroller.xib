@@ -10,6 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCrCommentViewntroller" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="ByteBuffer" destination="neM-fq-QWs" id="bmh-tb-tm4"/>
+                <outlet property="RealTimeJokerHub" destination="M2A-Wc-sSB" id="Mfx-jc-e3o"/>
+                <outlet property="meavatorbackgiug" destination="rsl-gq-UTf" id="H1E-CA-Iwg"/>
+                <outlet property="meavatorbackgiug1" destination="4Xa-dc-WH7" id="uz0-N2-zuS"/>
+                <outlet property="meinname" destination="QcI-bc-wj7" id="zpF-JP-LYC"/>
+                <outlet property="meinname1" destination="1Sv-Ae-ORU" id="Ql5-iK-2P0"/>
+                <outlet property="sapnchuin" destination="Iht-Iv-lyK" id="emS-qE-sKC"/>
+                <outlet property="sapnchuin1" destination="YRc-Tn-EZk" id="jPw-gN-aVT"/>
+                <outlet property="sendbackgiug" destination="x63-VZ-0Qx" id="llQ-QX-odR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -69,6 +78,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" backgroundImage="handsSend"/>
+                            <connections>
+                                <action selector="generatePrankMeteorShower:" destination="-1" eventType="touchUpInside" id="7ER-KD-pyh"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.054901964960000001" green="0.02352941222" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

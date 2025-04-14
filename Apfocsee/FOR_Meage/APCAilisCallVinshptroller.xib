@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCAilisCallVinshptroller" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="EffectLbl" destination="mLb-cW-ysz" id="iBn-dn-mDM"/>
+                <outlet property="MatrixButon" destination="QbG-Ts-YQZ" id="ee5-S5-Y07"/>
+                <outlet property="MeteorIMge" destination="DKD-Hq-yaZ" id="fGF-pO-3Pt"/>
+                <outlet property="backgoungimge" destination="g7I-J1-Mnp" id="nDj-rr-k5S"/>
+                <outlet property="focceRepo" destination="lCy-Lq-Suk" id="Yfp-nz-ak9"/>
                 <outlet property="view" destination="1jO-SC-tqZ" id="NJm-EC-lsZ"/>
             </connections>
         </placeholder>
@@ -30,6 +35,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="GaosocceHang"/>
+                    <connections>
+                        <action selector="dellatetDFooce:" destination="-1" eventType="touchUpInside" id="UTY-KR-5Jw"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41K-l3-Xha">
                     <rect key="frame" x="0.0" y="714" width="393" height="138"/>
@@ -42,11 +50,17 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" backgroundImage="socceoice"/>
+                            <connections>
+                                <action selector="igniteComedy:" destination="-1" eventType="touchUpInside" id="wRb-Xa-MKX"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxY-wo-Wzz">
                             <rect key="frame" x="285" y="36" width="60" height="60"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" backgroundImage="tosocevideo"/>
+                            <connections>
+                                <action selector="igniteComedy:" destination="-1" eventType="touchUpInside" id="40k-hn-y73"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.054901964962482452" green="0.023529412224888802" blue="0.18431374430656433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,6 +87,9 @@
                     <rect key="frame" x="48" y="750" width="60" height="60"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="soocejfxz"/>
+                    <connections>
+                        <action selector="igniteComedy:" destination="-1" eventType="touchUpInside" id="0cS-Eb-e7f"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbG-Ts-YQZ">
                     <rect key="frame" x="14" y="59" width="34" height="34"/>

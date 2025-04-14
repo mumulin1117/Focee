@@ -59,6 +59,11 @@
                 <constraint firstItem="VE6-vi-Dee" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qdN-SN-t7A"/>
             </constraints>
             <size key="customSize" width="160" height="180"/>
+            <connections>
+                <outlet property="fooceUserphoto" destination="WFY-Uw-Y7x" id="Und-Ph-PGc"/>
+                <outlet property="tochatuityin" destination="n7S-ye-W7R" id="p30-8F-mQN"/>
+                <outlet property="usernauioLbl" destination="x3F-tL-JWn" id="4bZ-Qw-5cR"/>
+            </connections>
             <point key="canvasLocation" x="222.90076335877862" y="65.492957746478879"/>
         </collectionViewCell>
     </objects>

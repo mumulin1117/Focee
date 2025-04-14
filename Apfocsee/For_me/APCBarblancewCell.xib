@@ -61,6 +61,10 @@
                 <constraint firstAttribute="trailing" secondItem="KhO-4g-QbJ" secondAttribute="trailing" id="yQF-GO-T1f"/>
             </constraints>
             <size key="customSize" width="467" height="113"/>
+            <connections>
+                <outlet property="countauioLbl" destination="flu-Xv-Qr9" id="UVY-j2-cak"/>
+                <outlet property="spenmmoney" destination="JWi-Lz-Cj8" id="bgK-mj-3vy"/>
+            </connections>
             <point key="canvasLocation" x="269.46564885496184" y="42.605633802816904"/>
         </collectionViewCell>
     </objects>

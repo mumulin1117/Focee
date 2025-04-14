@@ -30,16 +30,6 @@
                         <state key="normal" backgroundImage="foocereview"/>
                         <state key="selected" backgroundImage="miopeport"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh5-Zv-Mtb">
-                        <rect key="frame" x="307" y="125" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="50" id="AT8-pl-Unj"/>
-                            <constraint firstAttribute="height" constant="50" id="yWt-b2-iGt"/>
-                        </constraints>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" backgroundImage="iconHuiGreaylike"/>
-                        <state key="selected" backgroundImage="iconHuiGreaylikelect"/>
-                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Feiniujb" translatesAutoresizingMaskIntoConstraints="NO" id="kwC-Uo-aPJ">
                         <rect key="frame" x="0.0" y="350" width="373" height="162"/>
                         <constraints>
@@ -93,6 +83,16 @@
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="foocedpaly"/>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh5-Zv-Mtb">
+                        <rect key="frame" x="307" y="125" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="AT8-pl-Unj"/>
+                            <constraint firstAttribute="height" constant="50" id="yWt-b2-iGt"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" backgroundImage="iconHuiGreaylike"/>
+                        <state key="selected" backgroundImage="iconHuiGreaylikelect"/>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -123,6 +123,17 @@
                 <constraint firstItem="VwA-aU-JBT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wiw-xn-2MW"/>
             </constraints>
             <size key="customSize" width="373" height="512"/>
+            <connections>
+                <outlet property="civepostcntetn" destination="1As-ki-3vu" id="iIn-eh-v5m"/>
+                <outlet property="eninnerUser" destination="XLY-1e-6cf" id="X8a-fW-9Zs"/>
+                <outlet property="imhWo" destination="wwT-76-ZNJ" id="hVC-cc-Mix"/>
+                <outlet property="kifyCommentr" destination="kfx-HY-9MK" id="lNg-z4-okY"/>
+                <outlet property="kifyHlike" destination="vh5-Zv-Mtb" id="FMG-pl-VSO"/>
+                <outlet property="kifyRepo" destination="dQY-6L-qts" id="eih-Q2-f9c"/>
+                <outlet property="suretgoPlay" destination="VwA-aU-JBT" id="9EB-QS-Rdh"/>
+                <outlet property="useNakerl" destination="l3F-43-zI8" id="9m0-Tw-jRk"/>
+                <outlet property="videoCioverFooce" destination="Ga5-Ef-A6v" id="1kP-LJ-9Vx"/>
+            </connections>
             <point key="canvasLocation" x="270.99236641221376" y="183.09859154929578"/>
         </collectionViewCell>
     </objects>

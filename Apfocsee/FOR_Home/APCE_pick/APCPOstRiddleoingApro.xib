@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCPOstRiddleoingApro" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="MatrixButon" destination="4GC-hA-ZSQ" id="eYO-zE-Fea"/>
+                <outlet property="fooceNameLabel" destination="pRg-pz-BYl" id="IpO-mh-vtt"/>
+                <outlet property="lockMasterKey" destination="4px-c6-i1M" id="IJO-HB-ISP"/>
+                <outlet property="minweICON" destination="K0q-nF-PUk" id="Lnt-Lt-3no"/>
+                <outlet property="photoImhvie" destination="K66-0b-DWW" id="C59-UF-R2T"/>
+                <outlet property="postIsTrueLabel" destination="aBm-L0-I61" id="1R9-SD-3SI"/>
                 <outlet property="view" destination="dQf-Xm-VtP" id="YRg-L0-KXf"/>
             </connections>
         </placeholder>
@@ -30,6 +36,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="postaddPhoto"/>
+                    <connections>
+                        <action selector="PrankChallengeFeedStream:" destination="-1" eventType="touchUpInside" id="Vti-4w-4mw"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GC-hA-ZSQ">
                     <rect key="frame" x="14" y="59" width="34" height="34"/>
@@ -48,8 +57,8 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-5Y-kBp">
-                    <rect key="frame" x="173.66666666666666" y="66" width="46" height="20"/>
-                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                    <rect key="frame" x="170.33333333333334" y="64" width="52.333333333333343" height="24.333333333333329"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -80,6 +89,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="pullninewdown"/>
+                    <connections>
+                        <action selector="beginPickAlop:" destination="-1" eventType="touchUpInside" id="dfr-fW-qeX"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind, Linh?" translatesAutoresizingMaskIntoConstraints="NO" id="4px-c6-i1M">
                     <rect key="frame" x="15.666666666666657" y="195" width="362" height="523"/>
@@ -106,6 +118,9 @@
                     <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="POST" backgroundImage="trueAlll"/>
+                    <connections>
+                        <action selector="swapFacesInVideoChaos:" destination="-1" eventType="touchUpInside" id="qEe-ea-V4F"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="AQt-kU-bAN"/>

@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCELHoeloBarliDxiu" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="coinCountbelow" destination="jNv-b0-ds1" id="F42-rk-GdN"/>
+                <outlet property="fooceNameLabel" destination="wdj-lz-Z1F" id="deu-SA-jJU"/>
+                <outlet property="minweICON" destination="kyI-qE-ToA" id="mF9-0P-0Lh"/>
+                <outlet property="setringFooce" destination="LZf-hv-oJE" id="dYd-hz-wrv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +34,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="img_btn_check it"/>
+                    <connections>
+                        <action selector="beginMangheSham:" destination="-1" eventType="touchUpInside" id="TnT-wF-roq"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-t8-BQU">
                     <rect key="frame" x="0.0" y="688" width="202" height="124"/>
@@ -39,6 +46,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="postariddleHat"/>
+                    <connections>
+                        <action selector="satartMangHe:" destination="-1" eventType="touchUpInside" id="c0w-IG-bCF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-8b-xwK">
                     <rect key="frame" x="169" y="161" width="224" height="58"/>
@@ -57,6 +67,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="foocePrankify AI"/>
+                    <connections>
+                        <action selector="AiPrankify:" destination="-1" eventType="touchUpInside" id="EuL-dH-ZS9"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjQ-mh-2ux">
                     <rect key="frame" x="262" y="89" width="120" height="28"/>
@@ -66,6 +79,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="homeGold coin"/>
+                    <connections>
+                        <action selector="toCoinahole:" destination="-1" eventType="touchUpInside" id="0kO-u8-cQa"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favertoniu" translatesAutoresizingMaskIntoConstraints="NO" id="P0A-xD-W86">
                     <rect key="frame" x="38" y="86" width="104" height="34"/>
@@ -89,6 +105,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="Iouaysettings"/>
+                    <connections>
+                        <action selector="moanihdhSite:" destination="-1" eventType="touchUpInside" id="fHE-Rk-T3p"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNv-b0-ds1">
                     <rect key="frame" x="298" y="94.666666666666671" width="56" height="17"/>
@@ -96,6 +115,12 @@
                         <constraint firstAttribute="width" constant="56" id="rJG-U7-7KG"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-lz-Z1F">
+                    <rect key="frame" x="70" y="97" width="49.666666666666657" height="12"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="11"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -109,8 +134,10 @@
                 <constraint firstItem="LZf-hv-oJE" firstAttribute="centerY" secondItem="P0A-xD-W86" secondAttribute="centerY" id="74f-03-nYz"/>
                 <constraint firstItem="YhQ-b5-MrL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DdH-7O-xs3"/>
                 <constraint firstItem="EKU-t8-BQU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GSj-UM-W6m"/>
+                <constraint firstItem="wdj-lz-Z1F" firstAttribute="leading" secondItem="kyI-qE-ToA" secondAttribute="trailing" constant="8" symbolic="YES" id="GoT-iQ-BE2"/>
                 <constraint firstItem="jNv-b0-ds1" firstAttribute="centerY" secondItem="zjQ-mh-2ux" secondAttribute="centerY" id="HyI-ci-viQ"/>
                 <constraint firstItem="LZf-hv-oJE" firstAttribute="leading" secondItem="P0A-xD-W86" secondAttribute="trailing" constant="25" id="Mk3-2a-8tV"/>
+                <constraint firstItem="wdj-lz-Z1F" firstAttribute="centerY" secondItem="kyI-qE-ToA" secondAttribute="centerY" id="NcY-Db-EYz"/>
                 <constraint firstItem="YhQ-b5-MrL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ou3-1r-Ekd"/>
                 <constraint firstItem="P0A-xD-W86" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="bw8-dV-QKG"/>
                 <constraint firstItem="jNv-b0-ds1" firstAttribute="leading" secondItem="zjQ-mh-2ux" secondAttribute="trailing" constant="-84" id="dX8-RC-iUS"/>

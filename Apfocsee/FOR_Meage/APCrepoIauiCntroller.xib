@@ -11,7 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCrepoIauiCntroller" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="MatrixButon" destination="MZC-Jg-VIZ" id="oyg-dj-zo3"/>
+                <outlet property="adversitongbutton" destination="uqb-4P-G6c" id="fOr-7A-UJs"/>
+                <outlet property="lockMasterKey" destination="3PL-JT-EpT" id="sUu-BS-cfF"/>
+                <outlet property="otehwtbutton" destination="sLX-OD-dKi" id="HeJ-sN-LGd"/>
+                <outlet property="polisenButon" destination="iqr-pT-SrW" id="U57-dj-qAR"/>
                 <outlet property="view" destination="hQJ-QY-ZtB" id="EU4-1q-ZTE"/>
+                <outlet property="vilentButton" destination="iCS-dO-MMi" id="Oc6-Ce-h4i"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,6 +38,9 @@
                     <state key="normal" title="Submit" backgroundImage="hipopLaobg">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="spreadVirtualTicklishVirus:" destination="-1" eventType="touchUpInside" id="C11-Zw-oIf"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-Jg-VIZ">
                     <rect key="frame" x="14" y="59" width="34" height="34"/>

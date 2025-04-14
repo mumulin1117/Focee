@@ -11,6 +11,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCPersondaddleoingApro" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="MatrixButon" destination="plo-YR-cNq" id="Idq-am-iOW"/>
+                <outlet property="contentPostLabr" destination="YtK-K2-hvj" id="pRZ-mq-kzZ"/>
+                <outlet property="contetnepostm" destination="ah1-yl-tBW" id="PNf-0f-EOy"/>
+                <outlet property="focceRepo" destination="7Sd-19-oPE" id="2i0-Qt-UOt"/>
+                <outlet property="focusBureon" destination="kHn-gd-UOU" id="5BA-M7-LdF"/>
+                <outlet property="folooweingcounter" destination="5GN-tV-qqz" id="ZZt-uW-WOg"/>
+                <outlet property="fooceUserphoto" destination="fx0-GT-Sut" id="y9D-lI-0zk"/>
+                <outlet property="noehtingtiposd" destination="ebx-2P-XWt" id="S9Z-cM-lUs"/>
+                <outlet property="postlineffoe" destination="aaf-Xs-z9l" id="54c-K0-5lo"/>
+                <outlet property="timeolaber" destination="gvS-lL-jW0" id="UMw-O7-aKZ"/>
+                <outlet property="usernauioLbl" destination="jqP-Pq-R8X" id="mMm-jw-sJK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +54,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fengmuiak" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-sh-dbk">
                     <rect key="frame" x="0.0" y="159" width="414" height="737"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siH-ta-5l1">
+                <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siH-ta-5l1">
                     <rect key="frame" x="341" y="798" width="46" height="46"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="8We-r4-Tfn"/>
@@ -51,8 +62,11 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="callFoocevideo"/>
+                    <connections>
+                        <action selector="chaitred:" destination="-1" eventType="touchUpInside" id="2oP-rQ-Zdp"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iea-PZ-abj">
+                <button opaque="NO" tag="90" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iea-PZ-abj">
                     <rect key="frame" x="278" y="797" width="46" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="4jG-TW-Wrq"/>
@@ -60,6 +74,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="callFoocchat"/>
+                    <connections>
+                        <action selector="chaitred:" destination="-1" eventType="touchUpInside" id="1fN-fY-Rxj"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah1-yl-tBW">
                     <rect key="frame" x="70" y="444" width="166" height="29.5"/>
@@ -87,6 +104,9 @@
                         <constraint firstAttribute="height" constant="94" id="YUe-WF-0Tg"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="sureFooolweingGo:" destination="-1" eventType="touchUpInside" id="Ldv-Zy-7WO"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fans" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtC-Ri-Nh0">
                     <rect key="frame" x="291.5" y="337.5" width="33.5" height="20"/>
@@ -132,6 +152,9 @@
                         <constraint firstAttribute="width" constant="110" id="UNg-uB-kdK"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="sureFooolweingGo:" destination="-1" eventType="touchUpInside" id="dKd-FI-LHh"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hireFire" translatesAutoresizingMaskIntoConstraints="NO" id="aaf-Xs-z9l">
                     <rect key="frame" x="24" y="411.5" width="31" height="140"/>
@@ -157,6 +180,9 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="     To  Follow" image="sureadkodd" backgroundImage="hipopLaobg"/>
                     <state key="selected" title="     Followed" image="gouballowed"/>
+                    <connections>
+                        <action selector="focustchangestarut:" destination="-1" eventType="touchUpInside" id="yBt-rN-bu9"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

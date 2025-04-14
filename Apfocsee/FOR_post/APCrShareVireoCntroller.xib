@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCrShareVireoCntroller" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="FeedStream" destination="rLT-oj-0f7" id="8fh-mJ-bef"/>
+                <outlet property="MatrixButon" destination="7oe-mD-udg" id="f9S-zB-15D"/>
+                <outlet property="lockMasterKey" destination="uyl-ws-e7E" id="RO8-X7-qP7"/>
                 <outlet property="view" destination="vyb-KG-q6s" id="8vi-ev-Zr2"/>
             </connections>
         </placeholder>
@@ -30,6 +33,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="OPijiettadd pic"/>
+                    <connections>
+                        <action selector="PrankChallengeFeedStream:" destination="-1" eventType="touchUpInside" id="eXy-wm-Rcr"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-mD-udg">
                     <rect key="frame" x="14" y="59" width="34" height="34"/>
@@ -56,6 +62,9 @@
                     <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="POST" backgroundImage="hipopLaobg"/>
+                    <connections>
+                        <action selector="swapFacesInVideoChaos:" destination="-1" eventType="touchUpInside" id="q5W-Rh-IJY"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="9Xt-hO-fTh"/>

@@ -9,7 +9,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCAilisSendmeasgshptroller" customModule="Apfocsee" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCAilisSendmeasgshptroller" customModule="Apfocsee" customModuleProvider="target">
+            <connections>
+                <outlet property="LaughterView" destination="wPc-tP-d09" id="AUe-D4-B7h"/>
+                <outlet property="MatrixButon" destination="1bJ-b8-s3S" id="ZDD-5j-qtx"/>
+                <outlet property="focceRepo" destination="4PC-7n-Ie8" id="i0w-55-smo"/>
+                <outlet property="foooceINpuwter" destination="be7-MM-ZQ1" id="0Zp-Ix-orL"/>
+                <outlet property="useNakerl" destination="AlD-m8-2XP" id="JAF-EI-KfE"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l3u-oa-9Nw">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -21,11 +29,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4Y-Vm-Ftt">
                     <rect key="frame" x="0.0" y="752" width="393" height="100"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDa-xB-m3w">
-                            <rect key="frame" x="331" y="15" width="46" height="48"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" backgroundImage="bigHUjfeivideo"/>
-                        </button>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say something...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="be7-MM-ZQ1">
                             <rect key="frame" x="12" y="13" width="244" height="52"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,6 +46,17 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" backgroundImage="handsSend"/>
+                            <connections>
+                                <action selector="uioMeaasgesure:" destination="-1" eventType="touchUpInside" id="vXw-t4-Qr7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDa-xB-m3w">
+                            <rect key="frame" x="331" y="15" width="46" height="48"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="bigHUjfeivideo"/>
+                            <connections>
+                                <action selector="LaughterEchoBoost:" destination="-1" eventType="touchUpInside" id="s6j-r0-TxZ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.054901964960000001" green="0.02352941222" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

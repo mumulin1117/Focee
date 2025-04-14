@@ -2,7 +2,7 @@
 //  APCELCircleoBarliDxiu.swift
 //  Apfocsee
 //
-//  Created by mumu on 2025/4/9.
+//  Created by Apfocsee on 2025/4/9.
 //
 
 import UIKit
@@ -47,7 +47,10 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         
     }
    
-
+    //to post
+    @IBAction func scramblePuzzleForAprilFools(_ sender: UIButton) {
+    }
+    
 }
 
 

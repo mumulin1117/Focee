@@ -33,8 +33,8 @@
                             <constraint firstAttribute="width" constant="59" id="LVt-kS-EYm"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Balance" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz4-Ej-qJc">
-                        <rect key="frame" x="67" y="69.333333333333329" width="74.666666666666686" height="13.333333333333329"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Balance" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz4-Ej-qJc">
+                        <rect key="frame" x="67" y="69.333333333333329" width="361" height="13.333333333333329"/>
                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                         <color key="textColor" red="0.68235301971435547" green="0.65882354974746704" blue="0.72156864404678345" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -44,6 +44,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="fz4-Ej-qJc" secondAttribute="trailing" constant="14" id="1Ht-cr-aHr"/>
                 <constraint firstItem="sDs-wi-U4n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9A6-wj-hRI"/>
                 <constraint firstItem="Rzw-c6-Zxv" firstAttribute="leading" secondItem="sDs-wi-U4n" secondAttribute="trailing" constant="8" id="Ano-E2-1TA"/>
                 <constraint firstItem="WzN-I5-J4b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="DGs-nw-FWP"/>
@@ -56,6 +57,11 @@
                 <constraint firstAttribute="trailing" secondItem="WzN-I5-J4b" secondAttribute="trailing" id="x3i-ad-l8j"/>
             </constraints>
             <size key="customSize" width="442" height="116"/>
+            <connections>
+                <outlet property="xuelainFeiol" destination="fz4-Ej-qJc" id="IMA-oV-TRP"/>
+                <outlet property="xuelianname" destination="Rzw-c6-Zxv" id="2MF-5h-kfP"/>
+                <outlet property="zhanXuelian" destination="sDs-wi-U4n" id="slO-fE-EGL"/>
+            </connections>
             <point key="canvasLocation" x="196.94656488549617" y="26.760563380281692"/>
         </collectionViewCell>
     </objects>

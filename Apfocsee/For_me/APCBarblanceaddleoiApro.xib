@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCBarblanceaddleoiApro" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="MatrixButon" destination="gZS-zO-fNn" id="Jev-LN-vDZ"/>
+                <outlet property="blanceDiomend" destination="Le7-0E-KwB" id="rOn-mG-Fk0"/>
+                <outlet property="foooceISi" destination="OVO-6F-SX2" id="Hcs-ac-sIr"/>
                 <outlet property="view" destination="aSZ-Um-m1x" id="qTt-hY-nyG"/>
             </connections>
         </placeholder>

@@ -2,28 +2,40 @@
 //  APCEREsultsioingApro.swift
 //  Apfocsee
 //
-//  Created by mumu on 2025/4/10.
+//  Created by Apfocsee on 2025/4/10.
 //
 
 import UIKit
 //猜结果alert
 class APCEREsultsioingApro: UIViewController {
 
+    @IBOutlet weak var oopsgotImageview: UIImageView!
+    
+    private var resultAPCA:Bool = false
+    init( resultAPCA: Bool) {
+       
+        self.resultAPCA = resultAPCA
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if resultAPCA == true {
+            oopsgotImageview.image = UIImage(named: "focce_spot on")
+        }else{
+            oopsgotImageview.image = UIImage(named: "fooce_Oops")
+        }
     }
 
 
-    /*
-    // MARK: - Navigation
+   
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func loagi(_ sender: Any) {
+        self.dismiss(animated: true)
     }
-    */
-
 }
