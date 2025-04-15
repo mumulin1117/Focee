@@ -9,10 +9,11 @@ target 'Apfocsee' do
 
 pod 'SwiftMessages'
 pod 'SnapKit'
-pod 'iCarousel'
+
 pod "IQKeyboardManager"
 pod "SwiftyStoreKit"
+pod "Alamofire"
 pod 'Hero'
 pod "Player"
-pod 'CollectionViewPagingLayout'
+
 end

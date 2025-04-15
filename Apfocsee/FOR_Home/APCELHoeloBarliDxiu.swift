@@ -78,6 +78,7 @@ class APCELHoeloBarliDxiu: APCENEvcer {
         let current = UserDefaults.standard.object(forKey: "mamaFlyainguser") as? [String:String]
         fooceNameLabel.text = current?["blindbox_name"]
         coinCountbelow.text = current?["domoned"]
+        minweICON.image = APCELBarliDxiuController.appChacheimg
     }
     
     override func viewDidLoad() {

@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="ByteBuffer" destination="neM-fq-QWs" id="bmh-tb-tm4"/>
                 <outlet property="RealTimeJokerHub" destination="M2A-Wc-sSB" id="Mfx-jc-e3o"/>
+                <outlet property="dismianComment" destination="NXh-k1-O4t" id="a3v-Lo-lhc"/>
                 <outlet property="meavatorbackgiug" destination="rsl-gq-UTf" id="H1E-CA-Iwg"/>
                 <outlet property="meavatorbackgiug1" destination="4Xa-dc-WH7" id="uz0-N2-zuS"/>
                 <outlet property="meinname" destination="QcI-bc-wj7" id="zpF-JP-LYC"/>
@@ -28,38 +29,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sureaemialogg" translatesAutoresizingMaskIntoConstraints="NO" id="AWi-vJ-glO">
-                    <rect key="frame" x="0.0" y="339" width="393" height="513"/>
+                    <rect key="frame" x="0.0" y="275" width="393" height="513"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="513" id="5O9-sx-cwP"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemsdiolbg" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-P5-mGm">
-                    <rect key="frame" x="12" y="417" width="369" height="86"/>
+                    <rect key="frame" x="12" y="353" width="369" height="86"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="86" id="dg4-ew-OPc"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Balance" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sv-Ae-ORU">
-                    <rect key="frame" x="82" y="438" width="93.333333333333314" height="16.333333333333314"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sv-Ae-ORU">
+                    <rect key="frame" x="82" y="390.33333333333331" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Xa-dc-WH7">
-                    <rect key="frame" x="26" y="429" width="48" height="48"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callFoocchat" translatesAutoresizingMaskIntoConstraints="NO" id="4Xa-dc-WH7">
+                    <rect key="frame" x="26" y="365" width="48" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="TkV-CS-7iy"/>
                         <constraint firstAttribute="width" constant="48" id="c3r-HH-zpn"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Balance" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRc-Tn-EZk">
-                    <rect key="frame" x="82" y="463" width="276" height="13.333333333333314"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRc-Tn-EZk">
+                    <rect key="frame" x="82" y="399" width="276" height="0.0"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                     <color key="textColor" red="0.68235301969999995" green="0.65882354970000001" blue="0.72156864399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-i5-RS5">
-                    <rect key="frame" x="0.0" y="752" width="393" height="100"/>
+                    <rect key="frame" x="0.0" y="688" width="393" height="100"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say something...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="neM-fq-QWs">
                             <rect key="frame" x="12" y="13" width="304" height="42"/>
@@ -94,36 +95,45 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1  comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-Wc-sSB">
-                    <rect key="frame" x="143.66666666666666" y="370" width="106" height="23"/>
+                    <rect key="frame" x="143.66666666666666" y="306" width="106" height="23"/>
                     <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemsdiolbg" translatesAutoresizingMaskIntoConstraints="NO" id="x63-VZ-0Qx">
-                    <rect key="frame" x="12" y="521" width="369" height="86"/>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemsdiolbg" translatesAutoresizingMaskIntoConstraints="NO" id="x63-VZ-0Qx">
+                    <rect key="frame" x="12" y="457" width="369" height="86"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="86" id="g9w-Wd-yYj"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-bc-wj7">
-                    <rect key="frame" x="82" y="542" width="20" height="16.333333333333371"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-bc-wj7">
+                    <rect key="frame" x="82" y="478" width="20" height="16.333333333333314"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-gq-UTf">
-                    <rect key="frame" x="26" y="533" width="48" height="48"/>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callFoocchat" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-gq-UTf">
+                    <rect key="frame" x="26" y="469" width="48" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="2dy-a6-Lim"/>
                         <constraint firstAttribute="height" constant="48" id="Ccf-gu-lni"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Balance" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iht-Iv-lyK">
-                    <rect key="frame" x="82" y="567" width="276" height="13.333333333333371"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iht-Iv-lyK">
+                    <rect key="frame" x="82" y="503" width="276" height="0.0"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
                     <color key="textColor" red="0.68235301969999995" green="0.65882354970000001" blue="0.72156864399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-k1-O4t">
+                    <rect key="frame" x="347" y="284" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="P1E-eZ-pFN"/>
+                        <constraint firstAttribute="height" constant="34" id="cD1-EK-CsP"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="foocedclose"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.070588235294117646" green="0.074509803921568626" blue="0.082352941176470587" alpha="0.69799638605442171" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,8 +158,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Hb-P5-mGm" secondAttribute="trailing" constant="12" id="dIA-R1-ntQ"/>
                 <constraint firstItem="RJ0-i5-RS5" firstAttribute="leading" secondItem="AWi-vJ-glO" secondAttribute="leading" id="fpg-nZ-aWU"/>
                 <constraint firstItem="x63-VZ-0Qx" firstAttribute="top" secondItem="QcI-bc-wj7" secondAttribute="bottom" constant="-37.333333333333314" id="gHf-t3-Ui7"/>
+                <constraint firstItem="AWi-vJ-glO" firstAttribute="top" secondItem="NXh-k1-O4t" secondAttribute="bottom" constant="-43" id="icp-2m-Y4K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NXh-k1-O4t" secondAttribute="trailing" constant="12" id="j36-eZ-uc3"/>
                 <constraint firstItem="x63-VZ-0Qx" firstAttribute="leading" secondItem="5Hb-P5-mGm" secondAttribute="leading" id="j7y-Wf-UxA"/>
-                <constraint firstAttribute="bottom" secondItem="AWi-vJ-glO" secondAttribute="bottom" id="nrU-F3-4Fj"/>
+                <constraint firstAttribute="bottom" secondItem="AWi-vJ-glO" secondAttribute="bottom" constant="64" id="nrU-F3-4Fj"/>
                 <constraint firstItem="5Hb-P5-mGm" firstAttribute="top" secondItem="1Sv-Ae-ORU" secondAttribute="bottom" constant="-37.333333333333314" id="rAV-w1-J7Y"/>
                 <constraint firstItem="5Hb-P5-mGm" firstAttribute="top" secondItem="M2A-Wc-sSB" secondAttribute="bottom" constant="24" id="rbW-E1-x1G"/>
                 <constraint firstItem="5Hb-P5-mGm" firstAttribute="top" secondItem="4Xa-dc-WH7" secondAttribute="top" constant="-12" id="t0C-u5-wka"/>
@@ -161,6 +173,8 @@
         </view>
     </objects>
     <resources>
+        <image name="callFoocchat" width="46" height="48"/>
+        <image name="foocedclose" width="34" height="34"/>
         <image name="handsSend" width="50" height="42"/>
         <image name="itemsdiolbg" width="320" height="72"/>
         <image name="sureaemialogg" width="375" height="812"/>

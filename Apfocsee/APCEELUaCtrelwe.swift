@@ -153,7 +153,7 @@ Users under 13 may not use Focee’s real-time interaction features.
     
 
     @IBAction func trrremifoa(_ sender: UIButton) {
-        self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: false), animated: true)
+        self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: false), animated: false)
     }
     
     @IBAction func perivacy(_ sender: Any) {

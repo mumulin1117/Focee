@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftMessages
 protocol SideMenuDelegate{
    func didSelectMenuItem()
 }
@@ -29,19 +30,50 @@ class APCELMelinoBarliDxiu: APCENEvcer {
         
         switch sender.tag {
         case 11:
-            break
+            self.navigationController?.pushViewController(APCPersondaddleoingApro.init(), animated: true)
         case 12:
-            break
-        case 13:
-            break
+            self.navigationController?.pushViewController(APCEPersoandatet.init(), animated: true)
         case 14:
-            break
+            self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: true), animated: false)
         case 15:
-            break
+            self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: false), animated: false)
+        
         case 16:
-            break
+            let alertingOO = UIAlertController(
+                    title: "Delete Account Permanently",
+                    message: "This will immediately: \n• Erase all profile data \n• Remove active subscriptions \n• Delete chat history",
+                    preferredStyle: .alert
+                )
+     
+            let okaui = UIAlertAction(
+                    title: "Sure",
+                    style: .destructive) { _ in
+                        self.laodingFlay(loadingText: "Deleting.....")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+                            SwiftMessages.hide(animated: true)
+                            self.showingAlertingForSuccessfull(alsemessage:"Delete successful!")
+                            UserDefaults.standard.set(nil, forKey: "mamaFlyainguser")
+                            ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
+                            APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")!
+                            APCELBarliDxiuController.allFlayDatu.removeAll()
+                            APCELBarliDxiuController.allFolloweingDatu.removeAll()
+                        }))
+                       
+                        
+                    }
+            alertingOO.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                
+            alertingOO.addAction(okaui)
+        
+            present(alertingOO, animated: true)
         case 17:
-            break
+            UserDefaults.standard.set(nil, forKey: "mamaFlyainguser")
+            ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
+            APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")!
+            APCELBarliDxiuController.allFlayDatu.removeAll()
+            APCELBarliDxiuController.allFolloweingDatu.removeAll()
+            
         default:
             break
         }

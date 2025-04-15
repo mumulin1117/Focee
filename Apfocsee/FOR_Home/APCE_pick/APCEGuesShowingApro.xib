@@ -51,12 +51,12 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allforbacklopbk" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-Z6-4tf">
                     <rect key="frame" x="15" y="122" width="363" height="606"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mkz-lR-dZn">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mkz-lR-dZn">
                     <rect key="frame" x="16" y="122" width="361" height="606"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-v1-fOO">
-                    <rect key="frame" x="36" y="677" width="321" height="19.333333333333371"/>
-                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                    <rect key="frame" x="36" y="688.33333333333337" width="321" height="18.666666666666629"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -86,15 +86,15 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rdy-C4-ypm">
-                    <rect key="frame" x="36" y="637" width="28" height="28"/>
+                    <rect key="frame" x="36" y="648.33333333333337" width="28" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="ZQs-sP-2Lv"/>
                         <constraint firstAttribute="width" constant="28" id="pJv-5E-62O"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-iT-uT4">
-                    <rect key="frame" x="72" y="641.33333333333337" width="27.333333333333329" height="19.333333333333371"/>
-                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                    <rect key="frame" x="72" y="653" width="34" height="18.666666666666629"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -118,7 +118,7 @@
                 <constraint firstItem="9I1-cq-OBA" firstAttribute="trailing" secondItem="3hd-v1-fOO" secondAttribute="trailing" constant="36" id="WL8-Pb-D8P"/>
                 <constraint firstItem="F7I-nM-96F" firstAttribute="centerX" secondItem="Efy-zw-CYB" secondAttribute="centerX" id="a2c-ox-BPu"/>
                 <constraint firstItem="bGV-VR-RkF" firstAttribute="top" secondItem="9I1-cq-OBA" secondAttribute="top" id="dAt-uT-Gm3"/>
-                <constraint firstItem="3hd-v1-fOO" firstAttribute="top" secondItem="mkz-lR-dZn" secondAttribute="bottom" constant="-51" id="fDr-co-PL8"/>
+                <constraint firstItem="3hd-v1-fOO" firstAttribute="bottom" secondItem="mkz-lR-dZn" secondAttribute="bottom" constant="-21" id="fDr-co-PL8"/>
                 <constraint firstItem="mkz-lR-dZn" firstAttribute="height" secondItem="e4E-Z6-4tf" secondAttribute="height" id="geF-9S-QoS"/>
                 <constraint firstItem="F7I-nM-96F" firstAttribute="centerY" secondItem="pMW-U1-JTH" secondAttribute="centerY" id="iYZ-K7-msD"/>
                 <constraint firstItem="3hd-v1-fOO" firstAttribute="top" secondItem="Rdy-C4-ypm" secondAttribute="bottom" constant="12" id="mfW-05-Gv6"/>

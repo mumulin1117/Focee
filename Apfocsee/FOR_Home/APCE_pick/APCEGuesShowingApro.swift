@@ -8,6 +8,18 @@
 import UIKit
 //showing盲盒
 class APCEGuesShowingApro: UIViewController {
+    var box:APCEuserFlauy
+    init(box: APCEuserFlauy) {
+        self.box = box
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     
     @IBOutlet weak var thinkTrue: UIButton!
     
@@ -30,7 +42,12 @@ class APCEGuesShowingApro: UIViewController {
         deploySneakyPrankBot()
         
         thinkimg.layer.masksToBounds = true
-     
+        self.thinkimg.image = UIImage(named: box.MH_PICt ?? "")
+        thinkuserPhoto.image = UIImage(named: box.blindbox_avpter ?? "")
+        
+        
+        thinkuserBanme.text = box.blindbox_name
+        thinkingcontent.text = box.MH_Sayuing
     }
     
     private func deploySneakyPrankBot() {
@@ -63,13 +80,31 @@ class APCEGuesShowingApro: UIViewController {
     
     
     @objc func thinkIsTure(ert:UIButton) {
+       
+        var rerusl:Bool = false
+        
         if ert ==  thinkTrue {
-         
+            rerusl = true
         }
         
         if ert ==  thinkFalse {
-            //举报
+            rerusl = false
+            
         }
+        
+        if (box.MH_result == "TRUE" && rerusl == true) ||  (box.MH_result == "FALSE" && rerusl == false){
+            let moadllresult = APCEREsultsioingApro.init(resultAPCA: true)
+            moadllresult.modalPresentationStyle = .fullScreen
+            self.present(moadllresult, animated: true)
+            return
+        }
+        
+        let moadllresult = APCEREsultsioingApro.init(resultAPCA: false)
+        moadllresult.modalPresentationStyle = .fullScreen
+        self.present(moadllresult, animated: true)
+        
+        
+       
     }
     
 }

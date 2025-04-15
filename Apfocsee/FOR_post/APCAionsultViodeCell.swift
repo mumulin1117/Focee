@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+import SnapKit
+import Player
+import AVFoundation
 class APCAionsultViodeCell: UICollectionViewCell {
 
     
@@ -19,7 +21,7 @@ class APCAionsultViodeCell: UICollectionViewCell {
     @IBOutlet weak var kifyRepo: UIButton!//report
     
     
-    @IBOutlet weak var suretgoPlay: UIButton!//play
+
     
     @IBOutlet weak var eninnerUser: UIButton!//进入主页
     
@@ -34,10 +36,78 @@ class APCAionsultViodeCell: UICollectionViewCell {
     @IBOutlet weak var civepostcntetn: UILabel!//video post content
     
     
+    var player: AVPlayer?
+        
+    var playerLayer: AVPlayerLayer?
+   
+    // 配置播放器
+        
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        playerLayer?.frame = videoCioverFooce.bounds
+    }
+    func configure(with url: URL) {
+        // 清理旧播放器
+        player?.pause()
+        playerLayer?.removeFromSuperlayer()
+        
+        // 创建新播放器
+        player = AVPlayer(url: url)
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer?.videoGravity = .resizeAspectFill
+        
+        videoCioverFooce.layer.addSublayer(playerLayer!)
+        // 添加播放完成监听
+               NotificationCenter.default.addObserver(
+                   self,
+                   selector: #selector(playerDidFinishPlaying),
+                   name: .AVPlayerItemDidPlayToEndTime,
+                   object: player?.currentItem
+               )
+    }
+    @objc private func playerDidFinishPlaying() {
+        player?.seek(to: .zero)
+        player?.play()
+        
+    }
+    // 准备复用
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        player?.pause()
+        playerLayer?.removeFromSuperlayer()
+        player = nil
+        playerLayer = nil
+
+    }
+  
+
+    func allodj(doe:APCEuserFlauy)  {
+        if let videor = doe.blindbox_video  {
+            videoCioverFooce.image = UIImage(named: videor + "_photo")
+        }
+        useNakerl.text = doe.blindbox_name
+        
+        if let videor = doe.blindbox_avpter  {
+            imhWo.image = UIImage(named: videor )
+        }
+       
+        civepostcntetn.text = doe.blindbox_text
+        
+        if doe.video_loke != "lovert" {
+            kifyHlike.isSelected = false
+        }else{
+            kifyHlike.isSelected = true
+        }
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         deploySneakyPrankBot()
         spreadVirtualTicklishVirus()
+        videoCioverFooce.layer.cornerRadius = 22
+        videoCioverFooce.layer.masksToBounds = true
+ 
     }
 
     
@@ -49,4 +119,9 @@ class APCAionsultViodeCell: UICollectionViewCell {
         imhWo.layer.masksToBounds = true
         
     }
+    
+  
+       
+       
 }
+

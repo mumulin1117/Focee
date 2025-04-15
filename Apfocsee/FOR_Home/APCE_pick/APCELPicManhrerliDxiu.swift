@@ -8,20 +8,33 @@
 import UIKit
 //选择盲盒
 class APCELPicManhrerliDxiu: UIViewController {
-
+    private var boxAll: Array<APCEuserFlauy>{
+        APCELBarliDxiuController.allFlayDatu.filter { APCEuserFlauy in
+            APCEuserFlauy.MH_result != nil
+        }
+    }
+    
+    
+    
     @IBOutlet weak var constrainest: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         MatrixButon.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
+       
+    }
+    
+    
+  
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         if MangheBOX.frame.height <  350{
             constrainest.constant = 100
         }else{
-            constrainest.constant = 120
+            constrainest.constant = 130
         }
     }
-    
-    private  var recordMangheTag:Int = 0
+    private  var recordMangheTag:Int?
     
     @IBOutlet weak var MangheBOX: UIImageView!
     
@@ -41,7 +54,7 @@ class APCELPicManhrerliDxiu: UIViewController {
             return
         }
         
-        let dataatg = sender.tag
+        let dataatg = sender.tag - 11
         recordMangheTag = dataatg
         
         sender.isSelected = true
@@ -53,7 +66,7 @@ class APCELPicManhrerliDxiu: UIViewController {
                        initialSpringVelocity: 0.5) {
             sender.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         } completion: { _ in
-            sender.transform = .identity
+            
         }
     
            
@@ -63,16 +76,34 @@ class APCELPicManhrerliDxiu: UIViewController {
     
     //开盲盒
     @IBAction func openHouManHeBox(_ sender: Any) {
-        guard !isAnimating else { return }
-        isAnimating = true
-        
+        guard let shouldtag = self.recordMangheTag else {
+            self.showingAlertingFor_Alert(alsemessage: "Please select a box that you want to open first!")
+            return
+            
+        }
+
         //开始开启动画
-        openBoxTapped()
+        setupParticleEffect()
+       
+       
         //跳转进入下一页
-        let manhe = APCEGuesShowingApro.init()
+        
+        var tag:Int = 0
+        
+        if boxAll.count - 1 >=  shouldtag{
+            tag = shouldtag
+        }
+        let data = boxAll[tag]
+        
+        let manhe = APCEGuesShowingApro.init(box: data)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
             self.navigationController?.pushViewController(manhe, animated: true)
+            
+            guard let box = self.view.viewWithTag(shouldtag + 11) else{return}
+            box.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.recordMangheTag = nil
+           
         }))
     }
     
@@ -85,10 +116,15 @@ class APCELPicManhrerliDxiu: UIViewController {
     
     // MARK: - Animation
     private var particleEmitter: CAEmitterLayer!
+    
     private func setupParticleEffect() {
         particleEmitter = CAEmitterLayer()
-        
-        let suiview = view.viewWithTag(recordMangheTag)
+        guard let shouldtag = self.recordMangheTag else {
+            self.showingAlertingFor_Alert(alsemessage: "Please select a box that you want to open first!")
+            return
+            
+        }
+        let suiview = view.viewWithTag(shouldtag + 11)
         
         particleEmitter.emitterPosition = suiview?.center ?? .zero
         particleEmitter.emitterShape = .circle
@@ -101,60 +137,18 @@ class APCELPicManhrerliDxiu: UIViewController {
         cell.scale = 0.1
         cell.scaleRange = 0.2
         cell.emissionRange = .pi * 2
-        cell.contents = UIImage(named: "spark")?.cgImage
+        cell.contents = UIImage(named: "JIuaojdcoin")?.cgImage
         
         particleEmitter.emitterCells = [cell]
         view.layer.addSublayer(particleEmitter)
         particleEmitter.isHidden = true
-        
+        // 粒子特效
+        particleEmitter.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.particleEmitter.birthRate = 0
+        }
     }
     
-       
-    private var isAnimating = false
-    
-      private func openBoxTapped() {
-          setupParticleEffect()
-          // 3D翻转动画
-          UIView.animate(withDuration: 0.8, animations: {
-              var transform = CATransform3DIdentity
-              transform.m34 = -1 / 500
-              transform = CATransform3DRotate(transform, .pi, 0, 1, 0)
-              
-              let box = self.view.viewWithTag(self.recordMangheTag)
-              
-              box?.layer.transform = transform
-          }) { _ in
-              self.revealPrize()
-          }
-          
-          // 粒子特效
-          particleEmitter.isHidden = false
-          DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-              self.particleEmitter.birthRate = 0
-          }
-     
-      }
-      
-      private func revealPrize() {
-          guard let box = self.view.viewWithTag(self.recordMangheTag) else{return}
-          
-          let prizeView = UIImageView(image: UIImage(named: "surprise_item"))
-          prizeView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-          prizeView.center = box.center
-          prizeView.alpha = 0
-          prizeView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-          view.addSubview(prizeView)
-          
-          UIView.animate(withDuration: 0.8,
-                         delay: 0,
-                         usingSpringWithDamping: 0.6,
-                         initialSpringVelocity: 0.5) {
-              prizeView.alpha = 1
-              prizeView.transform = .identity
-              prizeView.center.y -= 100
-          }
+  
 
-          
-          isAnimating = false
-      }
 }

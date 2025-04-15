@@ -49,13 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
             window?.rootViewController = APCELBarliDxiuController()
-            
-//            let loginstatud = UserDefaults.standard.object(forKey: "ingCurrentUserMiAJ") as? [String:String]
-//            if loginstatud?["MIAJID"] == "dowy112@gmail.com" {
-//                MIAJWuoeImmtion.lognCacheing = UIImage(named: "MIAJ_6")!
-//                MIAJWuoeImmtion.lognFacing = Array(MIAJPerdforemImmtion.momomicMIAJ.prefix(1))
-//                MIAJWuoeImmtion.lognfolloweing = Array(MIAJPerdforemImmtion.momomicMIAJ.suffix(1))
-//            }
+
             return
         }
         

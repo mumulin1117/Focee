@@ -16,6 +16,7 @@ class APCrCommentViewntroller: UIViewController {
     
     
     
+    @IBOutlet weak var dismianComment: UIButton!
     //aready show
     
     @IBOutlet weak var meavatorbackgiug1: UIImageView!
@@ -43,10 +44,16 @@ class APCrCommentViewntroller: UIViewController {
         super.viewDidLoad()
 
         swapFacesInVideoChaos()
-        
+        dismianComment.addTarget(self, action: #selector(DalFlau), for: .touchUpInside)
         igniteComedyChainReaction()
     }
 
+    
+    
+    
+    @objc func DalFlau()  {
+        self.dismiss(animated: true)
+    }
 //send
     @IBAction func generatePrankMeteorShower(_ sender: UIButton) {
    

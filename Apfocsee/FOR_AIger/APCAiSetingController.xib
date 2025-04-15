@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCAiSetingController" customModule="Apfocsee" customModuleProvider="target">
             <connections>
                 <outlet property="MatrixButon" destination="4ry-Em-ZmK" id="o9j-H9-lrD"/>
-                <outlet property="lockMasterKey" destination="See-mA-8zR" id="zuW-6V-tVA"/>
+                <outlet property="texfielvioew" destination="See-mA-8zR" id="x0f-xT-g8s"/>
                 <outlet property="view" destination="ojz-vT-SVt" id="8ij-TX-oTe"/>
             </connections>
         </placeholder>
@@ -45,7 +45,7 @@
                                         <constraint firstAttribute="height" constant="182" id="MFS-oW-KfF"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-nb-Za1">
+                                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-nb-Za1">
                                     <rect key="frame" x="227" y="113.66666666666666" width="82" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="82" id="Ksp-xm-DOj"/>
@@ -55,8 +55,11 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="classic" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankLight:" destination="-1" eventType="touchUpInside" id="X0O-nx-BFB"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZE-kk-JZe">
+                                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZE-kk-JZe">
                                     <rect key="frame" x="133" y="113.66666666666666" width="82" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="BL1-SQ-Kxh"/>
@@ -66,8 +69,11 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="tech-based" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankLight:" destination="-1" eventType="touchUpInside" id="Owb-TC-2JW"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-W6-ubk">
+                                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-W6-ubk">
                                     <rect key="frame" x="24" y="113.66666666666666" width="97" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="PCA-fD-9I8"/>
@@ -77,8 +83,11 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="tech-based" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankLight:" destination="-1" eventType="touchUpInside" id="Sk0-Ur-zgy"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-an-t79">
+                                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-an-t79">
                                     <rect key="frame" x="171" y="57.666666666666657" width="97" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="97" id="1B0-c6-aqi"/>
@@ -88,6 +97,9 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="harmless" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankLight:" destination="-1" eventType="touchUpInside" id="hWc-lR-Fcy"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prank Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw4-ce-A3a">
                                     <rect key="frame" x="24" y="25" width="70" height="17.666666666666671"/>
@@ -95,7 +107,7 @@
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtT-qJ-t1p">
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtT-qJ-t1p">
                                     <rect key="frame" x="24" y="57.666666666666657" width="135" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="Z0W-Nb-rxG"/>
@@ -105,6 +117,9 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Light-hearted" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankLight:" destination="-1" eventType="touchUpInside" id="OqK-4z-fHp"/>
+                                    </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dhusooiabgk" translatesAutoresizingMaskIntoConstraints="NO" id="DJh-C5-6Hh">
                                     <rect key="frame" x="0.0" y="203" width="369" height="182"/>
@@ -112,7 +127,7 @@
                                         <constraint firstAttribute="height" constant="182" id="e47-hm-0ZO"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uA5-ZC-Gvj">
+                                <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uA5-ZC-Gvj">
                                     <rect key="frame" x="24" y="321.66666666666669" width="97" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="odg-6M-y8L"/>
@@ -122,8 +137,11 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="classmates" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankAudience:" destination="-1" eventType="touchUpInside" id="2gC-Kt-jsZ"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-wQ-HSY">
+                                <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-wQ-HSY">
                                     <rect key="frame" x="124" y="265.66666666666669" width="84" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="OLg-Nw-GZ0"/>
@@ -133,6 +151,9 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="family" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankAudience:" destination="-1" eventType="touchUpInside" id="ugt-Gr-XJA"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Audience" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WQ-Go-gp6">
                                     <rect key="frame" x="24" y="233" width="104" height="17.666666666666657"/>
@@ -140,7 +161,7 @@
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okM-eQ-dbr">
+                                <button opaque="NO" tag="20" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okM-eQ-dbr">
                                     <rect key="frame" x="24" y="265.66666666666669" width="88" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="88" id="Pw7-Th-owN"/>
@@ -150,8 +171,11 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Friends" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankAudience:" destination="-1" eventType="touchUpInside" id="hfo-u2-aH1"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uig-d7-eE3">
+                                <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uig-d7-eE3">
                                     <rect key="frame" x="220" y="265.66666666666669" width="97" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="TOC-d8-Gmb"/>
@@ -161,6 +185,9 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="coworkers" backgroundImage="aistyle_kkkbg"/>
                                     <state key="selected" backgroundImage="yesaiSelect"/>
+                                    <connections>
+                                        <action selector="prankAudience:" destination="-1" eventType="touchUpInside" id="VN0-q7-4yG"/>
+                                    </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dhusooiabgk" translatesAutoresizingMaskIntoConstraints="NO" id="f97-Ue-AHl">
                                     <rect key="frame" x="0.0" y="403" width="369" height="182"/>

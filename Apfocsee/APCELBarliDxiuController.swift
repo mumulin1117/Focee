@@ -15,6 +15,7 @@ class APCEuserFlauy {
     var blindbox_text:String?
     var blindbox_video:String?
    
+    var video_loke:String?
     
     var MH_Sayuing:String?
     var MH_result:String?
@@ -26,7 +27,7 @@ class APCEuserFlauy {
 
 class APCELBarliDxiuController: UITabBarController {
 
-    static var appChacheimg:UIImage? = UIImage.init(named: "fullicon")
+    static var appChacheimg:UIImage? = UIImage.init(named: "mogo_mrtx")
     
     static var allFlayDatu:Array<APCEuserFlauy> = Array<APCEuserFlauy>()
     
@@ -98,10 +99,10 @@ class APCELBarliDxiuController: UITabBarController {
         
         if ind == "focee@gmail.com" {
             APCELBarliDxiuController.allFolloweingDatu = Array(APCELBarliDxiuController.allFlayDatu.prefix(1))
-          
+            APCELBarliDxiuController.appChacheimg = UIImage(named: "fullicon")
         }
         
-        
+        APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")
         
     }
 

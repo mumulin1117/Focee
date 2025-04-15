@@ -1,7 +1,6 @@
 PODS:
-  - CollectionViewPagingLayout (1.1.0)
+  - Alamofire (5.10.2)
   - Hero (1.6.4)
-  - iCarousel (1.8.3)
   - IQKeyboardManager (6.5.19)
   - Player (0.14.0)
   - SnapKit (5.7.1)
@@ -11,9 +10,8 @@ PODS:
   - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
-  - CollectionViewPagingLayout
+  - Alamofire
   - Hero
-  - iCarousel
   - IQKeyboardManager
   - Player
   - SnapKit
@@ -22,9 +20,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - CollectionViewPagingLayout
+    - Alamofire
     - Hero
-    - iCarousel
     - IQKeyboardManager
     - Player
     - SnapKit
@@ -32,15 +29,14 @@ SPEC REPOS:
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
-  CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   Hero: 473a0143017e1371d050fcbedb67d317925097f2
-  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: a640f117221d960b17dafeab502956d642071e28
+PODFILE CHECKSUM: 6577abd39c7bd8c673ee694aec8d79fd1789274d
 
 COCOAPODS: 1.16.2

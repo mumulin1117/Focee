@@ -36,5 +36,21 @@ class APCAiGerneratController: UIViewController {
     }
 
     @IBAction func speend300Domend(_ sender: Any) {
+        if APCBarblanceaddleoiApro.diomendAPCE < 300 {
+            
+            let influce = APCEInfluceCoinController.init()
+            influce.modalPresentationStyle = .overCurrentContext
+            influce.onRechargeTapped = {
+                self.navigationController?.pushViewController(APCBarblanceaddleoiApro.init(), animated: true)
+            }
+            self.present(influce, animated: true)
+            return
+        }
+        
+     
+        let prankAI =  APCAiSetingController.init()
+        
+        self.navigationController?.pushViewController(prankAI, animated: true)
+        
     }
 }

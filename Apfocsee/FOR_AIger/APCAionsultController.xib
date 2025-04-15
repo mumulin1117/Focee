@@ -15,6 +15,7 @@
                 <outlet property="PrankyAISugg" destination="pNx-5E-8xv" id="At9-xE-JVN"/>
                 <outlet property="focceRepo" destination="ESt-AV-SAb" id="QcG-5y-dBx"/>
                 <outlet property="howitworkinGFla" destination="kbm-fs-0wg" id="eCS-Au-c2Z"/>
+                <outlet property="purcleView" destination="u3z-3q-WdM" id="NIm-DV-okP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -69,8 +70,11 @@
                                 <constraint firstAttribute="height" constant="96" id="hXU-mB-VPE"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prankify AI" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-5E-8xv">
-                            <rect key="frame" x="34" y="86" width="304" height="14.666666666666671"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-5E-8xv">
+                            <rect key="frame" x="34" y="102" width="304" height="44"/>
+                            <string key="text">🎭 Prank Name: The Phantom Phone Call
+📍 Setting: Office or Home
+🎯 Target: Friend or Coworker</string>
                             <fontDescription key="fontDescription" name="Charter-BlackItalic" family="Charter" pointSize="12"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -97,10 +101,10 @@
                         <constraint firstItem="11H-9A-OyC" firstAttribute="centerX" secondItem="WlZ-iK-63n" secondAttribute="centerX" id="KK6-Lj-KAL"/>
                         <constraint firstItem="u3z-3q-WdM" firstAttribute="leading" secondItem="WlZ-iK-63n" secondAttribute="leading" constant="20" id="MH4-Fx-Rm7"/>
                         <constraint firstItem="pNx-5E-8xv" firstAttribute="leading" secondItem="WlZ-iK-63n" secondAttribute="leading" constant="34" id="Qm7-CX-Fqs"/>
-                        <constraint firstItem="pNx-5E-8xv" firstAttribute="top" secondItem="VS4-LZ-mZm" secondAttribute="bottom" constant="32" id="XQM-dK-2qR"/>
                         <constraint firstItem="u3z-3q-WdM" firstAttribute="top" secondItem="VS4-LZ-mZm" secondAttribute="bottom" constant="22" id="Y6n-9v-pLj"/>
                         <constraint firstAttribute="trailing" secondItem="kbm-fs-0wg" secondAttribute="trailing" constant="20" id="bWF-QX-vHU"/>
                         <constraint firstItem="kbm-fs-0wg" firstAttribute="top" secondItem="11H-9A-OyC" secondAttribute="bottom" constant="20" id="dcd-Nm-uSy"/>
+                        <constraint firstItem="pNx-5E-8xv" firstAttribute="centerY" secondItem="u3z-3q-WdM" secondAttribute="centerY" id="fZz-LC-1jT"/>
                         <constraint firstAttribute="bottom" secondItem="kbm-fs-0wg" secondAttribute="bottom" id="gX3-xt-1S8"/>
                         <constraint firstItem="kbm-fs-0wg" firstAttribute="leading" secondItem="WlZ-iK-63n" secondAttribute="leading" constant="20" id="laW-59-fwB"/>
                         <constraint firstAttribute="trailing" secondItem="u3z-3q-WdM" secondAttribute="trailing" constant="20" id="pSR-oj-eeK"/>
