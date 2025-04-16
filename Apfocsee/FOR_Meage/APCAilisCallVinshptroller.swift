@@ -7,7 +7,7 @@
 
 import UIKit
 //视频播放
-class APCAilisCallVinshptroller: UIViewController {
+class APCAilisCallVinshptroller: FooceeSenConrer {
     
     
     @IBOutlet weak var EffectLbl: UILabel!
@@ -19,17 +19,26 @@ class APCAilisCallVinshptroller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        backgoungimge.image = UIImage(named: self.userNoafl?.blindbox_avpter ?? "") 
         deploySneakyPrankBot()
+        MeteorIMge.layer.cornerRadius = 15
+        MeteorIMge.layer.masksToBounds = true
+        PrankStashRepository()
     }
-    
+    private func PrankStashRepository(){
+        EffectLbl.text = self.userNoafl?.blindbox_name
+        MeteorIMge.image = APCELBarliDxiuController.appChacheimg
+    }
    
     @IBAction func igniteComedy(_ sender: UIButton) {
+        
+        showingAlertingFor_Alert(alsemessage:"Please try this function after the call is connected!")
     }
     
     
     //decline
     @IBAction func dellatetDFooce(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -52,7 +61,7 @@ class APCAilisCallVinshptroller: UIViewController {
         }
         
         if ert ==  focceRepo {
-            //举报
+            self.reporitEchoBoost()
         }
     }
     

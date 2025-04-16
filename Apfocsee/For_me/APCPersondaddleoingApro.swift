@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import SwiftMessages
 
 //个人中心
-class APCPersondaddleoingApro: UIViewController {
+class APCPersondaddleoingApro: FooceeSenConrer {
+   
+    
+    
     
     @IBOutlet weak var fooceUserphoto: UIImageView!
     
@@ -22,11 +26,9 @@ class APCPersondaddleoingApro: UIViewController {
     
     
     
-    //follow fans
-    @IBAction func sureFooolweingGo(_ sender: UIButton) {
-    }
+ 
     
-    
+    @IBOutlet weak var fanceFoce: UILabel!
     
     
     
@@ -51,19 +53,79 @@ class APCPersondaddleoingApro: UIViewController {
         super.viewDidLoad()
         
         deploySneakyPrankBot()
+        focusBureon.isSelected = (APCELBarliDxiuController.allFolloweingDatu.filter({ APCEuserFlauy in
+            APCEuserFlauy.blindbox_IOPD == userNoafl?.blindbox_IOPD
+        }).count > 0)
+        
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GiggleByteBuffer()
+    }
     @IBOutlet weak var MatrixButon: UIButton!
     
     
     private func deploySneakyPrankBot() {
-        
+        contentPostLabr.layer.cornerRadius = 20
+        contentPostLabr.isUserInteractionEnabled = true
+        contentPostLabr.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapinestaeeMah)))
+        fooceUserphoto.layer.cornerRadius = 59
+        contentPostLabr.layer.masksToBounds = true
         focceRepo.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
         MatrixButon.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
+        fooceUserphoto.layer.masksToBounds = true
     }
     
+    @objc func tapinestaeeMah()  {
+        guard let userNoafl = self.userNoafl else {
+            return
+        }
+        self.navigationController?.pushViewController(APCEGuesShowingApro.init(itMeCenter: false, userNoafl: userNoafl), animated: true)
+    }
     
-    
+    func GiggleByteBuffer() {
+        if  itMeCenter {
+            fooceUserphoto.image = APCELBarliDxiuController.appChacheimg
+            
+            var userDioemnt = UserDefaults.standard.object(forKey: "mamaFlyainguser") as? Dictionary<String,String>
+            usernauioLbl.text = userDioemnt?["blindbox_name"]
+            
+            
+            self.folooweingcounter.text = "\(APCELBarliDxiuController.allFolloweingDatu.count)"
+            
+            self.focceRepo.isHidden = true
+            focusBureon.isHidden = true
+            sendINgGui.isHidden = true
+            spINgGui.isHidden = true
+            
+        }else{
+            fooceUserphoto.image = UIImage(named: userNoafl?.blindbox_avpter ?? "")
+            usernauioLbl.text = userNoafl?.blindbox_name
+            self.folooweingcounter.text = "\(Int.random(in: 0...3))"
+            self.fanceFoce.text = "\(Int.random(in: 0...3))"
+            if let avvtor = userNoafl?.MH_PICt{
+                
+                
+                postlineffoe.isHidden = false
+                noehtingtiposd.isHidden = true
+                timeolaber.isHidden = false
+                contentPostLabr.isHidden = false
+                contentPostLabr.image = UIImage(named: avvtor)
+                contetnepostm.isHidden = false
+                contetnepostm.text = userNoafl?.MH_Sayuing
+                
+                
+            }else{
+                noehtingtiposd.isHidden = false
+            }
+        }
+        
+   
+    }
+    @IBOutlet weak var sendINgGui: UIButton!
+    @IBOutlet weak var spINgGui: UIButton!
     
     @objc func backJokeDomino(ert:UIButton) {
         if ert ==  MatrixButon {
@@ -71,7 +133,7 @@ class APCPersondaddleoingApro: UIViewController {
         }
         
         if ert ==  focceRepo {
-            //举报
+            reporitEchoBoost()
         }
     }
     
@@ -80,14 +142,117 @@ class APCPersondaddleoingApro: UIViewController {
     
     @IBOutlet weak var focusBureon: UIButton!
         //关注
-    @IBAction func focustchangestarut(_ sender: Any) {
+    @IBAction func focustchangestarut(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            APCELBarliDxiuController.allFolloweingDatu.insert(self.userNoafl!, at: 0)
+        }else{
+            APCELBarliDxiuController.allFolloweingDatu = APCELBarliDxiuController.allFolloweingDatu.filter({ APCEuserFlauy in
+                APCEuserFlauy.blindbox_IOPD != self.userNoafl?.blindbox_IOPD
+            })
+        }
+        
+        
     }
     
     @IBAction func chaitred(_ sender: UIButton) {
         
         //90 chat
+        if sender.tag == 90 {
+            
+            let mainu = APCAilisSendmeasgshptroller.init(itMeCenter: false, userNoafl: userNoafl)
+            mainu.meaasgeAllrecord = APCELMeasgelistBarliDxiu.mesakiuAll.filter({ MeasgtOGFOOCe in
+                MeasgtOGFOOCe.usbder.blindbox_IOPD == self.userNoafl?.blindbox_IOPD
+            }).first?.dilogmesage
+            self.navigationController?.pushViewController(mainu, animated: true)
+        }else{
+            self.navigationController?.pushViewController(APCAilisCallVinshptroller.init(itMeCenter: false, userNoafl: userNoafl), animated: true)
+        }
         //99 video
     }
     
+    
+  
 }
 
+
+
+class FooceeSenConrer: UIViewController {
+    
+    
+    var itMeCenter:Bool
+    var userNoafl:APCEuserFlauy?
+    init(itMeCenter: Bool, userNoafl: APCEuserFlauy?) {
+        self.itMeCenter = itMeCenter
+        self.userNoafl = userNoafl
+      
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(tradmjkhsg), name: NSNotification.Name.init("postbhaieblico"), object: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func tradmjkhsg()  {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    //report
+
+    @objc   func reporitEchoBoost()  {
+         
+        
+        let aposss = UIAlertController(title: "Report or Block", message: "", preferredStyle: .alert)
+        aposss.addAction(UIAlertAction(title: "Block", style: .default, handler: { UIAlertAction in
+            if let nerrID = self.userNoafl?.blindbox_IOPD {
+                self.Blaokido(Iod:nerrID)
+            }
+            
+            
+        }))
+        
+        aposss.addAction(UIAlertAction(title: "Report", style: .default, handler: { UIAlertAction in
+            self.navigationController?.pushViewController(APCrepoIauiCntroller.init(), animated: true)
+        }))
+        aposss.addAction(UIAlertAction(title: "Cancel", style: .default))
+        
+        self.present(aposss, animated: true)
+    }
+    
+    //拉黑
+    func Blaokido(Iod:String)  {
+        let aposss = UIAlertController(title: "Block User", message: "After blocking, you will not receive any push notifications related to this user", preferredStyle: .alert)
+        aposss.addAction(UIAlertAction(title: "sure", style: .default, handler: { UIAlertAction in
+            
+            self.laodingFlay(loadingText: "Blocking.....")
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+                SwiftMessages.hide(animated: true)
+                APCELBarliDxiuController.allFlayDatu = APCELBarliDxiuController.allFlayDatu.filter({ APCEuserFlauy in
+                    APCEuserFlauy.blindbox_IOPD != Iod
+                })
+                
+                APCELBarliDxiuController.allFolloweingDatu = APCELBarliDxiuController.allFolloweingDatu.filter({ APCEuserFlauy in
+                    APCEuserFlauy.blindbox_IOPD != Iod
+                })
+                APCELMeasgelistBarliDxiu.mesakiuAll = APCELMeasgelistBarliDxiu.mesakiuAll.filter({ APCEuserFlauy in
+                    APCEuserFlauy.usbder.blindbox_IOPD != Iod
+                })
+                
+                self.showingAlertingForSuccessfull(alsemessage:"Block successful!")
+                NotificationCenter.default.post(name: NSNotification.Name.init("postbhaieblico"), object: nil, userInfo: nil)
+               
+            }))
+            
+        }))
+        
+        aposss.addAction(UIAlertAction(title: "cancel", style: .default))
+        self.present(aposss, animated: true)
+    }
+}

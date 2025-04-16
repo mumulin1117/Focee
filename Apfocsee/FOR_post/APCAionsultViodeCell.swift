@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-import Player
+
 import AVFoundation
 class APCAionsultViodeCell: UICollectionViewCell {
 

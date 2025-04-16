@@ -30,13 +30,13 @@ class APCELMelinoBarliDxiu: APCENEvcer {
         
         switch sender.tag {
         case 11:
-            self.navigationController?.pushViewController(APCPersondaddleoingApro.init(), animated: true)
+            self.navigationController?.pushViewController(APCPersondaddleoingApro.init(itMeCenter: true, userNoafl: nil), animated: true)
         case 12:
             self.navigationController?.pushViewController(APCEPersoandatet.init(), animated: true)
         case 14:
-            self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: true), animated: false)
+            self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: false), animated: true)
         case 15:
-            self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: false), animated: false)
+            self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: true), animated: true)
         
         case 16:
             let alertingOO = UIAlertController(

@@ -16,6 +16,7 @@
                 <outlet property="foooceISi" destination="yE3-98-I5S" id="Vkw-v6-LLc"/>
                 <outlet property="shleepImagc" destination="yFU-yw-Uyq" id="nsr-fC-eg1"/>
                 <outlet property="shleepshoqwin" destination="jRx-oy-NJ3" id="LdJ-C4-fsg"/>
+                <outlet property="view" destination="luu-hb-n7b" id="Hfy-3q-X6Z"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -43,7 +44,7 @@
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yE3-98-I5S">
                     <rect key="frame" x="12" y="123" width="369" height="695"/>
-                    <color key="backgroundColor" red="0.91372549020000005" green="0.87450980389999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sdm-X0-xTA">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>

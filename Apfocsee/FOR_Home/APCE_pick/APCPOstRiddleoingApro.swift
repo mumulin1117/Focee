@@ -9,6 +9,7 @@ import UIKit
 import SwiftMessages
 //发布
 class APCPOstRiddleoingApro: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
+    private var checkPhotu:Bool = false
     
     
     
@@ -98,7 +99,10 @@ class APCPOstRiddleoingApro: UIViewController,UINavigationControllerDelegate, UI
 
 //post
     @IBAction func swapFacesInVideoChaos(_ sender: UIButton) {
-        
+        guard checkPhotu == true,let text = lockMasterKey.text,text != "What's on your mind?" ,text.count > 0 else {
+            self.showingAlertingFor_Alert(alsemessage: "Please input your ideas and illustrations first!")
+            return
+        }
         laodingFlay(loadingText: "uploading.....")
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
@@ -150,6 +154,7 @@ extension APCPOstRiddleoingApro:UITextViewDelegate{
             DispatchQueue.main.async {
                 picker.dismiss(animated: true)
                 self.photoImhvie.image = image
+                self.checkPhotu = true
             }
         }
     

@@ -93,7 +93,7 @@
                         <action selector="beginPickAlop:" destination="-1" eventType="touchUpInside" id="dfr-fW-qeX"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind, Linh?" translatesAutoresizingMaskIntoConstraints="NO" id="4px-c6-i1M">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind?" translatesAutoresizingMaskIntoConstraints="NO" id="4px-c6-i1M">
                     <rect key="frame" x="15.666666666666657" y="195" width="362" height="523"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="opaqueSeparatorColor"/>

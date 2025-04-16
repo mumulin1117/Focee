@@ -12,16 +12,16 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         allFlay.count
     }
-    let allFlay:[(Int,String,String)] = [(400,"","$0.99"),
-                                         (800,"","$1.99"),
-                                         (2450,"","$4.99"),
-                                         (2930,"","$5.99"),
-                                         (4900,"","$9.99"),
-                                         (9800,"","$19.99"),
-                                         (13600,"","$29.99"),
-                                         (24500,"","$49.99"),
-                                         (34250,"","$69.99"),
-                                         (49000,"","$99.99")]
+    let allFlay:[(Int,String,String)] = [(400,"ctiomdxqyeoaavaf","$0.99"),
+                                         (800,"jycmxdvzhmotyygo","$1.99"),
+                                         (2450,"cgspirkacdeaucnj","$4.99"),
+                                         (2930,"foceetruwihdihis","$5.99"),
+                                         (4900,"rjmvwygbybzkxvpk","$9.99"),
+                                         (9800,"qmnvhgiivcljpyys","$19.99"),
+                                         (13600,"foceeoijfsnmnud","$29.99"),
+                                         (24500,"gvbkoacsyrmibucy","$49.99"),
+                                         (34250,"foceesugdgszbcza","$69.99"),
+                                         (49000,"evbsbecdrlzwjyuu","$99.99")]
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let id = allFlay[indexPath.row]
@@ -76,7 +76,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         foooceISi.layer.cornerRadius = 20
         foooceISi.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMinYCorner]
         MatrixButon.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
-        
+        foooceISi.contentInset = UIEdgeInsets(top:20, left: 0, bottom: 100, right: 0)
         confSeintgFocceCollectionView()
     }
     
@@ -102,7 +102,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
             
             UserDefaults.standard.set(userDioemnt, forKey: "mamaFlyainguser")
             
-            guard let ind = userDioemnt?["useridFlay"] else{return}
+            guard let ind = userDioemnt?["blindbox_IOPD"] else{return}
             
             UserDefaults.standard.set(userDioemnt, forKey: ind)
             
@@ -122,7 +122,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         self.navigationController?.popViewController(animated: true)
     }
     private func confSeintgFocceCollectionView() {
-        foooceISi.register(APCBarblancewCell.self, forCellWithReuseIdentifier: "APCBarblancewCell")
+        foooceISi.register(UINib(nibName: "APCBarblancewCell", bundle: nil), forCellWithReuseIdentifier: "APCBarblancewCell")
         foooceISi.isPagingEnabled = true
         foooceISi.dataSource = self
         let layout = UICollectionViewFlowLayout()

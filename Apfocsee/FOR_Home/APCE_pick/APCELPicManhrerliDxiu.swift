@@ -95,7 +95,7 @@ class APCELPicManhrerliDxiu: UIViewController {
         }
         let data = boxAll[tag]
         
-        let manhe = APCEGuesShowingApro.init(box: data)
+        let manhe = APCEGuesShowingApro.init(itMeCenter: false, userNoafl: data)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
             self.navigationController?.pushViewController(manhe, animated: true)

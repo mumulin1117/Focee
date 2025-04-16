@@ -20,7 +20,8 @@ class APCEuserFlauy {
     var MH_Sayuing:String?
     var MH_result:String?
     var MH_PICt:String?
-    
+    var blindbox_video_comment:String?
+    var blindbox_me_comment:String?
 }
 
 
@@ -79,8 +80,9 @@ class APCELBarliDxiuController: UITabBarController {
                     flauy.MH_Sayuing = dict["MH_Sayuing"]
                     flauy.MH_result = dict["MH_result"]
                     flauy.MH_PICt = dict["MH_PICt"]
+                    flauy.blindbox_video_comment = dict["blindbox_video_comment"]
                     
-                   
+                    APCELMeasgelistBarliDxiu.mesakiuAll.append(MeasgtOGFOOCe(usbder: flauy, dilogmesage: []))
                     return flauy
                 }
         }
@@ -95,11 +97,24 @@ class APCELBarliDxiuController: UITabBarController {
     func addTestfollowering()  {
         
         let userDioemnt = UserDefaults.standard.object(forKey: "mamaFlyainguser") as? Dictionary<String,String>
-        guard let ind = userDioemnt?["useridFlay"] else{return}
+        guard let ind = userDioemnt?["blindbox_IOPD"] else{return}
         
         if ind == "focee@gmail.com" {
             APCELBarliDxiuController.allFolloweingDatu = Array(APCELBarliDxiuController.allFlayDatu.prefix(1))
             APCELBarliDxiuController.appChacheimg = UIImage(named: "fullicon")
+            
+            var fird = APCELMeasgelistBarliDxiu.mesakiuAll[0].dilogmesage
+            
+            fird?.append("hello what are you doing")
+            APCELMeasgelistBarliDxiu.mesakiuAll[0].dilogmesage = fird
+            
+            var nextfird = APCELMeasgelistBarliDxiu.mesakiuAll[1].dilogmesage
+            
+            nextfird?.append("Hi,I love listening some jokes!")
+            APCELMeasgelistBarliDxiu.mesakiuAll[1].dilogmesage = nextfird
+            
+            
+            return
         }
         
         APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")

@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-Jp-76I">
-                    <rect key="frame" x="0.0" y="111" width="393" height="741"/>
+                    <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                     <color key="backgroundColor" red="0.015686274509803921" green="0.082352941176470587" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F7C-ZQ-ybd">
                         <size key="itemSize" width="128" height="128"/>
@@ -66,8 +66,8 @@
                 <constraint firstItem="XXT-Jp-76I" firstAttribute="trailing" secondItem="g1O-Ep-bJY" secondAttribute="trailing" id="TxQ-8b-ymI"/>
                 <constraint firstItem="XXT-Jp-76I" firstAttribute="leading" secondItem="g1O-Ep-bJY" secondAttribute="leading" id="cNW-Sb-uYe"/>
                 <constraint firstItem="zeJ-k1-P1Z" firstAttribute="top" secondItem="g1O-Ep-bJY" secondAttribute="top" id="eAw-7O-kr2"/>
-                <constraint firstItem="XXT-Jp-76I" firstAttribute="top" secondItem="zeJ-k1-P1Z" secondAttribute="bottom" constant="12" id="gWK-wH-Fza"/>
                 <constraint firstItem="Mox-o1-9t0" firstAttribute="top" secondItem="7Uk-uk-TdE" secondAttribute="top" id="lIH-xF-1rI"/>
+                <constraint firstItem="XXT-Jp-76I" firstAttribute="top" secondItem="g1O-Ep-bJY" secondAttribute="top" constant="60" id="yCH-mM-6T7"/>
             </constraints>
             <point key="canvasLocation" x="93.89312977099236" y="20.422535211267608"/>
         </view>

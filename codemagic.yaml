@@ -1,18 +1,18 @@
 workflows:
   ios-native-workflow:
-    name: Duelliv
+    name: Focee
     max_build_duration: 120
     instance_type: mac_mini_m1
     integrations:
-      app_store_connect: Duelliv
+      app_store_connect: Focee
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.duelay.dancy
+        bundle_identifier: com.aeepo.focee
       vars:
-        BUNDLE_ID: "com.duelay.dancy"
-        XCODE_WORKSPACE: Duelliobuaf.xcworkspace # <-- Put the name of your Xcode workspace here
-        XCODE_SCHEME: "Duelliobuaf" # <-- Put the name of your Xcode scheme here
+        BUNDLE_ID: "com.aeepo.focee"
+        XCODE_WORKSPACE: Apfocsee.xcworkspace # <-- Put the name of your Xcode workspace here
+        XCODE_SCHEME: "Apfocsee" # <-- Put the name of your Xcode scheme here
 #        APP_STORE_APPLE_ID: 6743076520
       xcode: latest
       cocoapods: default

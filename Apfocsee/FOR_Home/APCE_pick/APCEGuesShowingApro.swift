@@ -7,16 +7,16 @@
 
 import UIKit
 //showing盲盒
-class APCEGuesShowingApro: UIViewController {
-    var box:APCEuserFlauy
-    init(box: APCEuserFlauy) {
-        self.box = box
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+class APCEGuesShowingApro: FooceeSenConrer {
+//    var box:APCEuserFlauy
+//    init(box: APCEuserFlauy) {
+//        self.box = box
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     
     
@@ -42,12 +42,12 @@ class APCEGuesShowingApro: UIViewController {
         deploySneakyPrankBot()
         
         thinkimg.layer.masksToBounds = true
-        self.thinkimg.image = UIImage(named: box.MH_PICt ?? "")
-        thinkuserPhoto.image = UIImage(named: box.blindbox_avpter ?? "")
+        self.thinkimg.image = UIImage(named: self.userNoafl?.MH_PICt ?? "")
+        thinkuserPhoto.image = UIImage(named: self.userNoafl?.blindbox_avpter ?? "")
         
-        
-        thinkuserBanme.text = box.blindbox_name
-        thinkingcontent.text = box.MH_Sayuing
+        NotificationCenter.default.addObserver(self, selector: #selector(tradmjkhsg), name: NSNotification.Name.init("postbhaieblico"), object: nil)
+        thinkuserBanme.text = self.userNoafl?.blindbox_name
+        thinkingcontent.text = self.userNoafl?.MH_Sayuing
     }
     
     private func deploySneakyPrankBot() {
@@ -69,7 +69,7 @@ class APCEGuesShowingApro: UIViewController {
         }
         
         if ert ==  focceRepo {
-            //举报
+            self.reporitEchoBoost()
         }
     }
     @IBOutlet weak var MatrixButon: UIButton!
@@ -92,7 +92,7 @@ class APCEGuesShowingApro: UIViewController {
             
         }
         
-        if (box.MH_result == "TRUE" && rerusl == true) ||  (box.MH_result == "FALSE" && rerusl == false){
+        if (self.userNoafl?.MH_result == "TRUE" && rerusl == true) ||  (self.userNoafl?.MH_result == "FALSE" && rerusl == false){
             let moadllresult = APCEREsultsioingApro.init(resultAPCA: true)
             moadllresult.modalPresentationStyle = .fullScreen
             self.present(moadllresult, animated: true)

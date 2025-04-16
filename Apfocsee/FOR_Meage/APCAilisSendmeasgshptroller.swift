@@ -7,13 +7,30 @@
 import SnapKit
 import UIKit
 //发送消息
-class APCAilisSendmeasgshptroller: UIViewController, UITableViewDelegate,UITableViewDataSource {
+class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableViewDataSource {
+    
+    var meaasgeAllrecord:Array<String>?
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        LaughterView.reloadData()
+    }
+    deinit {
+        for (ido,Ijush) in APCELMeasgelistBarliDxiu.mesakiuAll.enumerated(){
+            if let measNew = meaasgeAllrecord, Ijush.usbder.blindbox_IOPD == self.userNoafl?.blindbox_IOPD {
+                APCELMeasgelistBarliDxiu.mesakiuAll[ido].dilogmesage = measNew
+            }
+            
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        meaasgeAllrecord?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let foocee = tableView.dequeueReusableCell(withIdentifier: "APCATalkCell", for: indexPath) as! APCATalkCell
+        foocee.conterinJLbl.text = meaasgeAllrecord?[indexPath.row]
         return foocee
         
     }
@@ -27,11 +44,11 @@ class APCAilisSendmeasgshptroller: UIViewController, UITableViewDelegate,UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        useNakerl.text = self.userNoafl?.blindbox_name
         deploySneakyPrankBot()
         
         syncRealTimePrankWave()
-        
+        LaughterView.dataSource = self
         LaughterView.register(APCATalkCell.self, forCellReuseIdentifier: "APCATalkCell")
     }
     
@@ -40,7 +57,7 @@ class APCAilisSendmeasgshptroller: UIViewController, UITableViewDelegate,UITable
         LaughterView.showsVerticalScrollIndicator = false
         LaughterView.delegate = self
         LaughterView.separatorStyle = .none
-        LaughterView.rowHeight = UITableView.automaticDimension
+        LaughterView.rowHeight = 105
     }
     
     private func deploySneakyPrankBot() {
@@ -59,6 +76,7 @@ class APCAilisSendmeasgshptroller: UIViewController, UITableViewDelegate,UITable
         
         if ert ==  focceRepo {
             //举报
+            self.reporitEchoBoost()
         }
     }
     
@@ -71,11 +89,26 @@ class APCAilisSendmeasgshptroller: UIViewController, UITableViewDelegate,UITable
     
    //video call
     @IBAction func LaughterEchoBoost(_ sender: UIButton) {
-  
+        self.navigationController?.pushViewController(APCAilisCallVinshptroller.init(itMeCenter: false, userNoafl: userNoafl), animated: true)
     }
     
     //send message
     @IBAction func uioMeaasgesure(_ sender: UIButton) {
+        
+        
+       
+        
+        if self.foooceINpuwter.text == nil || self.foooceINpuwter.text?.count ?? 0 < 1 {
+            showingAlertingFor_Alert(alsemessage:"Please enter something first!")
+            return
+        }
+        meaasgeAllrecord?.append(self.foooceINpuwter.text!)
+        
+        LaughterView.reloadData()
+        
+        foooceINpuwter.resignFirstResponder()
+        foooceINpuwter.text = nil
+       
     }
     
     
@@ -90,35 +123,35 @@ class APCAilisSendmeasgshptroller: UIViewController, UITableViewDelegate,UITable
 
 
 class APCATalkCell: UITableViewCell {
-    let apca = UIImageView.init()
+    private let apca = UIImageView.init(image: APCELBarliDxiuController.appChacheimg)
     let conterinJLbl = UILabel.init()
     
     
-    func updateMoreHui(isRighy:Bool)  {
-        if isRighy {
-            apca.snp.remakeConstraints { make in
-                make.width.height.equalTo(36)
-                make.trailing.equalToSuperview()
-                make.top.equalToSuperview().offset(16)
-            }
-            
-            conterinJLbl.snp.remakeConstraints { make in
-                make.trailing.equalTo(apca.snp.leading).offset(24)
-                make.width.greaterThanOrEqualTo(70)
-                make.width.lessThanOrEqualTo(200)
-                make.top.equalToSuperview().offset(11 + 16)
-                make.bottom.equalToSuperview().offset(-11  - 16)
-            }
-            
-            singleijbiew.snp.remakeConstraints { make in
-                make.center.equalTo(conterinJLbl)
-                make.leading.equalTo(conterinJLbl.snp.leading).offset(-12)
-                make.trailing.equalTo(conterinJLbl.snp.trailing).offset(12)
-                make.top.equalTo(conterinJLbl.snp.top).offset(-12)
-                make.bottom.equalTo(conterinJLbl.snp.bottom).offset(12)
-            }
-        }
-    }
+//    func updateMoreHui(isRighy:Bool)  {
+//        if isRighy {
+//            apca.snp.remakeConstraints { make in
+//                make.width.height.equalTo(36)
+//                make.trailing.equalToSuperview()
+//                make.top.equalToSuperview().offset(16)
+//            }
+//            
+//            conterinJLbl.snp.remakeConstraints { make in
+//                make.trailing.equalTo(apca.snp.leading).offset(24)
+//                make.width.greaterThanOrEqualTo(70)
+//                make.width.lessThanOrEqualTo(200)
+//                make.top.equalToSuperview().offset(11 + 16)
+//                make.bottom.equalToSuperview().offset(-11  - 16)
+//            }
+//            
+//            singleijbiew.snp.remakeConstraints { make in
+//                make.center.equalTo(conterinJLbl)
+//                make.leading.equalTo(conterinJLbl.snp.leading).offset(-12)
+//                make.trailing.equalTo(conterinJLbl.snp.trailing).offset(12)
+//                make.top.equalTo(conterinJLbl.snp.top).offset(-12)
+//                make.bottom.equalTo(conterinJLbl.snp.bottom).offset(12)
+//            }
+//        }
+//    }
     private let singleijbiew = UIView.init()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -127,7 +160,7 @@ class APCATalkCell: UITableViewCell {
         apca.layer.cornerRadius = 18
        
         syncRealTimePrankWave()
-        
+        self.backgroundColor = .clear
         apca.layer.masksToBounds = true
     }
     
@@ -148,14 +181,17 @@ class APCATalkCell: UITableViewCell {
     }
     
     private func syncRealTimePrankWave()  {
+        conterinJLbl.numberOfLines = 0
+
+        
         apca.snp.makeConstraints { make in
             make.width.height.equalTo(36)
-            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.top.equalToSuperview().offset(16)
         }
         
         conterinJLbl.snp.makeConstraints { make in
-            make.leading.equalTo(apca.snp.trailing).offset(24)
+            make.trailing.equalTo(apca.snp.leading).offset(-24)
             make.width.greaterThanOrEqualTo(70)
             make.width.lessThanOrEqualTo(200)
             make.top.equalToSuperview().offset(11 + 16)
@@ -163,7 +199,7 @@ class APCATalkCell: UITableViewCell {
         }
         
         singleijbiew.snp.makeConstraints { make in
-            make.center.equalTo(conterinJLbl)
+//            make.center.equalTo(conterinJLbl)
             make.leading.equalTo(conterinJLbl.snp.leading).offset(-12)
             make.trailing.equalTo(conterinJLbl.snp.trailing).offset(12)
             make.top.equalTo(conterinJLbl.snp.top).offset(-12)

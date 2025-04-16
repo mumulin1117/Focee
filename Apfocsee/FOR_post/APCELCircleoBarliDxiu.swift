@@ -8,7 +8,6 @@
 import UIKit
 
 import SwiftMessages
-import Player
 
 class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionViewDelegate{
     
@@ -30,6 +29,9 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         forcce.allodj(doe: boxAll[indexPath.row])
         forcce.kifyHlike.tag = indexPath.row
         forcce.kifyHlike.addTarget(self, action: #selector(swapFacesInVideoChaos(Matrix:)), for: .touchUpInside)
+        
+        forcce.eninnerUser.tag = indexPath.row
+        forcce.eninnerUser.addTarget(self, action: #selector(inserinUserInhaos(Matrix:)), for: .touchUpInside)
         
         forcce.kifyCommentr.tag = indexPath.row
         forcce.kifyCommentr.addTarget(self, action: #selector(LaughterEchoBoost(Matrix:)), for: .touchUpInside)
@@ -56,14 +58,23 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         super.viewDidLoad()
      
         confSeintgFocceCollectionView()
-        
-       
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(tradmjkhsg), name: NSNotification.Name.init("postbhaieblico"), object: nil)
+    }
+   
+    
+    @objc func tradmjkhsg()  {
+        self.maFooceViedeView.reloadData()
         
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        handleVideoPlayback()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+            self.handleVideoPlayback()
+        }))
+        
     }
     
     // 核心方法：处理视频播放
@@ -122,13 +133,29 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
     
     //like
     @objc func swapFacesInVideoChaos(Matrix:UIButton)  {
+        
+        let modalnowe = boxAll[Matrix.tag]
+        
         Matrix.isSelected = !Matrix.isSelected
+        modalnowe.video_loke = Matrix.isSelected ? "lovert" : nil
+        for (i,modal) in APCELBarliDxiuController.allFlayDatu.enumerated(){
+            if modal.blindbox_IOPD == modalnowe.blindbox_IOPD {
+                APCELBarliDxiuController.allFlayDatu[i] = modalnowe
+            }
+        }
     }
-    
+    //user center
+    @objc func inserinUserInhaos(Matrix:UIButton)  {
+        
+        let modalnowe = boxAll[Matrix.tag]
+        
+        self.navigationController?.pushViewController(APCPersondaddleoingApro.init(itMeCenter: false, userNoafl: modalnowe), animated: true)  
+    }
     
     //comment
     @objc func LaughterEchoBoost(Matrix:UIButton)  {
-        let comment = APCrCommentViewntroller.init()
+        let modalnowe = boxAll[Matrix.tag]
+        let comment = APCrCommentViewntroller.init(ouser: modalnowe)
         comment.modalPresentationStyle = .overCurrentContext
         self.present(comment, animated: true)
     }
@@ -166,9 +193,24 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
                 APCELBarliDxiuController.allFlayDatu = APCELBarliDxiuController.allFlayDatu.filter({ APCEuserFlauy in
                     APCEuserFlauy.blindbox_IOPD != Iod
                 })
+                APCELMeasgelistBarliDxiu.mesakiuAll = APCELMeasgelistBarliDxiu.mesakiuAll.filter({ APCEuserFlauy in
+                    APCEuserFlauy.usbder.blindbox_IOPD != Iod
+                })
                 
+                APCELBarliDxiuController.allFolloweingDatu = APCELBarliDxiuController.allFolloweingDatu.filter({ APCEuserFlauy in
+                    APCEuserFlauy.blindbox_IOPD != Iod
+                })
                 self.showingAlertingForSuccessfull(alsemessage:"Block successful!")
+                
+                
                 self.maFooceViedeView.reloadData()
+               
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                    
+                    self.currentPlayingIndexPath = IndexPath(row: 0, section: 0)
+                    let cell = self.maFooceViedeView.cellForItem(at: self.currentPlayingIndexPath!) as? APCAionsultViodeCell
+                    cell?.player?.play()
+                }))
             }))
             
         }))

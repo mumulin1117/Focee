@@ -92,8 +92,8 @@ class APCELSureEmailfuseDxiu: UIViewController {
         }
         
         //如果邮箱id，对应的值存在。则是登陆
-        UserDefaults.standard.set(indfo, forKey: "ingCurrentUserMiAJ")//设置当前的登陆帐号
-       
+        UserDefaults.standard.set(indfo, forKey: "mamaFlyainguser")//设置当前的登陆帐号
+        
         laodingFlay(loadingText: "login.....")
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
@@ -109,13 +109,12 @@ class APCELSureEmailfuseDxiu: UIViewController {
         if UserDefaults.standard.bool(forKey: "ifAddiedid") == false {
             
             UserDefaults.standard.set([
-                "blindbox_emial":"focee@gmail.com",
+                "blindbox_IOPD":"focee@gmail.com",
                 "blindbox_name":"AhoFoo",
                 "blindbox_avpter":"fullicon",
                 
-                "blindbox_text":"Guess it!Tag your prank partner-in-crime!",
-                "blindbox_video":"blindVideo4",
-                "domoned":"100"], forKey: "focee@gmail.com")
+               
+                "domoned":"35"], forKey: "focee@gmail.com")
            
             UserDefaults.standard.set(true, forKey: "ifAddiedid")
         }

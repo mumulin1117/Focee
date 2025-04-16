@@ -16,6 +16,7 @@
                 <outlet property="focceRepo" destination="4PC-7n-Ie8" id="i0w-55-smo"/>
                 <outlet property="foooceINpuwter" destination="be7-MM-ZQ1" id="0Zp-Ix-orL"/>
                 <outlet property="useNakerl" destination="AlD-m8-2XP" id="JAF-EI-KfE"/>
+                <outlet property="view" destination="l3u-oa-9Nw" id="tkQ-Rv-41f"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

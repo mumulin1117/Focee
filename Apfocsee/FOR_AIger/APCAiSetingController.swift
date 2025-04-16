@@ -79,7 +79,17 @@ class APCAiSetingController: UIViewController,UITextViewDelegate {
             showingAlertingFor_Alert(alsemessage:"Please enter your prank theme ideas!")
             return
         }
-        
+        if APCBarblanceaddleoiApro.diomendAPCE < 300 {
+            
+            let influce = APCEInfluceCoinController.init()
+            influce.modalPresentationStyle = .overCurrentContext
+            influce.onRechargeTapped = {
+                self.navigationController?.pushViewController(APCBarblanceaddleoiApro.init(), animated: true)
+            }
+            self.present(influce, animated: true)
+            return
+        }
+         APCBarblanceaddleoiApro.diomendAPCE = APCBarblanceaddleoiApro.diomendAPCE - 300
         let post = APCAionsultController.init(titileForTYPE: titileForTYPE,titileForAudience: titileForAudience,themeForTYPE: maind)
         self.navigationController?.pushViewController(post, animated: true)
     }
