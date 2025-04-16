@@ -109,8 +109,8 @@
                         <action selector="moanihdhSite:" destination="-1" eventType="touchUpInside" id="fHE-Rk-T3p"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNv-b0-ds1">
-                    <rect key="frame" x="298" y="94.666666666666671" width="56" height="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNv-b0-ds1">
+                    <rect key="frame" x="298" y="103" width="56" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="56" id="rJG-U7-7KG"/>
                     </constraints>
@@ -118,8 +118,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-lz-Z1F">
-                    <rect key="frame" x="70" y="97" width="50" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-lz-Z1F">
+                    <rect key="frame" x="70" y="103" width="50" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="4IU-02-a6d"/>
                     </constraints>

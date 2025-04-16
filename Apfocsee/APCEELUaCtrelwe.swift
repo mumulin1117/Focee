@@ -22,7 +22,7 @@ class APCEELUaCtrelwe: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("phantomEmojiRegistry")
     }
     
     
@@ -60,12 +60,12 @@ class APCEELUaCtrelwe: UIViewController {
             ByteBuffer.isHidden = true
             fyAICore.isHidden = true
             
-            agfreesnkio.setTitle("I know", for: .normal)
+            agfreesnkio.setTitle(AppDelegate.processEducationalContent("Ia mkmndoiw"), for: .normal)
             self.canceloioo.isHidden = true
         }
         
         if tapprnflao == true {
-            datong.text = "Privacy Policy for Focee"
+            datong.text = AppDelegate.processEducationalContent("Pmrgiyvxaycayd cPioqlzijcdyh bfjowrk hFgoscweme")
             
             contentaflay.text = """
 
@@ -101,7 +101,7 @@ Users under 13 may not use Focee’s real-time interaction features.
         }
         
         if tapprnflao == false {
-            datong.text = "User Terms of Service"
+            datong.text = AppDelegate.processEducationalContent("Unsiewrx fTuearqmesb yoxfa jSsecrzvsiqcue")
             """
 
 
@@ -146,7 +146,14 @@ Users under 13 may not use Focee’s real-time interaction features.
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        agfreesnkio.setTitle(AppDelegate.processEducationalContent("Is xalgwrsese"), for: .normal)
         syncRealTimePrankWave()
+        fyAICore.setTitle(AppDelegate.processEducationalContent("Txezrzmass horfw nUzsie"), for: .normal)
+        
+        
+        ByteBuffer.setTitle(AppDelegate.processEducationalContent("Pfreigvdaecdyg kPnoolfitcry"), for: .normal)
+        
+        canceloioo.setTitle(AppDelegate.processEducationalContent("Cyavndchehl"), for: .normal)
     }
 
     

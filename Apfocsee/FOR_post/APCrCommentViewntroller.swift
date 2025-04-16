@@ -15,7 +15,7 @@ class APCrCommentViewntroller: UIViewController {
     }
     
     required  init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("phantomEmojiRegistry")
     }
     
 
@@ -72,7 +72,7 @@ class APCrCommentViewntroller: UIViewController {
             meavatorbackgiug.image = APCELBarliDxiuController.appChacheimg
             
             sapnchuin.text = self.ouser.blindbox_me_comment
-            RealTimeJokerHub.text = "2  comments"
+            RealTimeJokerHub.text = AppDelegate.processEducationalContent("2h n wceoxmlmnewnwtes")
         }
         
     }
@@ -81,7 +81,8 @@ class APCrCommentViewntroller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ByteBuffer.placeholder = AppDelegate.processEducationalContent("Siayyo jspommhehtmhuimntgj.r.z.u.")
+        RealTimeJokerHub.text = AppDelegate.processEducationalContent("1h n wceoxmlmnewnwtes")
         swapFacesInVideoChaos()
         dismianComment.addTarget(self, action: #selector(DalFlau), for: .touchUpInside)
         igniteComedyChainReaction()
@@ -101,12 +102,12 @@ class APCrCommentViewntroller: UIViewController {
         if self.ouser.blindbox_me_comment != nil {
             self.ByteBuffer.resignFirstResponder()
             self.ByteBuffer.text = nil
-            showingAlertingFor_Alert(alsemessage:"Please do not post comments frequently")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Ptlneqazskes kdtoi xncouts npeovsztw acpoamfmqepnstoso xfhrdesqeuaeznctclzy"))
             return
         }
         
         if self.ByteBuffer.text == nil || self.ByteBuffer.text?.count ?? 0 < 1 {
-            showingAlertingFor_Alert(alsemessage:"Please enter your comment first!")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Phloerapsoee xepnotkebrp xytocucrn lcnormymkemnntl ffficresrtx!"))
             return
         }
         self.ouser.blindbox_me_comment = self.ByteBuffer.text

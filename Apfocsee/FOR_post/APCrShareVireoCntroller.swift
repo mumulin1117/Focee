@@ -30,6 +30,7 @@ class APCrShareVireoCntroller: UIViewController {
     @IBOutlet weak var MatrixButon: UIButton!
    
     
+    @IBOutlet weak var poastrbutlater: UIButton!
     @objc func backJokeDomino() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -40,11 +41,11 @@ class APCrShareVireoCntroller: UIViewController {
             self.showingAlertingFor_Alert(alsemessage: "Please input your prank stories and video first!")
             return
         }
-        laodingFlay(loadingText: "uploading.....")
+        laodingFlay(loadingText: AppDelegate.processEducationalContent("uepklpowaodiirncgi.z.q.p.b."))
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
             SwiftMessages.hide(animated: true)
-            self.showingAlertingForSuccessfull(alsemessage:"upload successful! the updates will be displayed after approval")
+            self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("uyppliouazdm lsautcfczegsislfpuole!b htihjeh buepzduaptzepss uwbialglb rbvea bdqizsaprluazygefdp ianfztbesrv jaupzpnriobvaavl"))
             self.navigationController?.popViewController(animated: true)
             
         }))
@@ -55,18 +56,18 @@ class APCrShareVireoCntroller: UIViewController {
     @IBAction func PrankChallengeFeedStream(_ sender: UIButton) {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            laodingFlay(loadingText: "Video analysis in progress.....")
+            laodingFlay(loadingText: AppDelegate.processEducationalContent("Vjixdkefoy fawnhaklrybsuiysm iifnz sptrxojgrrnefstsd.g.m.e.e."))
             let puajoto = UIImagePickerController()
             
             
            
             puajoto.sourceType = .photoLibrary
             puajoto.delegate = self
-            puajoto.mediaTypes = ["public.movie"]
+            puajoto.mediaTypes = [AppDelegate.processEducationalContent("pvuabulhidcg.gmdomvgige")]
             self.present(puajoto, animated: true, completion: nil)
             return
         }
-        showingAlertingFor_Alert(alsemessage:"No photo permission!")
+        showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Nooz kplhyogtaoi tpcecrpmpisstsiioocnx!"))
         
         
     }
@@ -74,6 +75,7 @@ class APCrShareVireoCntroller: UIViewController {
     
     private func triggerLaughterEchoBoost()  {
         lockMasterKey.layer.cornerRadius = 20
+        poastrbutlater.setTitle(AppDelegate.processEducationalContent("PkOtSyT"), for: .normal)
         lockMasterKey.layer.masksToBounds = true
         lockMasterKey.contentInset = UIEdgeInsets(top: 20, left: 18, bottom: 18, right: 38)
         lockMasterKey.delegate = self
@@ -93,7 +95,7 @@ extension APCrShareVireoCntroller:UITextViewDelegate, UIImagePickerControllerDel
             picker.dismiss(animated: true)
             
             guard let videoURL = info[.mediaURL] as? URL ?? info[.referenceURL] as? URL else {
-                showingAlertingFor_Alert(alsemessage:"Video parsing failed!")
+                showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Vsivdeegol upaaerestiencgy wfiaxijlvehdp!"))
                 return
             }
             
@@ -129,7 +131,7 @@ extension APCrShareVireoCntroller:UITextViewDelegate, UIImagePickerControllerDel
             )
             return UIImage(cgImage: cgImage)
         } catch {
-            showingAlertingFor_Alert(alsemessage:"Video parsing failed!")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Vsivdeegol upaaerestiencgy wfiaxijlvehdp!"))
             return nil
         }
     }

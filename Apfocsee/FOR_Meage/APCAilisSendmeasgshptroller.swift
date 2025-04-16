@@ -46,10 +46,14 @@ class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableV
         super.viewDidLoad()
         useNakerl.text = self.userNoafl?.blindbox_name
         deploySneakyPrankBot()
-        
+        chaosCipherStream()
         syncRealTimePrankWave()
         LaughterView.dataSource = self
         LaughterView.register(APCATalkCell.self, forCellReuseIdentifier: "APCATalkCell")
+    }
+    
+    func chaosCipherStream(){
+        foooceINpuwter.placeholder = AppDelegate.processEducationalContent("Srasyz dsfobmdelttheienhge.d.w.w.")
     }
     
    
@@ -99,7 +103,7 @@ class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableV
        
         
         if self.foooceINpuwter.text == nil || self.foooceINpuwter.text?.count ?? 0 < 1 {
-            showingAlertingFor_Alert(alsemessage:"Please enter something first!")
+            showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("Pqlceqaqsjek jegnltaefra rsxokmyeutghoisnbgr yfiibrnswtt!"))
             return
         }
         meaasgeAllrecord?.append(self.foooceINpuwter.text!)
@@ -126,32 +130,7 @@ class APCATalkCell: UITableViewCell {
     private let apca = UIImageView.init(image: APCELBarliDxiuController.appChacheimg)
     let conterinJLbl = UILabel.init()
     
-    
-//    func updateMoreHui(isRighy:Bool)  {
-//        if isRighy {
-//            apca.snp.remakeConstraints { make in
-//                make.width.height.equalTo(36)
-//                make.trailing.equalToSuperview()
-//                make.top.equalToSuperview().offset(16)
-//            }
-//            
-//            conterinJLbl.snp.remakeConstraints { make in
-//                make.trailing.equalTo(apca.snp.leading).offset(24)
-//                make.width.greaterThanOrEqualTo(70)
-//                make.width.lessThanOrEqualTo(200)
-//                make.top.equalToSuperview().offset(11 + 16)
-//                make.bottom.equalToSuperview().offset(-11  - 16)
-//            }
-//            
-//            singleijbiew.snp.remakeConstraints { make in
-//                make.center.equalTo(conterinJLbl)
-//                make.leading.equalTo(conterinJLbl.snp.leading).offset(-12)
-//                make.trailing.equalTo(conterinJLbl.snp.trailing).offset(12)
-//                make.top.equalTo(conterinJLbl.snp.top).offset(-12)
-//                make.bottom.equalTo(conterinJLbl.snp.bottom).offset(12)
-//            }
-//        }
-//    }
+
     private let singleijbiew = UIView.init()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -165,7 +144,7 @@ class APCATalkCell: UITableViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("phantomEmojiRegistry")
     }
     
     private func spreadVirtualTicklishVirus(){

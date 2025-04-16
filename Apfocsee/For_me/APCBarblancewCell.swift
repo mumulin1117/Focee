@@ -14,10 +14,5 @@ class APCBarblancewCell: UICollectionViewCell {
     
     @IBOutlet weak var spenmmoney: UIButton!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+   
 }

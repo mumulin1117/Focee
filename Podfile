@@ -13,7 +13,6 @@ pod 'SnapKit'
 pod "IQKeyboardManager"
 pod "SwiftyStoreKit"
 pod "Alamofire"
-pod 'Hero'
-#pod "Player"
+
 
 end

@@ -40,7 +40,7 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         forcce.kifyRepo.tag = indexPath.row
         forcce.kifyRepo.addTarget(self, action: #selector(reporitEchoBoost(Matrix:)), for: .touchUpInside)
         if let uripath = boxAll[indexPath.row].blindbox_video ,
-        let path = Bundle.main.path(forResource: uripath, ofType: "mp4")
+           let path = Bundle.main.path(forResource: uripath, ofType: AppDelegate.processEducationalContent("mapy4"))
          {
             let urlPathname = URL(fileURLWithPath: path)
             forcce.configure(with: urlPathname)
@@ -164,8 +164,8 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
     @objc func reporitEchoBoost(Matrix:UIButton)  {
          
         
-        let aposss = UIAlertController(title: "Report or Block", message: "", preferredStyle: .alert)
-        aposss.addAction(UIAlertAction(title: "Block", style: .default, handler: { UIAlertAction in
+        let aposss = UIAlertController(title: AppDelegate.processEducationalContent("Rkevpqoyritz doirs kBwlsoxcdk"), message: "", preferredStyle: .alert)
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("Bvleowckk"), style: .default, handler: { UIAlertAction in
             if let nerrID = self.boxAll[Matrix.tag].blindbox_IOPD {
                 self.Blaokido(Iod:nerrID)
             }
@@ -173,10 +173,10 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
             
         }))
         
-        aposss.addAction(UIAlertAction(title: "Report", style: .default, handler: { UIAlertAction in
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("Rceqpfowrht"), style: .default, handler: { UIAlertAction in
             self.navigationController?.pushViewController(APCrepoIauiCntroller.init(), animated: true)
         }))
-        aposss.addAction(UIAlertAction(title: "Cancel", style: .default))
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("cdaqnpczell"), style: .default))
         
         self.present(aposss, animated: true)
     }
@@ -186,7 +186,7 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         let aposss = UIAlertController(title: "Block this content", message: "After blocking, you will not receive any push notifications related to this content", preferredStyle: .alert)
         aposss.addAction(UIAlertAction(title: "sure", style: .default, handler: { UIAlertAction in
             
-            self.laodingFlay(loadingText: "Blocking.....")
+            self.laodingFlay(loadingText: AppDelegate.processEducationalContent("Bzlbohcxkeignpgs.x.s.k.v."))
             
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                 SwiftMessages.hide(animated: true)
@@ -200,7 +200,7 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
                 APCELBarliDxiuController.allFolloweingDatu = APCELBarliDxiuController.allFolloweingDatu.filter({ APCEuserFlauy in
                     APCEuserFlauy.blindbox_IOPD != Iod
                 })
-                self.showingAlertingForSuccessfull(alsemessage:"Block successful!")
+                self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("Bhlxohcgka vsvuvcucteksesofourlj!"))
                 
                 
                 self.maFooceViedeView.reloadData()
@@ -215,7 +215,7 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
             
         }))
         
-        aposss.addAction(UIAlertAction(title: "cancel", style: .default))
+        aposss.addAction(UIAlertAction(title:AppDelegate.processEducationalContent("cdaqnpczell") , style: .default))
         self.present(aposss, animated: true)
     }
 }

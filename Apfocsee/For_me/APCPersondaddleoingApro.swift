@@ -196,7 +196,7 @@ class FooceeSenConrer: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(tradmjkhsg), name: NSNotification.Name.init("postbhaieblico"), object: nil)
     }
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("phantomEmojiRegistry")
     }
     
     @objc func tradmjkhsg()  {
@@ -208,8 +208,8 @@ class FooceeSenConrer: UIViewController {
     @objc   func reporitEchoBoost()  {
          
         
-        let aposss = UIAlertController(title: "Report or Block", message: "", preferredStyle: .alert)
-        aposss.addAction(UIAlertAction(title: "Block", style: .default, handler: { UIAlertAction in
+        let aposss = UIAlertController(title: AppDelegate.processEducationalContent("Rkevpqoyritz doirs kBwlsoxcdk"), message: "", preferredStyle: .alert)
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("Bvleowckk"), style: .default, handler: { UIAlertAction in
             if let nerrID = self.userNoafl?.blindbox_IOPD {
                 self.Blaokido(Iod:nerrID)
             }
@@ -217,20 +217,20 @@ class FooceeSenConrer: UIViewController {
             
         }))
         
-        aposss.addAction(UIAlertAction(title: "Report", style: .default, handler: { UIAlertAction in
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("Rceqpfowrht"), style: .default, handler: { UIAlertAction in
             self.navigationController?.pushViewController(APCrepoIauiCntroller.init(), animated: true)
         }))
-        aposss.addAction(UIAlertAction(title: "Cancel", style: .default))
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("cdaqnpczell"), style: .default))
         
         self.present(aposss, animated: true)
     }
     
     //拉黑
     func Blaokido(Iod:String)  {
-        let aposss = UIAlertController(title: "Block User", message: "After blocking, you will not receive any push notifications related to this user", preferredStyle: .alert)
-        aposss.addAction(UIAlertAction(title: "sure", style: .default, handler: { UIAlertAction in
+        let aposss = UIAlertController(title:  AppDelegate.processEducationalContent("Balyolczki wUcsjejr"), message: AppDelegate.processEducationalContent("Axftteezrl lbalfoeclkoiinggg,i fyhoiub qwhiuljlr jnxouta krteocwehikvbef xaqnpyr wpwuasthr znwoltmiefriecxajtkitobnqst preezlvactteqdy rttow mtfhyizso gunssebr") , preferredStyle: .alert)
+        aposss.addAction(UIAlertAction(title:AppDelegate.processEducationalContent("shugrue") , style: .default, handler: { UIAlertAction in
             
-            self.laodingFlay(loadingText: "Blocking.....")
+            self.laodingFlay(loadingText: AppDelegate.processEducationalContent("Bzlbohcxkeignpgs.x.s.k.v."))
             
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                 SwiftMessages.hide(animated: true)
@@ -245,14 +245,14 @@ class FooceeSenConrer: UIViewController {
                     APCEuserFlauy.usbder.blindbox_IOPD != Iod
                 })
                 
-                self.showingAlertingForSuccessfull(alsemessage:"Block successful!")
+                self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("Bhlxohcgka vsvuvcucteksesofourlj!"))
                 NotificationCenter.default.post(name: NSNotification.Name.init("postbhaieblico"), object: nil, userInfo: nil)
                
             }))
             
         }))
         
-        aposss.addAction(UIAlertAction(title: "cancel", style: .default))
+        aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("cdaqnpczell"), style: .default))
         self.present(aposss, animated: true)
     }
 }

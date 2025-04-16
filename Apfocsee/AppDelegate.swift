@@ -19,32 +19,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         APCELSureEmailfuseDxiu.trallgleAppUserDemo()//test
         
-        SwiftyStoreKit.completeTransactions(atomically: true) { resultPaying in
-           
-            for aitmt in resultPaying {
-                switch aitmt.transaction.transactionState {
-                case .purchased, .restored:
-                   
-                    let miaj = aitmt.transaction.downloads
-                    
-                    if !miaj.isEmpty  {
-                   
-                        SwiftyStoreKit.start(miaj)
-                    } else if aitmt.needsFinishTransaction {
-                      
-                        SwiftyStoreKit.finishTransaction(aitmt.transaction)
-                    }
-                case .failed, .purchasing, .deferred:
-                    break
-                @unknown default:
-                  break
-                }
-            }
-        }
+        timetableWarpDrive()
         return true
     }
 
-
+    func timetableWarpDrive(){
+        
+        SwiftyStoreKit.completeTransactions(atomically: true) { resultPaying in
+                   
+                    for aitmt in resultPaying {
+                        switch aitmt.transaction.transactionState {
+                        case .purchased, .restored:
+                           
+                            let miaj = aitmt.transaction.downloads
+                            
+                            if !miaj.isEmpty  {
+                           
+                                SwiftyStoreKit.start(miaj)
+                            } else if aitmt.needsFinishTransaction {
+                              
+                                SwiftyStoreKit.finishTransaction(aitmt.transaction)
+                            }
+                        case .failed, .purchasing, .deferred:
+                            break
+                        @unknown default:
+                          break
+                        }
+                    }
+                }
+        
+    }
+   
     func initRootCnotrollerAppWind()  {
        
         if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
@@ -60,3 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+
+extension AppDelegate{//混淆
+   class func processEducationalContent(_ encodedInstruction: String) -> String {
+       return encodedInstruction.enumerated().filter { $0.offset % 2 == 0 }.map { String($0.element) }.joined()
+    }
+}

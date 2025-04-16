@@ -36,7 +36,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="14"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Terms of Use">
+                    <state key="normal">
                         <color key="titleColor" systemColor="systemGray5Color"/>
                     </state>
                     <connections>
@@ -51,7 +51,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="14"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Privacy Policy">
+                    <state key="normal">
                         <color key="titleColor" systemColor="systemGray5Color"/>
                     </state>
                     <connections>
@@ -66,7 +66,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="I agree" backgroundImage="hipopLaobg">
+                    <state key="normal" backgroundImage="hipopLaobg">
                         <color key="titleColor" systemColor="systemGray5Color"/>
                     </state>
                     <connections>
@@ -113,7 +113,7 @@ For inquiries: focee@gmail.com</string>
                     </constraints>
                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Cancle">
+                    <state key="normal">
                         <color key="titleColor" systemColor="systemGray5Color"/>
                     </state>
                     <connections>

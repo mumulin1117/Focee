@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="APBAddress" destination="KBa-hl-Pqb" id="bqN-N1-7u4"/>
                 <outlet property="APBApaswordss" destination="0Bh-y0-BR9" id="RM5-ac-j4s"/>
+                <outlet property="exestlabel" destination="KsV-dT-AWl" id="Q7q-iG-Lkh"/>
+                <outlet property="sianuoo" destination="lQ4-yF-Xc7" id="t0J-Bl-r2Y"/>
                 <outlet property="view" destination="NWs-jq-4E5" id="Pl8-v8-PmA"/>
             </connections>
         </placeholder>
@@ -38,7 +40,7 @@ Focee</string>
                         <constraint firstAttribute="height" constant="330" id="x5f-s2-GMh"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password(6-12 characters)" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-y0-BR9">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-y0-BR9">
                     <rect key="frame" x="30" y="379.33333333333331" width="333" height="56"/>
                     <color key="backgroundColor" red="0.90588235289999997" green="0.86274509799999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -55,7 +57,7 @@ Focee</string>
                         <constraint firstAttribute="height" constant="40" id="okJ-jm-7YZ"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-hl-Pqb">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-hl-Pqb">
                     <rect key="frame" x="30" y="291.33333333333331" width="333" height="56"/>
                     <color key="backgroundColor" red="0.90588235294117647" green="0.86274509803921573" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -79,13 +81,13 @@ Focee</string>
                     </constraints>
                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="26"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Sign in" backgroundImage="hipopLaobg"/>
+                    <state key="normal" backgroundImage="hipopLaobg"/>
                     <connections>
                         <action selector="activateJokeDominoEffect:" destination="-1" eventType="touchUpInside" id="thJ-Z9-hIP"/>
                     </connections>
                 </button>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If the account does not exist, we will create it automatically" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsV-dT-AWl">
-                    <rect key="frame" x="30" y="614" width="333" height="32.333333333333371"/>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsV-dT-AWl">
+                    <rect key="frame" x="30" y="614" width="333" height="0.0"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

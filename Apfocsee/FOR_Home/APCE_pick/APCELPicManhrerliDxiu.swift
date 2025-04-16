@@ -77,7 +77,7 @@ class APCELPicManhrerliDxiu: UIViewController {
     //开盲盒
     @IBAction func openHouManHeBox(_ sender: Any) {
         guard let shouldtag = self.recordMangheTag else {
-            self.showingAlertingFor_Alert(alsemessage: "Please select a box that you want to open first!")
+            self.showingAlertingFor_Alert(alsemessage:  AppDelegate.processEducationalContent("Piliemansree zswevlceccitm pac cbgohxp xtehdaatk cyooguh wwiapnytx gtsob nozpveinz tfyilrqshts!"))
             return
             
         }
@@ -120,7 +120,7 @@ class APCELPicManhrerliDxiu: UIViewController {
     private func setupParticleEffect() {
         particleEmitter = CAEmitterLayer()
         guard let shouldtag = self.recordMangheTag else {
-            self.showingAlertingFor_Alert(alsemessage: "Please select a box that you want to open first!")
+            self.showingAlertingFor_Alert(alsemessage:  AppDelegate.processEducationalContent("Prlqeeaqsoed jsjerlaeqcrtm faw ibpomxq qtmhhadta uyxomuw bwcaqnvtf ftboz jolphekns nfoidrlsytp!"))
             return
             
         }

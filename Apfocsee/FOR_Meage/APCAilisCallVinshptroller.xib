@@ -14,6 +14,7 @@
                 <outlet property="EffectLbl" destination="mLb-cW-ysz" id="iBn-dn-mDM"/>
                 <outlet property="MatrixButon" destination="QbG-Ts-YQZ" id="ee5-S5-Y07"/>
                 <outlet property="MeteorIMge" destination="DKD-Hq-yaZ" id="fGF-pO-3Pt"/>
+                <outlet property="Shinauer" destination="CNu-pq-WH8" id="YJ9-Jz-rZh"/>
                 <outlet property="backgoungimge" destination="g7I-J1-Mnp" id="nDj-rr-k5S"/>
                 <outlet property="focceRepo" destination="lCy-Lq-Suk" id="Yfp-nz-ak9"/>
                 <outlet property="view" destination="1jO-SC-tqZ" id="NJm-EC-lsZ"/>
@@ -100,8 +101,8 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="trableBackback"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-cW-ysz">
-                    <rect key="frame" x="172" y="65" width="49.333333333333343" height="22.333333333333329"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-cW-ysz">
+                    <rect key="frame" x="196.66666666666666" y="76" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -113,8 +114,8 @@
                         <constraint firstAttribute="width" constant="140" id="Ttl-za-isM"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-pq-WH8">
-                    <rect key="frame" x="259" y="661" width="107.66666666666669" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-pq-WH8">
+                    <rect key="frame" x="259" y="682" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

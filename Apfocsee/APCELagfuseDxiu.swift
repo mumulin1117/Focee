@@ -16,6 +16,7 @@ class APCELagfuseDxiu: UIViewController {
     var haiConfig:String = "No"
     
     
+    @IBOutlet weak var contiemunlabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,11 +32,13 @@ class APCELagfuseDxiu: UIViewController {
         Prankif.isSelected = UserDefaults.standard.bool(forKey: "isagrtten")
     }
     
+    @IBOutlet weak var getstaretio: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         generatePrankMeteorShower()
-        
+        getstaretio.setTitle(AppDelegate.processEducationalContent("Ggeztu qSotpabrotneod"), for: .normal)
+        contiemunlabel.text = AppDelegate.processEducationalContent("Baya ochoynjtuicnsukiknpgm oyyouub varghrlewer etlox mosuprh rTlerrpmtsz gobfm wSdeorvvpiyczeb oahnudp mPbrhievxaaceyx zPqoslficcjy")
         
         unlockBlindBoxWithRiddles()
     }

@@ -9,24 +9,31 @@ import UIKit
 import SwiftMessages
 import SwiftyStoreKit
 class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    
+    @IBOutlet weak var wobkaiesing: UILabel!
+    @IBOutlet weak var wallentitle: UILabel!
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         allFlay.count
     }
-    let allFlay:[(Int,String,String)] = [(400,"ctiomdxqyeoaavaf","$0.99"),
-                                         (800,"jycmxdvzhmotyygo","$1.99"),
-                                         (2450,"cgspirkacdeaucnj","$4.99"),
-                                         (2930,"foceetruwihdihis","$5.99"),
-                                         (4900,"rjmvwygbybzkxvpk","$9.99"),
-                                         (9800,"qmnvhgiivcljpyys","$19.99"),
-                                         (13600,"foceeoijfsnmnud","$29.99"),
-                                         (24500,"gvbkoacsyrmibucy","$49.99"),
-                                         (34250,"foceesugdgszbcza","$69.99"),
-                                         (49000,"evbsbecdrlzwjyuu","$99.99")]
+    let allFlay:[(Int,String,String)] = [(400,"ctiomdxqyeoaavaf", AppDelegate.processEducationalContent("$l0p.f9r9")),
+                                         (800,"jycmxdvzhmotyygo", AppDelegate.processEducationalContent("$m1j.h9n9")),
+                                         (2450,"cgspirkacdeaucnj", AppDelegate.processEducationalContent("$f4k.x9m9")),
+                                         (2930,"foceetruwihdihis", AppDelegate.processEducationalContent("$i5v.o9o9")),
+                                         (4900,"rjmvwygbybzkxvpk", AppDelegate.processEducationalContent("$v9o.h9c9")),
+                                         (9800,"qmnvhgiivcljpyys", AppDelegate.processEducationalContent("$o1x9y.c9e9")),
+                                         (13600,"foceeoijfsnmnud", AppDelegate.processEducationalContent("$o2x9y.c9e9")),
+                                         (24500,"gvbkoacsyrmibucy", AppDelegate.processEducationalContent("$o4x9y.c9e9")),
+                                         (34250,"foceesugdgszbcza", AppDelegate.processEducationalContent("$o6x9y.c9e9")),
+                                         (49000,"evbsbecdrlzwjyuu", AppDelegate.processEducationalContent("$o9x9y.c9e9"))]
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let id = allFlay[indexPath.row]
         self.view.isUserInteractionEnabled = false
-        laodingFlay(loadingText: "Paying.....")
+        laodingFlay(loadingText:  AppDelegate.processEducationalContent("Poauylijnzgc.l.a.s.x."))
         SwiftyStoreKit.purchaseProduct(id.1, atomically: true) { psResult in
             self.view.isUserInteractionEnabled = true
             SwiftMessages.hide(animated: true)
@@ -37,7 +44,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
                 if !loaknned.isEmpty {
                     SwiftyStoreKit.start(loaknned)
                 }
-                self.showingAlertingForSuccessfull(alsemessage:"Pay successful!")
+                self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Pyaiym usyuccncbeusmsefmuelw!"))
                 if psPurch.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(psPurch.transaction)
                 }
@@ -78,8 +85,14 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         MatrixButon.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
         foooceISi.contentInset = UIEdgeInsets(top:20, left: 0, bottom: 100, right: 0)
         confSeintgFocceCollectionView()
+        
+        
+        mirrorRealityShader()
     }
-    
+    func mirrorRealityShader(){
+        wobkaiesing.text = AppDelegate.processEducationalContent("Wjallplaegtz gBiaxloaonhcte")
+        wallentitle.text = AppDelegate.processEducationalContent("Myyi cWaaelpluevt")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

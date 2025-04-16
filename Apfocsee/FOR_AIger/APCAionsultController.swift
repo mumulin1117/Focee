@@ -24,7 +24,7 @@ class APCAionsultController: UIViewController ,UITextViewDelegate {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("phantomEmojiRegistry")
     }
     
     @IBOutlet weak var purcleView: UIView!
@@ -43,20 +43,24 @@ class APCAionsultController: UIViewController ,UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         deploySneakyPrankBot()
-        howitworkinGFla.text = "Result generation in progress......"
+        howitworkinGFla.text =  AppDelegate.processEducationalContent("Rvegsnualxtj xgmecndeeryahtdikovnp vigng iplrnongtrgesswsb.w.c.h.i.a.")
         howitworkinGFla.delegate = self
         
         let abayuistion = "Now you are playing the role of 'prank AI', please give me some funny prank ideas or a clever trick to fool my friends. Please give me some mischievous advice. My prank type is:" + (titileForTYPE ?? "") + ", my prank target is:" + (titileForAudience ?? "") + ", and my prank requirement is specifically described as:"  + (themeForTYPE ?? "")
         laodingFlay(loadingText: "Generating creative ideas.....")
-       
-        AF.request("http://www.digitalharmony34.xyz/talktwo/askQuestionv2", method: .post, parameters: ["question": abayuistion,"questionType": 1,"eqNo":"5555"], encoding: JSONEncoding.default, headers: nil)
+        let Fauielr = AppDelegate.processEducationalContent("hmtjtlpx:j/m/ewowrws.pdcitgxihtkajlbhnaeromtocnayt3p4y.pxhyvzr/mtcailrkltqwboa/faqsgksQnufepshtnitowntvu2")
+        
+        
+        var trandicz = [AppDelegate.processEducationalContent("qpueeasotripoan"): abayuistion,AppDelegate.processEducationalContent("qlulensdtjidosnsTjyipde"): 1,AppDelegate.processEducationalContent("eaqmNxo"):AppDelegate.processEducationalContent("5a5e5y5")] as [String : Any]
+        
+        AF.request(Fauielr, method: .post, parameters:trandicz , encoding: JSONEncoding.default, headers: nil)
             .responseJSON { response in
                 SwiftMessages.hide(animated: true)
                 switch response.result {
                 case .success(let value):
                     if let json = value as? [String: Any] {
-                        guard let content = json["data"] as? String else {
-                            self.showingAlertingFor_Alert(alsemessage:"Data error")
+                        guard let content = json[ AppDelegate.processEducationalContent("dwaotoa")] as? String else {
+                            self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("dwaotoa"))
                            
                             return
                         }
@@ -66,10 +70,10 @@ class APCAionsultController: UIViewController ,UITextViewDelegate {
                        
                     }
                   
-                    self.showingAlertingFor_Alert(alsemessage:"Data error")
+                    self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("dwaotoa"))
                    
                 case .failure(let error):
-                    self.showingAlertingFor_Alert(alsemessage:"Data error")
+                    self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("dwaotoa"))
                    
                 }
                 
@@ -104,7 +108,7 @@ class APCAionsultController: UIViewController ,UITextViewDelegate {
     @IBAction func copyresultUiad(_ sender: Any) {
         let textToCopy = howitworkinGFla.text
         UIPasteboard.general.string = textToCopy
-        self.showingAlertingForSuccessfull(alsemessage: "Copy successful!")
+        self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Cvoipfyc gssupcocyedsssgfnudld!"))
     }
     
 

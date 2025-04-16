@@ -2,7 +2,7 @@
 //  APCEPersoandatet.swift
 //  Apfocsee
 //
-//  Created by mumu on 2025/4/14.
+
 //
 
 import UIKit
@@ -14,11 +14,13 @@ class APCEPersoandatet: UIViewController,UINavigationControllerDelegate, UIImage
     @IBOutlet weak var avatoertpay: UIButton!
     @IBOutlet weak var interttexfilr: UITextField!
     
+    @IBOutlet weak var avarotitleFooce: UILabel!
     
+    @IBOutlet weak var nameitikefoo: UILabel!
     deinit {
         var userDioemnt = UserDefaults.standard.object(forKey: "mamaFlyainguser") as? Dictionary<String,String>
         
-        userDioemnt?["blindbox_name"] = "\(interttexfilr.text ?? "No Name")"
+        userDioemnt?["blindbox_name"] = "\(interttexfilr.text ?? AppDelegate.processEducationalContent("Neor anvahmne"))"
         
         UserDefaults.standard.set(userDioemnt, forKey: "mamaFlyainguser")
         
@@ -31,8 +33,15 @@ class APCEPersoandatet: UIViewController,UINavigationControllerDelegate, UIImage
     override func viewDidLoad() {
         super.viewDidLoad()
         igniteComedyChainReaction()
+        interttexfilr.placeholder = AppDelegate.processEducationalContent("Pllqebajsher yeqnntpedrn sntagmxe")
+        confettiParticleAccelerator()
     }
 
+    
+    func confettiParticleAccelerator(){
+        nameitikefoo.text =  AppDelegate.processEducationalContent("Nmaymse")
+        avarotitleFooce.text = AppDelegate.processEducationalContent("Anvzaptcaqr")
+    }
 
     @IBAction func traijBackl(_ sender: UIButton) {
         
@@ -54,7 +63,7 @@ class APCEPersoandatet: UIViewController,UINavigationControllerDelegate, UIImage
             return
         }
         
-        showingAlertingFor_Alert(alsemessage:"No photo permission!")
+        showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Nooz kplhyogtaoi tpcecrpmpisstsiioocnx!"))
     }
     
     

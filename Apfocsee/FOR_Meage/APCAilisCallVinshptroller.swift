@@ -24,6 +24,11 @@ class APCAilisCallVinshptroller: FooceeSenConrer {
         MeteorIMge.layer.cornerRadius = 15
         MeteorIMge.layer.masksToBounds = true
         PrankStashRepository()
+        chaosCipherStream()
+    }
+    
+    func chaosCipherStream(){
+        Shinauer.text = AppDelegate.processEducationalContent("clouninbencctaibnqgt.x.o.")
     }
     private func PrankStashRepository(){
         EffectLbl.text = self.userNoafl?.blindbox_name
@@ -32,7 +37,7 @@ class APCAilisCallVinshptroller: FooceeSenConrer {
    
     @IBAction func igniteComedy(_ sender: UIButton) {
         
-        showingAlertingFor_Alert(alsemessage:"Please try this function after the call is connected!")
+        showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("Peltezagslen ntcrwyj rtwhfibsb ffnutnzcpttijopnp pabfytoezro ytrhres ncaazlnlc ziqsr kcloxndncewcxtoepdz!"))
     }
     
     
@@ -68,4 +73,9 @@ class APCAilisCallVinshptroller: FooceeSenConrer {
     @IBOutlet weak var focceRepo: UIButton!
     
     @IBOutlet weak var MatrixButon: UIButton!
+    
+    
+    
+    @IBOutlet weak var Shinauer: UILabel!
+    
 }

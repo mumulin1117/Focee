@@ -15,7 +15,7 @@ class APCEFolaoeiController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("phantomEmojiRegistry")
     }
     
     @IBOutlet weak var baberLaber: UILabel!//title
@@ -61,12 +61,12 @@ class APCEFolaoeiController: UIViewController, UICollectionViewDataSource, UICol
     
     private func LaughterEchoTracker()  {
         if juduie == nil {
-            self.baberLaber.text = "Followers"
+            self.baberLaber.text =  AppDelegate.processEducationalContent("Fcoplblbovwkewrfs")
             foooceISi.isHidden = true
             shleepImagc.isHidden = false
             shleepshoqwin.isHidden = false
         }else{
-            
+            self.baberLaber.text =  AppDelegate.processEducationalContent("Fiorljlaopwyiunxg")
             if APCELBarliDxiuController.allFolloweingDatu.count <= 0{
                 foooceISi.isHidden = true
                 shleepImagc.isHidden = false
@@ -93,7 +93,7 @@ class APCEFolaoeiController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
         LaughterEchoTracker()
         MatrixButon.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
-        
+        self.shleepshoqwin.text = AppDelegate.processEducationalContent("Tqhkeprleg'usf nnoortmhyicnegn qhveprve")
         confSeintgFocceCollectionView()
     }
     

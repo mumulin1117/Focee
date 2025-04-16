@@ -40,19 +40,19 @@ class APCELMelinoBarliDxiu: APCENEvcer {
         
         case 16:
             let alertingOO = UIAlertController(
-                    title: "Delete Account Permanently",
-                    message: "This will immediately: \n• Erase all profile data \n• Remove active subscriptions \n• Delete chat history",
+                    title:  AppDelegate.processEducationalContent("Ddeklmedtqel cAicscuoruynstb sPvebrjmiapnvetnstulyy"),
+                    message:  AppDelegate.processEducationalContent("Tehziwsw bwiislkls bipmimiesdvioahtreylzyp:a gEqrrahseea kablhld rpgrnodfoirlgen ldgastlas,o batnqdn sruepmhofvyej xamcnttihvvee vsgugbestcdraiopctlifornnsv p,xabnjdz gddewlbegtser xcphualtc uhyigsstqoprwy"),
                     preferredStyle: .alert
                 )
      
             let okaui = UIAlertAction(
-                    title: "Sure",
+                    title:  AppDelegate.processEducationalContent("Ssuarde"),
                     style: .destructive) { _ in
-                        self.laodingFlay(loadingText: "Deleting.....")
+                        self.laodingFlay(loadingText:  AppDelegate.processEducationalContent("Doedluentsisnzgy.o.f.u.m."))
                         
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                             SwiftMessages.hide(animated: true)
-                            self.showingAlertingForSuccessfull(alsemessage:"Delete successful!")
+                            self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Dyeylyextnet dsrulcockezswsjfvuplj!"))
                             UserDefaults.standard.set(nil, forKey: "mamaFlyainguser")
                             ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
                             APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")!
@@ -62,7 +62,7 @@ class APCELMelinoBarliDxiu: APCENEvcer {
                        
                         
                     }
-            alertingOO.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alertingOO.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("cdaqnpczell"), style: .cancel))
                 
             alertingOO.addAction(okaui)
         

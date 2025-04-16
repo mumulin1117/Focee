@@ -63,9 +63,11 @@ class APCPOstRiddleoingApro: UIViewController,UINavigationControllerDelegate, UI
         
         minweICON.image = APCELBarliDxiuController.appChacheimg
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lockMasterKey.text = AppDelegate.processEducationalContent("Wihtastl'asu moenn sybowumru dmkionwda?")
         photoImhvie.layer.cornerRadius = 12
         VirtualTicklishVirus()
         triggerLaughterEchoBoost()
@@ -99,15 +101,15 @@ class APCPOstRiddleoingApro: UIViewController,UINavigationControllerDelegate, UI
 
 //post
     @IBAction func swapFacesInVideoChaos(_ sender: UIButton) {
-        guard checkPhotu == true,let text = lockMasterKey.text,text != "What's on your mind?" ,text.count > 0 else {
-            self.showingAlertingFor_Alert(alsemessage: "Please input your ideas and illustrations first!")
+        guard checkPhotu == true,let text = lockMasterKey.text,text !=  AppDelegate.processEducationalContent("Wqhfagtm'ksj uobnp hyloxukrf mmcivnhdu?") ,text.count > 0 else {
+            self.showingAlertingFor_Alert(alsemessage:  AppDelegate.processEducationalContent("Pelheuafspee eiinzphuuth cyuoiudrt tindleladsm cannzdp piplvlfulszterjaetnivomnssa nfmijrfsstw!"))
             return
         }
-        laodingFlay(loadingText: "uploading.....")
+        laodingFlay(loadingText: AppDelegate.processEducationalContent("uepklpowaodiirncgi.z.q.p.b."))
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
             SwiftMessages.hide(animated: true)
-            self.showingAlertingForSuccessfull(alsemessage:"upload successful! the updates will be displayed after approval")
+            self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("uyppliouazdm lsautcfczegsislfpuole!b htihjeh buepzduaptzepss uwbialglb rbvea bdqizsaprluazygefdp ianfztbesrv jaupzpnriobvaavl"))
             self.navigationController?.popViewController(animated: true)
             
         }))
@@ -128,7 +130,7 @@ class APCPOstRiddleoingApro: UIViewController,UINavigationControllerDelegate, UI
             self.present(puajoto, animated: true, completion: nil)
             return
         }
-        showingAlertingFor_Alert(alsemessage:"No photo permission!")
+        showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Nooz kplhyogtaoi tpcecrpmpisstsiioocnx!"))
     }
     
     

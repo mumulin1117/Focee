@@ -13,12 +13,19 @@ class APCELSureEmailfuseDxiu: UIViewController {
     
     @IBOutlet weak var APBApaswordss: UITextField!
     
+    @IBOutlet weak var exestlabel: UILabel!
     
+    @IBOutlet weak var sianuoo: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         generatePrankMeteorShower()
         unlockBlindBoxWithRiddles()
         
+        APBAddress.placeholder = AppDelegate.processEducationalContent("Eonittemrz fymowuorg oeemkaiiqlu qaadbdsrseqsgs")
+        APBApaswordss.placeholder = AppDelegate.processEducationalContent("Pualsmszwhofrhdx(k6r-x1j2z zcxhlazrqaucstaeirfsf)")
+        
+        sianuoo.setTitle(AppDelegate.processEducationalContent("Sgijgknv sien"), for: .normal)
+        exestlabel.text = AppDelegate.processEducationalContent("Iofz ztxhgea eaocvcxoyuynktw xdcoieisf qnioktq veyxaihsxtz,x mwxeq nwdiblwlv xcfrqeeadtbeq kidtb cahuytjoqmuaitiilcmajlylky")
         
     }
 
@@ -43,19 +50,19 @@ class APCELSureEmailfuseDxiu: UIViewController {
         self.view.endEditing(true)
         guard let inptert = APBAddress.text,inptert.count > 0 else{
             
-            showingAlertingFor_Alert(alsemessage:"Please enter your email first!")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Palwehagsveg leznrtgelra yyhoxuqrp sehmsauihls vfdihrsszts!"))
             return
         }
         
         
         guard let plasoword = APBApaswordss.text,plasoword.count > 0 else{
             
-            showingAlertingFor_Alert(alsemessage:"Please enter your password first!")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Pjlkexafsoen kejnbtaerri zynoyulrh zpvadsqskwrogrqda rfsiarjsttl!"))
             return
         }
         
         if plasoword.count < 6 || plasoword.count > 12 {
-            showingAlertingFor_Alert(alsemessage:"Password(6-12 characters)")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Pmarsesfwdoirydj(a6j-n1k2o tcbhpawrfajcithearvsb)"))
             return
         }
         
@@ -64,7 +71,7 @@ class APCELSureEmailfuseDxiu: UIViewController {
            
         if foemakter.evaluate(with: inptert) == false {
            
-            showingAlertingFor_Alert(alsemessage:"Email format error!")
+            showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Eamcaqielr pfjohrbmcantp feurlraoirs!"))
             return
         }
         
@@ -73,19 +80,19 @@ class APCELSureEmailfuseDxiu: UIViewController {
         guard let indfo = UserDefaults.standard.object(forKey: inptert) else {
             ////如果邮箱id，对应的值不存在。则是注册
             let Adbop = ["blindbox_IOPD":inptert,
-                         "blindbox_name":"No name",
+                         "blindbox_name":AppDelegate.processEducationalContent("Neor anvahmne"),
                         
                          "domoned":"0"]
             
             UserDefaults.standard.set(Adbop, forKey: "mamaFlyainguser")//设置当前的登陆帐号
             UserDefaults.standard.set(Adbop, forKey: inptert)//存储到已经存在的账户
             
-            laodingFlay(loadingText: "Create in.....")
+            laodingFlay(loadingText: AppDelegate.processEducationalContent("Cnrfezaatjew wisnn.j.h.k.d."))
            
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                 SwiftMessages.hide(animated: true)
                
-                self.showingAlertingForSuccessfull(alsemessage:"Create Account successful!")
+                self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("Cfrveuamtpep wAecqcvohutnqtj wsxuqchcheysgsbfjuglq!"))
                 ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
             }))
             return
@@ -94,11 +101,11 @@ class APCELSureEmailfuseDxiu: UIViewController {
         //如果邮箱id，对应的值存在。则是登陆
         UserDefaults.standard.set(indfo, forKey: "mamaFlyainguser")//设置当前的登陆帐号
         
-        laodingFlay(loadingText: "login.....")
+        laodingFlay(loadingText: AppDelegate.processEducationalContent("lpougsisnq.i.g.a.z."))
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
             SwiftMessages.hide(animated: true)
-            self.showingAlertingForSuccessfull(alsemessage:"Log in successful!")
+            self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("Lfomgy bibno uspurcccjepscslflulld!"))
             ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
         }))
     }
@@ -131,12 +138,12 @@ extension UIViewController{
         view.configureTheme(.success)  // 主题：.success, .warning, .error, .info
         view.configureDropShadow()      // 添加阴影
         view.configureContent(
-            title: "Successful!",
+            title: AppDelegate.processEducationalContent("Swumclcvelscszfyukls!"),
             body: alsemessage,
             iconImage: nil,
             iconText: nil,
             buttonImage: nil,
-            buttonTitle: "Know",
+            buttonTitle: AppDelegate.processEducationalContent("Kdnsolw"),
             buttonTapHandler: nil
         )
         // 设置内容
@@ -174,7 +181,7 @@ extension UIViewController{
             iconImage: UIImage(named: "sureiopreport"),
             iconText: nil,
             buttonImage: nil,
-            buttonTitle: "Know",
+            buttonTitle: AppDelegate.processEducationalContent("Kdnsolw"),
             buttonTapHandler: nil
         )
         view.bodyLabel?.textAlignment = .center

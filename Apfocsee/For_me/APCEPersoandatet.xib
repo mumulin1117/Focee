@@ -11,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCEPersoandatet" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="avarotitleFooce" destination="kJX-ok-VsP" id="2ae-0x-bTT"/>
                 <outlet property="avatoertpay" destination="Puc-lM-whx" id="kG5-g2-bEg"/>
                 <outlet property="interttexfilr" destination="cvI-DP-mRd" id="0DD-2z-dho"/>
+                <outlet property="nameitikefoo" destination="1FB-wR-nlj" id="TTR-GJ-Xbd"/>
                 <outlet property="view" destination="4zr-Ad-7ea" id="6vS-BF-eYe"/>
             </connections>
         </placeholder>
@@ -30,8 +32,8 @@
                         <constraint firstAttribute="height" constant="80" id="pBx-ES-h1e"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-wR-nlj">
-                    <rect key="frame" x="36" y="241.66666666666666" width="38" height="18.666666666666657"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-wR-nlj">
+                    <rect key="frame" x="36" y="251" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -57,8 +59,8 @@
                         <action selector="changeAvtoertNamin:" destination="-1" eventType="touchUpInside" id="nXZ-Hi-Uc6"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-ok-VsP">
-                    <rect key="frame" x="36" y="139.66666666666666" width="51.333333333333343" height="18.666666666666657"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-ok-VsP">
+                    <rect key="frame" x="36" y="149" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -81,8 +83,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvI-DP-mRd">
-                    <rect key="frame" x="96" y="234" width="274" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvI-DP-mRd">
+                    <rect key="frame" x="58" y="234" width="312" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="KlT-w2-G9c"/>
                     </constraints>
