@@ -11,11 +11,13 @@ import SwiftMessages
 class APCPOstRiddleoingApro: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     private var checkPhotu:Bool = false
     
-    
+    private var ghostTypingIndicator: UILabel?
+    private let messageBubbleColors: [UIColor] = [.systemPurple, .systemTeal, .systemPink]
     
     @IBOutlet weak var postIsTrueLabel: UILabel!
     
-    
+    private var fakeLoadingProgress: Double = 0 // 用于搞笑假进度条
+    private var hasTriggeredBankJoke = false // 是否触发银行来电彩蛋
     @IBOutlet weak var minweICON: UIImageView!
     
     @IBOutlet weak var fooceNameLabel: UILabel!

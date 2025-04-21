@@ -8,7 +8,7 @@ import SnapKit
 import UIKit
 //发送消息
 class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableViewDataSource {
-    
+    private var isJokeModeActive = UserDefaults.standard.bool(forKey: "isAprilFoolsMode")
     var meaasgeAllrecord:Array<String>?
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -23,10 +23,12 @@ class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableV
             
         }
     }
+    private var explodingMessageTimer: Timer?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         meaasgeAllrecord?.count ?? 0
     }
+    private var ghostTypingIndicator: UILabel?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let foocee = tableView.dequeueReusableCell(withIdentifier: "APCATalkCell", for: indexPath) as! APCATalkCell
@@ -34,9 +36,13 @@ class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableV
         return foocee
         
     }
-    
+    private let messageBubbleColors: [UIColor] = [.systemPurple, .systemTeal, .systemPink]
     @IBOutlet weak var useNakerl: UILabel!//user name
-    
+    private let prankMessageTemplates = [
+        "你收到一只隐形独角兽 🦄",
+        "AI正在偷看这条消息... 👀",
+        "该消息将在5秒后自毁 💣"
+    ]
     @IBOutlet weak var LaughterView: UITableView!
     
     //say
@@ -89,8 +95,40 @@ class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableV
   
     @IBOutlet weak var MatrixButon: UIButton!
     
-    
-    
+    // 方法5: 消息抖动动画
+        
+    private func shakeReceivedMessage(_ cell: UITableViewCell) {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.values = [0, 15, -15, 15, -5, 5, -5, 0 ]
+        animation.duration = 0.6
+        animation.isAdditive = true
+        cell.layer.add(animation, forKey: "shake")
+        
+        UIView.animate(withDuration: 0.3) {
+            cell.contentView.backgroundColor = .systemYellow.withAlphaComponent(0.3)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.animate(withDuration: 0.5) {
+                cell.contentView.backgroundColor = .clear
+            }
+        }
+    }
+    private func startGhostTyping() {
+        ghostTypingIndicator = UILabel(frame: CGRect(x: 20, y: 0, width: view.frame.width-40, height: 30))
+        ghostTypingIndicator?.textColor = .systemGray
+        ghostTypingIndicator?.font = UIFont.italicSystemFont(ofSize: 14)
+        
+        
+        let texts = ["Prankify AI正在输入...", "对方正在构思恶作剧...", "消息正在穿越时空..."]
+        var counter = 0
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] timer in
+            self?.ghostTypingIndicator?.text = texts[counter % texts.count]
+            counter += 1
+            if counter > 6 { timer.invalidate() }
+        }
+        
+    }
    //video call
     @IBAction func LaughterEchoBoost(_ sender: UIButton) {
         self.navigationController?.pushViewController(APCAilisCallVinshptroller.init(itMeCenter: false, userNoafl: userNoafl), animated: true)
@@ -115,7 +153,17 @@ class APCAilisSendmeasgshptroller: FooceeSenConrer, UITableViewDelegate,UITableV
        
     }
     
-    
+    // 方法4: 发送愚人节彩蛋消息
+       private func sendPrankTemplateMessage() {
+           guard let template = prankMessageTemplates.randomElement() else { return }
+           
+           let alert = UIAlertController(title: "发送彩蛋消息", message: template, preferredStyle: .actionSheet)
+          
+           alert.addAction(UIAlertAction(title: "取消", style: .cancel))
+           present(alert, animated: true)
+           
+           UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+       }
 }
 
 

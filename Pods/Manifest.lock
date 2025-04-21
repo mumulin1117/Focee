@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.10.2)
-  - Hero (1.6.4)
+  - Instructions (2.3.0)
   - IQKeyboardManager (6.5.19)
   - SnapKit (5.7.1)
   - SwiftMessages (10.0.1):
@@ -10,7 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Hero
+  - Instructions
   - IQKeyboardManager
   - SnapKit
   - SwiftMessages
@@ -19,7 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Hero
+    - Instructions
     - IQKeyboardManager
     - SnapKit
     - SwiftMessages
@@ -27,12 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  Hero: 473a0143017e1371d050fcbedb67d317925097f2
+  Instructions: 3aac22d036495ba4c40e00747e0a275da40ce53d
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: bf959473860a558ea6d260cd4e5072d2c3dc012e
+PODFILE CHECKSUM: 3c335ed2fe2f034c2503d5345d58e9ae4885ed30
 
 COCOAPODS: 1.16.2

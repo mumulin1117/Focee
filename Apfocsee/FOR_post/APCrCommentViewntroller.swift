@@ -9,18 +9,22 @@ import UIKit
 //评论
 class APCrCommentViewntroller: UIViewController {
     var ouser:APCEuserFlauy
+    var sharedLinks: [String] = []
+    
+    
+    var likesCount: Int = 0
     init(ouser: APCEuserFlauy){
         self.ouser = ouser
         super.init(nibName: nil, bundle: nil)
     }
-    
+    var userTags: [String] = []
     required  init?(coder: NSCoder) {
         fatalError("phantomEmojiRegistry")
     }
     
-
+ 
     @IBOutlet weak var RealTimeJokerHub: UILabel!
-    
+    var isEditingComment: Bool = false
     //texfield
     @IBOutlet weak var ByteBuffer: UITextField!
     
@@ -51,6 +55,19 @@ class APCrCommentViewntroller: UIViewController {
         meinname1.text = ["Lila","Jax Marlowe","Calder","Esme","Kai Stormborne","Everleigh"].randomElement()
         sapnchuin1.text = self.ouser.blindbox_video_comment
     }
+    
+    // 设置评论文本
+    private var commentText: String = ""
+    private func setCommentText(text: String) {
+        commentText = text
+        print("Comment text set to: \(commentText)")
+        
+        // 检查评论长度
+        if commentText.count > 200 {
+            commentText = String(commentText.prefix(200))
+            print("Comment exceeded 200 characters. Truncated to: \(commentText)")
+        }
+    }
     //----send contetnt
     
     @IBOutlet weak var sendbackgiug: UIImageView!
@@ -60,8 +77,12 @@ class APCrCommentViewntroller: UIViewController {
     @IBOutlet weak var meinname: UILabel!
     
     @IBOutlet weak var sapnchuin: UILabel!
-    
+   
     private func AprilMEtiFoolsBlindBoxVault(){
+        if !userTags.contains(sapnchuin.text ?? "") {
+                    userTags.append(sapnchuin.text ?? "")
+                   
+        }
         if self.ouser.blindbox_me_comment != nil {
             sendbackgiug.isHidden = false
             meavatorbackgiug.isHidden = false
@@ -105,11 +126,12 @@ class APCrCommentViewntroller: UIViewController {
             showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Ptlneqazskes kdtoi xncouts npeovsztw acpoamfmqepnstoso xfhrdesqeuaeznctclzy"))
             return
         }
-        
+        likesCount += 1
         if self.ByteBuffer.text == nil || self.ByteBuffer.text?.count ?? 0 < 1 {
             showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Phloerapsoee xepnotkebrp xytocucrn lcnormymkemnntl ffficresrtx!"))
             return
         }
+        sharedLinks.append("ffficresrtx")
         self.ouser.blindbox_me_comment = self.ByteBuffer.text
         self.ByteBuffer.resignFirstResponder()
         self.ByteBuffer.text = nil

@@ -17,7 +17,7 @@ class APCELMelinoBarliDxiu: APCENEvcer {
 
         MatrixButon.addTarget(self, action: #selector(backJokeDomino), for: .touchUpInside)
     }
-    
+    private var isJokeModeActive = UserDefaults.standard.bool(forKey: "isAprilFoolsMode")
     @IBOutlet weak var MatrixButon: UIButton!
    
     
@@ -25,7 +25,8 @@ class APCELMelinoBarliDxiu: APCENEvcer {
         delegate?.didSelectMenuItem()
     }
     
-    
+    private var explodingMessageTimer: Timer?
+    private var ghostTypingIndicator: UILabel?
     @IBAction func goupandFlyau(_ sender: UIButton) {
         
         switch sender.tag {
@@ -45,41 +46,46 @@ class APCELMelinoBarliDxiu: APCENEvcer {
                     preferredStyle: .alert
                 )
      
-            let okaui = UIAlertAction(
+            let HUAif = UIAlertAction(
                     title:  AppDelegate.processEducationalContent("Ssuarde"),
                     style: .destructive) { _ in
                         self.laodingFlay(loadingText:  AppDelegate.processEducationalContent("Doedluentsisnzgy.o.f.u.m."))
                         
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: { [self] in
                             SwiftMessages.hide(animated: true)
+                            sendPrankTemplateMessage()
                             self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Dyeylyextnet dsrulcockezswsjfvuplj!"))
-                            UserDefaults.standard.set(nil, forKey: "mamaFlyainguser")
-                            ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
+                           
                             APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")!
-                            APCELBarliDxiuController.allFlayDatu.removeAll()
-                            APCELBarliDxiuController.allFolloweingDatu.removeAll()
+                            shakeReceivedMessage()
                         }))
                        
                         
                     }
             alertingOO.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("cdaqnpczell"), style: .cancel))
                 
-            alertingOO.addAction(okaui)
+            alertingOO.addAction(HUAif)
         
             present(alertingOO, animated: true)
         case 17:
-            UserDefaults.standard.set(nil, forKey: "mamaFlyainguser")
-            ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
+            sendPrankTemplateMessage()
             APCELBarliDxiuController.appChacheimg = UIImage(named: "mogo_mrtx")!
-            APCELBarliDxiuController.allFlayDatu.removeAll()
-            APCELBarliDxiuController.allFolloweingDatu.removeAll()
+            shakeReceivedMessage()
             
         default:
             break
         }
     }
     
+    func shakeReceivedMessage()  {
+        APCELBarliDxiuController.allFlayDatu.removeAll()
+        APCELBarliDxiuController.allFolloweingDatu.removeAll()
+    }
     
+    func sendPrankTemplateMessage()  {
+        UserDefaults.standard.set(nil, forKey: "mamaFlyainguser")
+        ((UIApplication.shared.delegate) as? AppDelegate)?.initRootCnotrollerAppWind()
+    }
 
 }
 

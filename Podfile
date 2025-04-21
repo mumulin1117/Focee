@@ -6,10 +6,11 @@ target 'Apfocsee' do
   use_frameworks!
 
   # Pods for Apfocsee
-
+  
+pod "FSPagerView"
 pod 'SwiftMessages'
 pod 'SnapKit'
-
+pod 'Instructions'
 pod "IQKeyboardManager"
 pod "SwiftyStoreKit"
 pod "Alamofire"

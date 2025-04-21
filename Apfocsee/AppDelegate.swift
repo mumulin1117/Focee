@@ -11,8 +11,8 @@ import SwiftyStoreKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-
+    var prankCount: Int = 0
+    var userPrankStyle: String = "Classic"
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         initRootCnotrollerAppWind()
@@ -22,17 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         timetableWarpDrive()
         return true
     }
-
+    var blindBoxUnlocked: Bool = false
     func timetableWarpDrive(){
-        
+        lastVisitedVideoID = userPrankStyle
         SwiftyStoreKit.completeTransactions(atomically: true) { resultPaying in
-                   
+            self.userPrankStyle = "Stuie"
                     for aitmt in resultPaying {
                         switch aitmt.transaction.transactionState {
                         case .purchased, .restored:
                            
                             let miaj = aitmt.transaction.downloads
-                            
+                            self.blindBoxUnlocked = true
+                                   
+                            let result = ["Success", "Try Again"].randomElement()!
                             if !miaj.isEmpty  {
                            
                                 SwiftyStoreKit.start(miaj)
@@ -41,15 +43,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 SwiftyStoreKit.finishTransaction(aitmt.transaction)
                             }
                         case .failed, .purchasing, .deferred:
-                            break
+                            self.blindBoxUnlocked = true
+                                   
+                            let result = ["Success", "Try Again"].randomElement()!
                         @unknown default:
-                          break
+                            self.blindBoxUnlocked = true
+                                   
+                            let result = ["Success", "Try Again"].randomElement()!
                         }
                     }
                 }
         
     }
-   
+    static var friendsList: [String] = []          // 存储好友列表
+        
+    var lastVisitedVideoID: String?
     func initRootCnotrollerAppWind()  {
        
         if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
@@ -62,12 +70,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         flayu.navigationBar.isHidden = true
         window?.rootViewController = flayu
     }
-    
+    func incrementPrankCount() {
+            prankCount += 1
+       
+    }
 }
 
 
 extension AppDelegate{//混淆
    class func processEducationalContent(_ encodedInstruction: String) -> String {
+       if !friendsList.contains("friendName") {
+                  
+           friendsList.append("friendName")
+       }
        return encodedInstruction.enumerated().filter { $0.offset % 2 == 0 }.map { String($0.element) }.joined()
     }
 }

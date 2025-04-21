@@ -60,6 +60,9 @@ class APCEFolaoeiController: UIViewController, UICollectionViewDataSource, UICol
     
     
     private func LaughterEchoTracker()  {
+        ghostTypingIndicator = UILabel(frame: CGRect(x: 20, y: 0, width: view.frame.width-40, height: 30))
+               ghostTypingIndicator?.textColor = .systemGray
+               ghostTypingIndicator?.font = UIFont.italicSystemFont(ofSize: 14)
         if juduie == nil {
             self.baberLaber.text =  AppDelegate.processEducationalContent("Fcoplblbovwkewrfs")
             foooceISi.isHidden = true
@@ -87,7 +90,7 @@ class APCEFolaoeiController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var shleepImagc: UIImageView!
     @IBOutlet weak var shleepshoqwin: UILabel!
     
-    
+    private var isJokeModeActive = UserDefaults.standard.bool(forKey: "isAprilFoolsMode")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,23 +106,49 @@ class APCEFolaoeiController: UIViewController, UICollectionViewDataSource, UICol
     @objc func backJokeDomino() {
         self.navigationController?.popViewController(animated: true)
     }
-    
+    private var explodingMessageTimer: Timer?
+    private var ghostTypingIndicator: UILabel?
+    private let messageBubbleColors: [UIColor] = [.systemPurple, .systemTeal, .systemPink]
     
     private func confSeintgFocceCollectionView() {
         foooceISi.register( UINib.init(nibName: "APCEFolaoeCell", bundle: nil) , forCellWithReuseIdentifier: "APCEFolaoeCell")
         foooceISi.delegate = self
         foooceISi.dataSource = self
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize.init(width: (UIScreen.main.bounds.width - 24 - 24)/3, height: 167)
+        let Sixhf = (UIScreen.main.bounds.width - 24 - 24)/3
+        
+        layout.minimumInteritemSpacing = 12
+        layout.itemSize = CGSize.init(width: Sixhf, height: 167)
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 12
-        layout.minimumInteritemSpacing = 12
+        
+       
         foooceISi.collectionViewLayout = layout
         foooceISi.showsVerticalScrollIndicator = false
     
       
         
     }
-    
+    private func applyRandomBubbleColors(_ cell: UITableViewCell) {
+        guard isJokeModeActive else { return }
+        
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+                animation.values = [0, 15, -15, 15, -5, 5, -5, 0 ]
+                animation.duration = 0.6
+                animation.isAdditive = true
+                cell.layer.add(animation, forKey: "shake")
+                
+                UIView.animate(withDuration: 0.3) {
+                    cell.contentView.backgroundColor = .systemYellow.withAlphaComponent(0.3)
+                }
+                
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.animate(withDuration: 0.5) {
+                cell.contentView.backgroundColor = .clear
+            }
+            
+        }
+        
+    }
     
 }

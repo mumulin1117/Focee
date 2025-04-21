@@ -10,7 +10,8 @@ import UIKit
 class APCEREsultsioingApro: UIViewController {
 
     @IBOutlet weak var oopsgotImageview: UIImageView!
-    
+    private var fakeLoadingProgress: Double = 0 // 用于搞笑假进度条
+    private var hasTriggeredBankJoke = false // 是否触发银行来电彩蛋
     private var resultAPCA:Bool = false
     init( resultAPCA: Bool) {
        

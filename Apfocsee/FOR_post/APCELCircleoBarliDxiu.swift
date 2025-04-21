@@ -13,10 +13,18 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
     
     var currentPlayingIndexPath: IndexPath?
     
+  
+    
     private var boxAll: Array<APCEuserFlauy>{
         APCELBarliDxiuController.allFlayDatu.filter { APCEuserFlauy in
             APCEuserFlauy.blindbox_video != nil
         }
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.handleVideoPlayback(ifd: false)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,6 +79,12 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: "swipeHintShown") == false{
+            
+            self.showingAlertingFor_Alert(alsemessage:"Swipe to unlock more")
+            UserDefaults.standard.set(true, forKey: "swipeHintShown")
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
             self.handleVideoPlayback()
         }))
@@ -79,7 +93,7 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
     
     // 核心方法：处理视频播放
        
-    private func handleVideoPlayback() {
+    private func handleVideoPlayback(ifd:Bool = true) {
         // 获取当前中心位置
         let visibleRect = CGRect(origin: maFooceViedeView.contentOffset, size: maFooceViedeView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
@@ -90,6 +104,12 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
             currentPlayingIndexPath = nil
             return
         }
+        if ifd == false {
+            cell.player?.pause()
+            currentPlayingIndexPath = nil
+            return
+        }
+        
         
         // 如果当前播放的不是这个Cell
         if indexPath != currentPlayingIndexPath {
@@ -100,9 +120,15 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
             }
             
             // 开始新的播放
+           
+               
             cell.player?.play()
+                
             currentPlayingIndexPath = indexPath
+            
+            
         }
+        
     }
     private func confSeintgFocceCollectionView() {
         maFooceViedeView.register(UINib(nibName: "APCAionsultViodeCell", bundle: nil), forCellWithReuseIdentifier: "APCAionsultViodeCell")
@@ -111,7 +137,7 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width , height: maFooceViedeView.frame.height - 48)
+        layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width  , height: maFooceViedeView.frame.height - 48)
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
@@ -159,10 +185,10 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         comment.modalPresentationStyle = .overCurrentContext
         self.present(comment, animated: true)
     }
-    
+    var isEditingComment: Bool = false
     //report
     @objc func reporitEchoBoost(Matrix:UIButton)  {
-         
+        isEditingComment.toggle()
         
         let aposss = UIAlertController(title: AppDelegate.processEducationalContent("Rkevpqoyritz doirs kBwlsoxcdk"), message: "", preferredStyle: .alert)
         aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("Bvleowckk"), style: .default, handler: { UIAlertAction in
@@ -170,7 +196,10 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
                 self.Blaokido(Iod:nerrID)
             }
             
-            
+            if AppDelegate.processEducationalContent("Rkevpqoyritz doirs kBwlsoxcdk").count > 200 {
+                      
+               
+            }
         }))
         
         aposss.addAction(UIAlertAction(title: AppDelegate.processEducationalContent("Rceqpfowrht"), style: .default, handler: { UIAlertAction in
@@ -183,8 +212,8 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
     
     //拉黑
     func Blaokido(Iod:String)  {
-        let aposss = UIAlertController(title: "Block this content", message: "After blocking, you will not receive any push notifications related to this content", preferredStyle: .alert)
-        aposss.addAction(UIAlertAction(title: "sure", style: .default, handler: { UIAlertAction in
+        let aposss = UIAlertController(title: AppDelegate.processEducationalContent("Bilqopcwka utehciosq nchotnjthepnqt"), message:AppDelegate.processEducationalContent("Ayfmtweurx ebxlboncrkaivnagw,k ryoobud mwyitlnlz bnpovti trteickeliqvces qafnhyi mpdubshhs mnfoztjijfyikcwaitliuornvsh orbeilxaxtxevde cthoe wtsheiisc kchomnmtrelnbt") , preferredStyle: .alert)
+        aposss.addAction(UIAlertAction(title:AppDelegate.processEducationalContent("Svuwrbe"), style: .default, handler: { UIAlertAction in
             
             self.laodingFlay(loadingText: AppDelegate.processEducationalContent("Bzlbohcxkeignpgs.x.s.k.v."))
             

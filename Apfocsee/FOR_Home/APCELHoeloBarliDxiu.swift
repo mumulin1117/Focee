@@ -14,6 +14,10 @@ class MainViewController: UIViewController {
     
     private var sideMenuVC: APCELMelinoBarliDxiu!
 
+    
+    
+    
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +52,8 @@ class MainViewController: UIViewController {
        
     }
     
+    
+   
 
 }
 
@@ -84,7 +90,7 @@ class APCELHoeloBarliDxiu: APCENEvcer {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.startAttentionAnimation()
         VirtualTicklishVirus()
         
         
@@ -131,6 +137,50 @@ class APCELHoeloBarliDxiu: APCENEvcer {
         minweICON.layer.cornerRadius = 22
         minweICON.layer.masksToBounds = true
     }
+    
+    @IBOutlet weak var cheijdking: UIButton!
+    
+    func startAttentionAnimation() {
+            let rotationAngle: CGFloat = .pi / 32 // 小角度旋转
+            let duration: TimeInterval = 0.25
+            
+            // 移除现有动画
+        cheijdking.layer.removeAllAnimations()
+            
+            // 左右摇摆动画
+            let leftWobble = CABasicAnimation(keyPath: "transform.rotation.z")
+            leftWobble.toValue = rotationAngle
+            leftWobble.duration = duration
+            
+            let rightWobble = CABasicAnimation(keyPath: "transform.rotation.z")
+            rightWobble.toValue = -rotationAngle
+            rightWobble.duration = duration
+            rightWobble.beginTime = duration
+            
+            let reset = CABasicAnimation(keyPath: "transform.rotation.z")
+            reset.toValue = 0
+            reset.duration = duration
+            reset.beginTime = duration * 2
+            
+            // 组合动画
+            let animationGroup = CAAnimationGroup()
+            animationGroup.animations = [leftWobble, rightWobble, reset]
+            animationGroup.duration = duration * 3
+            animationGroup.repeatCount = .infinity
+            animationGroup.autoreverses = true
+            
+        cheijdking.layer.add(animationGroup, forKey: "wobble")
+            
+            // 同步脉冲缩放效果
+            UIView.animate(
+                withDuration: duration * 2,
+                delay: 0,
+                options: [.autoreverse, .repeat, .allowUserInteraction],
+                animations: {
+                    self.cheijdking.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+                }
+            )
+        }
 }
 
 

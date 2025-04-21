@@ -14,10 +14,10 @@ class APCrShareVireoCntroller: UIViewController {
     
     
     @IBOutlet weak var FeedStream: UIButton!
-    
+    var isVideoEditing: Bool = false
     
     @IBOutlet weak var lockMasterKey: UITextView!
-    
+    var videoTitle: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,16 +51,18 @@ class APCrShareVireoCntroller: UIViewController {
         }))
     }
     
-    
+    var selectedFilters: [String] = []           // 存储用户选择的视频滤镜
+       
+    var taggedFriends: [String] = []
     //上传视频
     @IBAction func PrankChallengeFeedStream(_ sender: UIButton) {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            laodingFlay(loadingText: AppDelegate.processEducationalContent("Vjixdkefoy fawnhaklrybsuiysm iifnz sptrxojgrrnefstsd.g.m.e.e."))
+           
             let puajoto = UIImagePickerController()
             
             
-           
+            puajoto.isEditing = isVideoEditing
             puajoto.sourceType = .photoLibrary
             puajoto.delegate = self
             puajoto.mediaTypes = [AppDelegate.processEducationalContent("pvuabulhidcg.gmdomvgige")]
@@ -71,7 +73,19 @@ class APCrShareVireoCntroller: UIViewController {
         
         
     }
-    
+    // 设置视频标题
+       
+    func setVideoTitle(title: String) {
+        videoTitle = title
+        print("Video title set to: \(videoTitle)")
+        
+        // 确保标题不超过30个字符
+        if videoTitle.count > 30 {
+            videoTitle = String(videoTitle.prefix(30))
+            print("Title exceeded 30 characters. Truncated to: \(videoTitle)")
+        }
+    }
+
     
     private func triggerLaughterEchoBoost()  {
         lockMasterKey.layer.cornerRadius = 20
@@ -87,7 +101,17 @@ extension APCrShareVireoCntroller:UITextViewDelegate, UIImagePickerControllerDel
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = nil
     }
-    
+    func selectFilter(filterName: String) {
+        selectedFilters.append(filterName)
+        print("Selected filter: \(filterName)")
+        
+        // 限制最多选择3个滤镜
+        if selectedFilters.count > 3 {
+            selectedFilters.removeFirst()
+            print("Filter selection exceeded limit. Removed oldest filter.")
+        }
+        
+    }
     func imagePickerController(
             _ picker: UIImagePickerController,
             didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
@@ -98,7 +122,7 @@ extension APCrShareVireoCntroller:UITextViewDelegate, UIImagePickerControllerDel
                 showingAlertingFor_Alert(alsemessage:AppDelegate.processEducationalContent("Vsivdeegol upaaerestiencgy wfiaxijlvehdp!"))
                 return
             }
-            
+            laodingFlay(loadingText: AppDelegate.processEducationalContent("Vjixdkefoy fawnhaklrybsuiysm iifnz sptrxojgrrnefstsd.g.m.e.e."))
             // 异步生成封面防止卡顿
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 if let coverImage = self?.generateCover(for: videoURL){
@@ -118,9 +142,19 @@ extension APCrShareVireoCntroller:UITextViewDelegate, UIImagePickerControllerDel
     }
     
     // 核心方法：获取视频封面
-        
+    // 切换视频编辑模式
+      
+    func toggleEditingMode() {
+        isVideoEditing.toggle()
+        if isVideoEditing {
+            print("Entered video editing mode.")
+        } else {
+            print("Exited video editing mode.")
+        }
+    }
     private func generateCover(for videoURL: URL) -> UIImage? {
         let asset = AVAsset(url: videoURL)
+        toggleEditingMode()
         let generator = AVAssetImageGenerator(asset: asset)
         generator.appliesPreferredTrackTransform = true // 修正方向
         

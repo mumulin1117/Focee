@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCELHoeloBarliDxiu" customModule="Apfocsee" customModuleProvider="target">
             <connections>
+                <outlet property="cheijdking" destination="Oaw-ba-NBD" id="9YC-YS-Isu"/>
                 <outlet property="coinCountbelow" destination="jNv-b0-ds1" id="F42-rk-GdN"/>
                 <outlet property="fooceNameLabel" destination="wdj-lz-Z1F" id="deu-SA-jJU"/>
                 <outlet property="minweICON" destination="kyI-qE-ToA" id="mF9-0P-0Lh"/>

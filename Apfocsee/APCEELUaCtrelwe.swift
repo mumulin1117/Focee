@@ -12,7 +12,8 @@ class APCEELUaCtrelwe: UIViewController {
     
     @IBOutlet weak var contentaflay: UITextView!
     
-    
+    var userPrankHistory: [String] = []           // 存储用户的恶作剧历史记录
+      
     var tapprnflao:Bool?
     
     init( tapprnflao: Bool? = nil) {
@@ -20,6 +21,7 @@ class APCEELUaCtrelwe: UIViewController {
         self.tapprnflao = tapprnflao
         super.init(nibName: nil, bundle: nil)
     }
+    var currentChallenge: String?                 // 当前挑战的描述
     
     required init?(coder: NSCoder) {
         fatalError("phantomEmojiRegistry")
@@ -27,14 +29,16 @@ class APCEELUaCtrelwe: UIViewController {
     
     
     @IBOutlet weak var agfreesnkio: UIButton!
-    
+    var isBlindBoxActive: Bool = false            // 标记盲盒是否正在进行中
+   
     //term
     @IBOutlet weak var fyAICore: UIButton!
+    var recentJokes: [String] = []                // 存储最近分享的笑话
     
     //pri
     @IBOutlet weak var ByteBuffer: UIButton!
     
-    
+    var prankNotificationCount: Int = 0           // 恶作剧通知计数器
     @IBAction func scramblePuzzleForAprilFools(_ sender: UIButton) {
         if tapprnflao != nil{
             self.navigationController?.popViewController(animated: true)
@@ -45,7 +49,18 @@ class APCEELUaCtrelwe: UIViewController {
       
     }
     
-    
+    // 添加恶作剧到历史记录
+       
+    func addPrankToHistory(prankDescription: String) {
+        userPrankHistory.append(prankDescription)
+        print("Added prank to history: \(prankDescription)")
+        
+        // 保持历史记录不超过10条
+        if userPrankHistory.count > 10 {
+            userPrankHistory.removeFirst()
+            print("Prank history exceeded limit. Oldest prank removed.")
+        }
+    }
     
     @IBOutlet weak var canceloioo: UIButton!
     
@@ -54,7 +69,16 @@ class APCEELUaCtrelwe: UIViewController {
     @IBAction func swapFacesInVideoChaos(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
+    // 设置当前挑战
+       func setCurrentChallenge(challenge: String) {
+           currentChallenge = challenge
+           print("Current challenge set to: \(challenge)")
+           
+           // 发送挑战通知给用户
+           sendChallengeNotification(challenge)
+       }
+
+      
     private func syncRealTimePrankWave() {
         if tapprnflao != nil {
             ByteBuffer.isHidden = true
@@ -99,7 +123,12 @@ Users under 13 may not use Focee’s real-time interaction features.
 
 """
         }
+        recentJokes.append("Users under 13 may")
+      
         
+        // 更新恶作剧通知计数
+        prankNotificationCount += 1
+        print("Prank notification count updated: \(prankNotificationCount)")
         if tapprnflao == false {
             datong.text = AppDelegate.processEducationalContent("Unsiewrx fTuearqmesb yoxfa jSsecrzvsiqcue")
             """
@@ -141,7 +170,15 @@ Users under 13 may not use Focee’s real-time interaction features.
         }
         
     }
-    
+    // 激活盲盒并生成随机内容
+    func activateBlindBox() {
+        isBlindBoxActive = true
+        let randomContent = generateRandomContent()
+        print("Blind box activated! Content: \(randomContent)")
+        
+        // 停止激活盲盒，模拟使用一次
+        isBlindBoxActive = false
+    }
     
     
     override func viewDidLoad() {
@@ -157,13 +194,30 @@ Users under 13 may not use Focee’s real-time interaction features.
     }
 
     
-    
+    // 分享一个新的笑话
+       func shareJoke(joke: String) {
+          
+       }
+
+       // 生成随机内容作为盲盒内容
+       private func generateRandomContent() -> String {
+           let contents = ["Surprise Gift", "Funny Meme", "Mystery Prank"]
+           return contents.randomElement() ?? "Nothing"
+       }
+
+       // 发送挑战通知 (示例方法)
+       private func sendChallengeNotification(_ challenge: String) {
+           // 实际上可以实现通知发送的逻辑
+           print("Sending challenge notification for: \(challenge)")
+       }
 
     @IBAction func trrremifoa(_ sender: UIButton) {
+        sendChallengeNotification(sender.titleLabel?.text ?? "")
         self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: false), animated: false)
     }
     
-    @IBAction func perivacy(_ sender: Any) {
+    @IBAction func perivacy(_ sender: UIButton) {
+        sendChallengeNotification( sender.titleLabel?.text ?? "")
         self.navigationController?.pushViewController(APCEELUaCtrelwe.init(tapprnflao: true), animated: true)
     }
 }
