@@ -134,10 +134,11 @@ class APCELCircleoBarliDxiu: APCENEvcer,UICollectionViewDataSource,UICollectionV
         maFooceViedeView.register(UINib(nibName: "APCAionsultViodeCell", bundle: nil), forCellWithReuseIdentifier: "APCAionsultViodeCell")
         maFooceViedeView.isPagingEnabled = true
         maFooceViedeView.dataSource = self
+        let uishhuf = ((UIApplication.shared.delegate) as? AppDelegate)?.window?.safeAreaInsets
         
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width  , height: maFooceViedeView.frame.height - 48)
+        layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width  , height: UIScreen.main.bounds.height - (uishhuf?.top ?? 0) - 60 - 35)
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0

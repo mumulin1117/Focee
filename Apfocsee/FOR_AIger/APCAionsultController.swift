@@ -46,7 +46,7 @@ class APCAionsultController: UIViewController ,UITextViewDelegate {
         howitworkinGFla.text =  AppDelegate.processEducationalContent("Rvegsnualxtj xgmecndeeryahtdikovnp vigng iplrnongtrgesswsb.w.c.h.i.a.")
         howitworkinGFla.delegate = self
         
-        let abayuistion = "Now you are playing the role of 'prank AI', please give me some funny prank ideas or a clever trick to fool my friends. Please give me some mischievous advice. My prank type is:" + (titileForTYPE ?? "") + ", my prank target is:" + (titileForAudience ?? "") + ", and my prank requirement is specifically described as:"  + (themeForTYPE ?? "")
+        let abayuistion = "Now you are playing the role of 'prank AI'. Please give me some interesting April Fool's Day play ideas or a clever suggestion for me to play with my friends who I have filmed.Please give me some specific advice. My prank type is:" + (titileForTYPE ?? "") + ", my prank target is:" + (titileForAudience ?? "") + ", and my prank requirement is specifically described as:"  + (themeForTYPE ?? "")
         laodingFlay(loadingText: "Generating creative ideas.....")
         let Fauielr = AppDelegate.processEducationalContent("hmtjtlpx:j/m/ewowrws.pdcitgxihtkajlbhnaeromtocnayt3p4y.pxhyvzr/mtcailrkltqwboa/faqsgksQnufepshtnitowntvu2")
         

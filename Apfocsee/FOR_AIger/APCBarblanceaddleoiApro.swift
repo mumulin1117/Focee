@@ -11,7 +11,11 @@ import SwiftyStoreKit
 import AVFAudio
 class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
     private var prankCoinMultiplier: Int = Bool.random() ? 3 : 1
-    
+    lazy var actinveuh: UIActivityIndicatorView = {
+        let sdzssss = UIActivityIndicatorView.init(style: .large)
+        sdzssss.hidesWhenStopped = true
+        return sdzssss
+    }()
     @IBOutlet weak var wobkaiesing: UILabel!
     private let jokePaymentMessages = [
         "Converting tears to coins...",
@@ -43,7 +47,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         fakeLoadingProgress = 0
        
         self.fakeLoadingProgress += Double.random(in: 0.01...0.1)
-        
+        actinveuh.startAnimating()
         
         if self.fakeLoadingProgress >= 0.95 {
             
@@ -53,6 +57,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         laodingFlay(loadingText:  AppDelegate.processEducationalContent("Poauylijnzgc.l.a.s.x."))
         SwiftyStoreKit.purchaseProduct(id.1, atomically: true) { psResult in
             self.view.isUserInteractionEnabled = true
+            self.actinveuh.stopAnimating()
             SwiftMessages.hide(animated: true)
             self.fakeLoadingProgress += Double.random(in: 0.01...0.1)
             if case .success(let psPurch) = psResult {
@@ -123,6 +128,12 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         
         
         mirrorRealityShader()
+        
+        view.addSubview(actinveuh)
+        actinveuh.snp.makeConstraints { make in
+            make.width.height.equalTo(45)
+            make.center.equalToSuperview()
+        }
     }
     private var jokeReceipts = [
         "1x Invisible Unicorn",
@@ -220,6 +231,7 @@ class APCBarblanceaddleoiApro: UIViewController, UICollectionViewDataSource,UICo
         foooceISi.showsVerticalScrollIndicator = false
         foooceISi.layer.cornerRadius = 12
         foooceISi.layer.masksToBounds = true
+        foooceISi.delegate = self
     }
     
     

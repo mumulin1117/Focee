@@ -104,6 +104,9 @@ class APCAionsultViodeCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         deploySneakyPrankBot()
+        
+//        self.layer.cornerRadius = 22
+//        self.layer.masksToBounds = true
         spreadVirtualTicklishVirus()
         videoCioverFooce.layer.cornerRadius = 22
         videoCioverFooce.layer.masksToBounds = true
