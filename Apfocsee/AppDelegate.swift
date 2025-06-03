@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         initRootCnotrollerAppWind()
         self.window?.makeKeyAndVisible()
-        APCELSureEmailfuseDxiu.trallgleAppUserDemo()//test
+        LabyrinthLenslfuseDxiu.trallgleAppUserDemo()//test
         
         timetableWarpDrive()
         return true
@@ -61,12 +61,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initRootCnotrollerAppWind()  {
        
         if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
-            window?.rootViewController = APCELBarliDxiuController()
+            window?.rootViewController = PhantomPrankontroller()
 
             return
         }
         
-        let flayu = UINavigationController.init(rootViewController: APCELagfuseDxiu.init())
+        let flayu = UINavigationController.init(rootViewController: DazzleDodgefuseDxiu.init())
         flayu.navigationBar.isHidden = true
         window?.rootViewController = flayu
     }
