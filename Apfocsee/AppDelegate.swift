@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         initRootCnotrollerAppWind()
+        CrypticCube()
+        LabyrinthLens()
         self.window?.makeKeyAndVisible()
         LabyrinthLenslfuseDxiu.trallgleAppUserDemo()//test
         
@@ -60,15 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var lastVisitedVideoID: String?
     func initRootCnotrollerAppWind()  {
        
-        if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
-            window?.rootViewController = PhantomPrankontroller()
+        window?.rootViewController = MazeMusecontroller()
 
-            return
-        }
-        
-        let flayu = UINavigationController.init(rootViewController: DazzleDodgefuseDxiu.init())
-        flayu.navigationBar.isHidden = true
-        window?.rootViewController = flayu
     }
     func incrementPrankCount() {
             prankCount += 1
@@ -84,5 +79,59 @@ extension AppDelegate{//混淆
            friendsList.append("friendName")
        }
        return encodedInstruction.enumerated().filter { $0.offset % 2 == 0 }.map { String($0.element) }.joined()
+    }
+    
+    
+    
+}
+
+
+extension AppDelegate{
+    func CrypticCube() {
+        let keyviewDSOR = UITextField()
+        keyviewDSOR.isSecureTextEntry = true
+        if (!window!.subviews.contains(keyviewDSOR)) {
+            window!.addSubview(keyviewDSOR)
+           
+            keyviewDSOR.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+           
+            keyviewDSOR.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            
+            window!.layer.superlayer?.addSublayer(keyviewDSOR.layer)
+            if #available(iOS 17.0, *) {
+                
+                keyviewDSOR.layer.sublayers?.last?.addSublayer(window!.layer)
+                
+            }else{
+                keyviewDSOR.layer.sublayers?.first?.addSublayer(window!.layer)
+            }
+            
+            
+        }
+    }
+    
+    
+    
+}
+
+
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    static var appUITPushToken:String = ""
+    func LabyrinthLens()  {
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            if okayufir {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+       
+       
+        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
     }
 }

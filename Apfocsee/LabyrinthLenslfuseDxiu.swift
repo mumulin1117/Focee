@@ -133,7 +133,7 @@ class LabyrinthLenslfuseDxiu: UIViewController {
 extension UIViewController{
     
     //成功
-    func showingAlertingForSuccessfull(alsemessage:String) {
+     func showingAlertingForSuccessfull(alsemessage:String) {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(.success)  // 主题：.success, .warning, .error, .info
         view.configureDropShadow()      // 添加阴影
