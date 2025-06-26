@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftMessages
 //launch
 class MazeMusecontroller: UIViewController {
     static  var whimsyWidget:UIWindow?{
@@ -57,19 +58,19 @@ class MazeMusecontroller: UIViewController {
             
         }
         
-#if DEBUG
+//#if DEBUG
                 self.gagGenerator()
-#else
-           
-                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
-                   
-                    self.gagGenerator()
-                    
-                }else{
-                    
-                    self.giggleGeometer()
-                }
-#endif
+//#else
+//           
+//                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
+//                   
+//                    self.gagGenerator()
+//                    
+//                }else{
+//                    
+//                    self.giggleGeometer()
+//                }
+//#endif
             
 
        
@@ -86,15 +87,24 @@ class MazeMusecontroller: UIViewController {
     
     
     private func gagGenerator()  {
-//        self.laodingFlay(loadingText:"")
+        self.laodingFlay(loadingText:"loading...")
 
         
 
         let bamboozleBot = "/opi/v1/jidjjo"
         let quirkQuark: [String: Any] = [
-//            "sdsdd":1,
-//            "sdfn":0,
-            "sdcfsg":1
+            "**e":Locale.preferredLanguages
+                .map { Locale(identifier: $0).languageCode ?? $0 }
+                .reduce(into: [String]()) { result, code in
+                    if !result.contains(code) {
+                        result.append(code)
+                    }
+                },//language,
+            "**t":TimeZone.current.identifier,//时区
+            "**k":UITextInputMode.activeInputModes
+                .compactMap { $0.primaryLanguage }
+                .filter { $0 != "dictation" },//keyboards
+            "**g":1
 
         ]
 
@@ -105,10 +115,10 @@ class MazeMusecontroller: UIViewController {
            
 
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
-#if DEBUG
-            #else
+//#if DEBUG
+//            #else
             SwiftMessages.hide(animated: true)
-#endif
+//#endif
             
             switch result{
             case .success(let riddleResolver):

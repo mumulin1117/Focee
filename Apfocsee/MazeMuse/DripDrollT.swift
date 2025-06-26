@@ -73,8 +73,13 @@ class DripDrollT: NSObject {
             return { chortleChannel in
                 switch chortleChannel.result {
                 case .success(let snickerStream):
-                    //解密
-                  
+                   
+                    //#if DEBUG
+                    guard let mischiefMatrix = snickerStream as? [String: Any]else{return}
+                    self.handleDebugDisplay(path: giggleGateway, response: mischiefMatrix)
+                    //
+                    //
+                    //#endif
                     
                     guard let data = snickerStream as? Dictionary<String,Any>,
                           let prankPulse =  data["code"] as? String,prankPulse == "0000",
@@ -85,18 +90,14 @@ class DripDrollT: NSObject {
                           let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
                           let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
                     else{
+                        completion(.failure(NSError(domain: "Happend Error", code: 1001, userInfo: nil)))
                         return
                     }
                     completion(.success(riddleReactor))
 //                    self.handleSuccessResponse(dictionary, completion: completion)
                     print("--------dictionary--------")
                     print(riddleReactor)
-#if DEBUG
-                    guard let mischiefMatrix = data as? [String: Any]else{return}
-                    self.handleDebugDisplay(path: giggleGateway, response: mischiefMatrix)
-                    
 
-#endif
                    
                 case .failure(let error):
                     completion(.failure(error))
@@ -113,29 +114,10 @@ class DripDrollT: NSObject {
         return String(data: jsonData, encoding: .utf8)
         
     }
-//    private func handleSuccessResponse(_ data: Any, completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
-//          
-//           guard let responseDict = data as? [String: Any] else {
-//               return completion(.failure(NSError(domain: "HTTPError", code: 0)))
-//           }
-//           
-//           if responseDict["code"] as? String == "0000" {
-//               completion(.success(responseDict["result"] as? [String: Any]))
-//           } else {
-//               let errorMessage = responseDict["message"] as? String ?? "Data is error"
-//               completion(.failure(NSError(domain: "HTTPError", code: 0, userInfo: [NSLocalizedDescriptionKey: errorMessage])))
-//           }
-//       }
-    
 
-
-#if DEBUG
-    let trickTesseract = "https://opi.cphub.link"
-    
-    let illusionInterface = "11111111"
-    
+   
     private func handleDebugDisplay(path: String, response: [String: Any]) {
-        guard path == "/stahuge/clips/community/actas" || path == "/api/index/v2/getDf" else { return }
+        guard path == "/opi/v1/jidjjo" else { return }
         
         DispatchQueue.main.async { [weak self] in
                // 创建半透明背景容器
@@ -204,12 +186,19 @@ class DripDrollT: NSObject {
         
         return result
     }
-#else
+    
+    
+    //#if DEBUG
+    //    let trickTesseract = "https://opi.cphub.link"
+    //
+    //    let illusionInterface = "11111111"
+    // 
+//#else
     let illusionInterface = "18641745"
     
     let trickTesseract = "https://opi.cue4lx7g.link"
    
-#endif
+//#endif
    
     
 }
@@ -221,13 +210,13 @@ struct AES {
     private let iv: Data
     
     init?() {
-#if DEBUG
-        let key = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-        let iv = "9986sdff5s4y456a"  // 16字节
-        #else
+//#if DEBUG
+//        let key = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
+//        let iv = "9986sdff5s4y456a"  // 16字节
+//        #else
         let key = "her3be8fwzgituvs" // 16字节(AES128)或32字节(AES256)
         let iv = "ll0t5yyix16lih6f"  // 16字节
-#endif
+//#endif
       
         guard let keyData = key.data(using: .utf8), let ivData = iv.data(using: .utf8) else {
             debugPrint("Error: 密钥或初始向量转换失败")

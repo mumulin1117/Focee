@@ -71,26 +71,13 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
             
      
         
-#if DEBUG
-        let bamboozleBot = "/opi/v1/sdhfuishl"
-        let quirkQuark: [String: Any] = [
-            "xxd":DripDrollT.goofyGradient.illusionInterface,//password
-            "xxn":DripDrollT.loonyLatency,//deviceNo
 
-            "**v":[//userLocationAddressVO
-              
-                "countryCode":"KR",
-               
-                "latitude":37.5665,
-                "longitude":126.9780
-            ]
-        ]
-        #else
-        let bamboozleBot = "/snapHub/poseGen/creativeX"
-        let quirkQuark: [String: Any] = [
-            "xxd":DripDrollT.goofyGradient.illusionInterface,//password
-            "xxn":DripDrollT.loonyLatency,//deviceNo
-            "**v":[//userLocationAddressVO
+        let bamboozleBot = "/opi/v1/sdhfuishl"
+        
+        var quirkQuark: [String: Any] = [
+           
+            "xxn":DripDrollT.loonyLatency,
+            "**v":[
                
                 "countryCode":trickDatabase,
                 "latitude":laughterMetrics,
@@ -99,10 +86,11 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
            
             
         ]
-#endif
         
-       
-        
+        if let passwored = UserDefaults.standard.object(forKey: "password") {
+            quirkQuark["xxd"] = passwored
+        }
+  
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
            
             SwiftMessages.hide(animated: true)
@@ -112,12 +100,15 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
 
                 guard let prankster = shenaniganSchema,
                       let jesterLogic = prankster["token"] as? String,
-                      let guffawGraph = prankster["password"] as? String,
                       let whopperWare = UserDefaults.standard.object(forKey: "openValue")  as? String
                 else {
                     self.showingAlertingForSuccessfull(alsemessage: "data weak!")
                    
                     return
+                }
+                if let guffawGraph = prankster["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                    
+                    UserDefaults.standard.set(guffawGraph, forKey: "password")
                 }
                 
                 UserDefaults.standard.set(jesterLogic, forKey: "absurdityEngine")

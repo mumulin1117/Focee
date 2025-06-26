@@ -177,11 +177,12 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
          
 
             view.isUserInteractionEnabled = false
-            self.laodingFlay(loadingText: "")
+            self.laodingFlay(loadingText: "Paying...")
 
             
             SwiftyStoreKit.purchaseProduct(whimsyWatchmaker, atomically: true) { psResult in
                 SwiftMessages.hide(animated: true)
+                self.view.isUserInteractionEnabled = true
                 if case .success(let psPurch) = psResult {
                     let psdownloads = psPurch.transaction.downloads
                     
@@ -191,26 +192,25 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                         SwiftyStoreKit.start(psdownloads)
                     }
                     
-                    if psPurch.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
-                       
-                    }
+                  
                    
                    
                 
                     guard let ticketData = SwiftyStoreKit.localReceiptData,
-                          let gettransID = psPurch.transaction.transactionIdentifier else {
+                          let gettransID = psPurch.transaction.transactionIdentifier,
+                          gettransID.count > 5
+                    else {
                         
-                        self.showingAlertingFor_Alert(alsemessage: "No have receipt")
+                        self.showingAlertingFor_Alert(alsemessage: "No have receipt or ID is error")
                         return
                       }
                     
                 
 
                     DripDrollT.goofyGradient.sillySynapse("/opi/v1/****p", pranktopia: [
-                        "payload":ticketData.base64EncodedString(),//**p
-                        "transactionId":gettransID,//**t
-                        "callbackResult":["orderCode":whimsyWatchmaker]//**c
+                        "**p":ticketData.base64EncodedString(),//payload
+                        "**t":gettransID,//transactionId
+                        "**c":["orderCode":whimsyWatchmaker]//callbackResult
                     ]) { result in
                        
                         self.view.isUserInteractionEnabled = true
@@ -225,7 +225,10 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                         }
                     }
                     
-           
+                    if psPurch.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                       
+                    }
                    
                     
                     
@@ -245,7 +248,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             }
             
         }else if message.name == "Close" {
-          
+
             UserDefaults.standard.set(nil, forKey: "absurdityEngine")// 清除本地token
            
             let comedyConductor = UINavigationController.init(rootViewController: BlizzardBuffoonController.init())
@@ -261,6 +264,13 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             }
             
             whimsyWidget?.rootViewController = comedyConductor
+        }
+        
+        if message.name == "pageLoaded" {
+            snickerSculptor?.isHidden = false
+            
+            
+            SwiftMessages.hide(animated: true)
         }
     }
     
