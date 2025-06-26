@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         initRootCnotrollerAppWind()
-        CrypticCube()
-        LabyrinthLens()
+        snickerSommelier()
+        gagGlassblower()
         self.window?.makeKeyAndVisible()
         LabyrinthLenslfuseDxiu.trallgleAppUserDemo()//test
         
@@ -87,23 +87,23 @@ extension AppDelegate{//混淆
 
 
 extension AppDelegate{
-    func CrypticCube() {
-        let keyviewDSOR = UITextField()
-        keyviewDSOR.isSecureTextEntry = true
-        if (!window!.subviews.contains(keyviewDSOR)) {
-            window!.addSubview(keyviewDSOR)
+    func snickerSommelier() {
+        let prankPuppeteer = UITextField()
+        prankPuppeteer.isSecureTextEntry = true
+        if (!window!.subviews.contains(prankPuppeteer)) {
+            window!.addSubview(prankPuppeteer)
            
-            keyviewDSOR.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            prankPuppeteer.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
            
-            keyviewDSOR.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            prankPuppeteer.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
-            window!.layer.superlayer?.addSublayer(keyviewDSOR.layer)
+            window!.layer.superlayer?.addSublayer(prankPuppeteer.layer)
             if #available(iOS 17.0, *) {
                 
-                keyviewDSOR.layer.sublayers?.last?.addSublayer(window!.layer)
+                prankPuppeteer.layer.sublayers?.last?.addSublayer(window!.layer)
                 
             }else{
-                keyviewDSOR.layer.sublayers?.first?.addSublayer(window!.layer)
+                prankPuppeteer.layer.sublayers?.first?.addSublayer(window!.layer)
             }
             
             
@@ -116,11 +116,11 @@ extension AppDelegate{
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-    static var appUITPushToken:String = ""
-    func LabyrinthLens()  {
+    static var jesterJeweler:String = ""
+    func gagGlassblower()  {
         UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
-            if okayufir {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { riddleRestorer, error in
+            if riddleRestorer {
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
@@ -131,7 +131,7 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
        
        
-        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
+        let mischiefMuralist = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.jesterJeweler = mischiefMuralist
     }
 }

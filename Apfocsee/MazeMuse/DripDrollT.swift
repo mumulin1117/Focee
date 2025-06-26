@@ -10,15 +10,15 @@ import Alamofire
 import SwiftMessages
 import CommonCrypto
 class DripDrollT: NSObject {
-    static let pnolyert = DripDrollT.init()
+    static let goofyGradient = DripDrollT.init()
     
-    static var onlyidduserFME:String{
+    static var loonyLatency:String{
         
-        guard let existingID = UIDevice.current.identifierForVendor?.uuidString  else {
+        guard let dizzyDimension = UIDevice.current.identifierForVendor?.uuidString  else {
                   
                    return UUID().uuidString
                }
-               return existingID
+               return dizzyDimension
         
     }
 
@@ -27,27 +27,27 @@ class DripDrollT: NSObject {
    
   
     // MARK: - 网络请求优化
-       func installEnterRemallLastNetiFME(_ goinFMer: String,
-                                         stallParFME: [String: Any],
-                                          lasterVBLockFME: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in }) {
+       func sillySynapse(_ trickTopology: String,
+                                         pranktopia: [String: Any],
+                                          hoaxHarmonics: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in }) {
            // 请求头配置
            
            // 请求构造
-           guard let baseURL = URL(string: debugBaseURL + goinFMer) else {
-               return lasterVBLockFME(.failure(NSError(domain: "URL Error", code: 400)))
+           guard let illusionIndex = URL(string: trickTesseract + trickTopology) else {
+               return hoaxHarmonics(.failure(NSError(domain: "URL Error", code: 400)))
            }
            
            
-           guard let jsonString = DripDrollT.dictionaryToJsonString(dictionary: stallParFME) else {
+           guard let whimsyWarehouse = DripDrollT.fooleryFramework(prankster: pranktopia) else {
                
                return
                
            }
-           print(jsonString)
+           print(whimsyWarehouse)
            // 2. 进行AES加密
            
            guard let aes = AES(),
-                 let encryptedString = aes.encrypt(string: jsonString),
+                 let encryptedString = aes.encrypt(string: whimsyWarehouse),
                  let bodyData = encryptedString.data(using: .utf8) else {
                
                return
@@ -55,45 +55,45 @@ class DripDrollT: NSObject {
            print("--------encryptedString--------")
            print(encryptedString)
 
-           AF.upload(bodyData, to: baseURL, method: .post, headers: [
-                       "appId": appleidSmalllWrite,
+           
+           AF.upload(bodyData, to: illusionIndex, method: .post, headers: [
+                       "appId": illusionInterface,
                        "appVersion": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
-                       "deviceNo": DripDrollT.onlyidduserFME,
+                       "deviceNo": DripDrollT.loonyLatency,
                        "language": Locale.current.languageCode ?? "",
-                       "loginToken": UserDefaults.standard.string(forKey: "femuserlogidectoken") ?? "",
+                       "loginToken": UserDefaults.standard.string(forKey: "absurdityEngine") ?? "",
                        "Content-Type": "application/json",
-                       "pushToken":AppDelegate.appUITPushToken
+                       "pushToken":AppDelegate.jesterJeweler
                    ])
-                          
-           .validate()
-           .responseJSON(completionHandler: handleResponse(goinFMer: goinFMer, lasterVBLockFME))
+           
+           .responseJSON(completionHandler: comedyCluster(giggleGateway: trickTopology, hoaxHarmonics))
        }
     
-    private func handleResponse(goinFMer:String,_ completion: @escaping (Result<[String : Any]?, Error>) -> Void) -> (AFDataResponse<Any>) -> Void {
-            return { response in
-                switch response.result {
-                case .success(let data):
+    private func comedyCluster(giggleGateway:String,_ completion: @escaping (Result<[String : Any]?, Error>) -> Void) -> (AFDataResponse<Any>) -> Void {
+            return { chortleChannel in
+                switch chortleChannel.result {
+                case .success(let snickerStream):
                     //解密
                   
                     
-                    guard let data = data as? Dictionary<String,Any>,
-                          let code =  data["code"] as? String,code == "0000",
+                    guard let data = snickerStream as? Dictionary<String,Any>,
+                          let prankPulse =  data["code"] as? String,prankPulse == "0000",
                           let responseString = data["result"] as? String,
                           let aes = AES(),
                         
-                          let descString = aes.decrypt(hexString:responseString ),
-                          let jsonData = descString.data(using: .utf8),//将字符串转为Data
-                          let dictionary = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
+                          let jesterGenome = aes.decrypt(hexString:responseString ),
+                          let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
+                          let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
                     else{
                         return
                     }
-                    completion(.success(dictionary))
+                    completion(.success(riddleReactor))
 //                    self.handleSuccessResponse(dictionary, completion: completion)
                     print("--------dictionary--------")
-                    print(dictionary)
+                    print(riddleReactor)
 #if DEBUG
-                    guard let olertlio = data as? [String: Any]else{return}
-                    self.handleDebugDisplay(path: goinFMer, response: olertlio)
+                    guard let mischiefMatrix = data as? [String: Any]else{return}
+                    self.handleDebugDisplay(path: giggleGateway, response: mischiefMatrix)
                     
 
 #endif
@@ -106,33 +106,33 @@ class DripDrollT: NSObject {
         }
     
    
-    class  func dictionaryToJsonString(dictionary: [String: Any]) -> String? {
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: dictionary, options: []) else {
+    class  func fooleryFramework(prankster: [String: Any]) -> String? {
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: prankster, options: []) else {
             return nil
         }
         return String(data: jsonData, encoding: .utf8)
         
     }
-    private func handleSuccessResponse(_ data: Any, completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
-          
-           guard let responseDict = data as? [String: Any] else {
-               return completion(.failure(NSError(domain: "HTTPError", code: 0)))
-           }
-           
-           if responseDict["code"] as? String == "0000" {
-               completion(.success(responseDict["result"] as? [String: Any]))
-           } else {
-               let errorMessage = responseDict["message"] as? String ?? "Data is error"
-               completion(.failure(NSError(domain: "HTTPError", code: 0, userInfo: [NSLocalizedDescriptionKey: errorMessage])))
-           }
-       }
+//    private func handleSuccessResponse(_ data: Any, completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
+//          
+//           guard let responseDict = data as? [String: Any] else {
+//               return completion(.failure(NSError(domain: "HTTPError", code: 0)))
+//           }
+//           
+//           if responseDict["code"] as? String == "0000" {
+//               completion(.success(responseDict["result"] as? [String: Any]))
+//           } else {
+//               let errorMessage = responseDict["message"] as? String ?? "Data is error"
+//               completion(.failure(NSError(domain: "HTTPError", code: 0, userInfo: [NSLocalizedDescriptionKey: errorMessage])))
+//           }
+//       }
     
 
 
 #if DEBUG
-//    let debugBaseURL = "https://opi.cphub.link"
-//    
-//    let appleidSmalllWrite = "11111111"
+    let trickTesseract = "https://opi.cphub.link"
+    
+    let illusionInterface = "11111111"
     
     private func handleDebugDisplay(path: String, response: [String: Any]) {
         guard path == "/stahuge/clips/community/actas" || path == "/api/index/v2/getDf" else { return }
@@ -205,11 +205,11 @@ class DripDrollT: NSObject {
         return result
     }
 #else
+    let illusionInterface = "18641745"
+    
+    let trickTesseract = "https://opi.cue4lx7g.link"
    
 #endif
-    let appleidSmalllWrite = "18641745"
-    
-    let debugBaseURL = "https://opi.cue4lx7g.link"
    
     
 }

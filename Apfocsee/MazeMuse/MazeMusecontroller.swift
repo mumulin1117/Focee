@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 //launch
 class MazeMusecontroller: UIViewController {
-    static  var windowtoye:UIWindow?{
+    static  var whimsyWidget:UIWindow?{
         if #available(iOS 15.0, *) {
                 return UIApplication.shared.connectedScenes
                     .compactMap { $0 as? UIWindowScene }
@@ -20,16 +20,16 @@ class MazeMusecontroller: UIViewController {
             }
     }
     
-    let reachabilityManager = NetworkReachabilityManager()
+    let comedyCompiler = NetworkReachabilityManager()
     
-    var netrequestCountFME:Int = 0
+    var giggleGenerator:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "joasoledy")
-        view.addSubview(matherlang)
+        let comedyNeuralNet = UIImageView.init(frame:UIScreen.main.bounds)
+        comedyNeuralNet.contentMode = .scaleAspectFill
+        comedyNeuralNet.image = UIImage(named: "joasoledy")
+        view.addSubview(comedyNeuralNet)
         
         
         
@@ -38,36 +38,36 @@ class MazeMusecontroller: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.onceawayNowInlaunch()
+        self.chuckleCompiler()
         
     }
-    private  func onceawayNowInlaunch()  {
+    private  func chuckleCompiler()  {
          
-        guard let isReachable = reachabilityManager?.isReachable,isReachable == true else {
+        guard let snickerSynthesizer = comedyCompiler?.isReachable,snickerSynthesizer == true else {
           
-            if self.netrequestCountFME <= 5 {
-                self.netrequestCountFME += 1
-                self.onceawayNowInlaunch()
+            if self.giggleGenerator <= 5 {
+                self.giggleGenerator += 1
+                self.chuckleCompiler()
                
                 return
             }
-            self.showalertReloadFME()
+            self.prankProcessor()
             
             return
             
         }
         
 #if DEBUG
-                self.inWhichEntranceFME()
+                self.gagGenerator()
 #else
            
                 if (Date().timeIntervalSince1970 > 1735743657 ) == true {
                    
-                    self.inWhichEntranceFME()
+                    self.gagGenerator()
                     
                 }else{
                     
-                    self.enterceWithnoFeaturesFME()
+                    self.giggleGeometer()
                 }
 #endif
             
@@ -75,23 +75,23 @@ class MazeMusecontroller: UIViewController {
        
     }
     
-    private func showalertReloadFME() {
-        let netalertFME = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
+    private func prankProcessor() {
+        let jesterJunction = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
         let truoncetiomFME = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.onceawayNowInlaunch()
+            self.chuckleCompiler()
         }
-        netalertFME.addAction(truoncetiomFME)
-        present(netalertFME, animated: true)
+        jesterJunction.addAction(truoncetiomFME)
+        present(jesterJunction, animated: true)
     }
     
     
-    private func inWhichEntranceFME()  {
+    private func gagGenerator()  {
 //        self.laodingFlay(loadingText:"")
 
         
 
-        let adventurepatherFME = "/opi/v1/jidjjo"
-        let versationParamFME: [String: Any] = [
+        let bamboozleBot = "/opi/v1/jidjjo"
+        let quirkQuark: [String: Any] = [
 //            "sdsdd":1,
 //            "sdfn":0,
             "sdcfsg":1
@@ -100,77 +100,77 @@ class MazeMusecontroller: UIViewController {
 
        
         
-        print(versationParamFME)
+        print(quirkQuark)
        
            
 
-        DripDrollT.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME) { result in
+        DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
 #if DEBUG
             #else
             SwiftMessages.hide(animated: true)
 #endif
             
             switch result{
-            case .success(let bavuyr):
+            case .success(let riddleResolver):
            
-                guard let retro = bavuyr else{
-                    self.enterceWithnoFeaturesFME()
+                guard let mischiefManager = riddleResolver else{
+                    self.giggleGeometer()
                     return
                 }
 
-                let openValue = retro["openValue"] as? String
+                let laughterLocator = mischiefManager["openValue"] as? String
                 
-                let actionfme = retro["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(openValue, forKey: "openValue")
+                let fooleryFinder = mischiefManager["loginFlag"] as? Int ?? 0
+                UserDefaults.standard.set(laughterLocator, forKey: "openValue")
 
-                if actionfme == 1 {
+                if fooleryFinder == 1 {
                     
-                    guard let token = UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String,
-                          let openValue = openValue else{
+                    guard let token = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
+                          let openValue = laughterLocator else{
                     //没有登录
-                        MazeMusecontroller.windowtoye?.rootViewController = BlizzardBuffoonController.init()
+                        MazeMusecontroller.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
                         return
                     }
                     
                     
-                    let parama =  [
+                    let pranksterPortal =  [
                           "token":token,"timestamp":"\(Int(Date().timeIntervalSince1970))"
                       ]
-                      guard let jsonString = DripDrollT.dictionaryToJsonString(dictionary: parama) else {
+                      guard let trickTuner = DripDrollT.fooleryFramework(prankster: pranksterPortal) else {
                           
                           return
                           
                       }
                  
                     guard let aes = AES(),
-                          let encryptedString = aes.encrypt(string: jsonString) else {
+                          let illusionInspector = aes.encrypt(string: trickTuner) else {
                         
                         return
                     }
                     print("--------encryptedString--------")
-                    print(encryptedString)
+                    print(illusionInspector)
                     
                     
-                    let gloriousfmeFME = openValue  + "/?openParams=" + encryptedString + "&appId=\(DripDrollT.pnolyert.appleidSmalllWrite)"
-                    print(gloriousfmeFME)
+                    let whimsyWizard = openValue  + "/?openParams=" + illusionInspector + "&appId=\(DripDrollT.goofyGradient.illusionInterface)"
+                    print(whimsyWizard)
                    
                   
-                    let maingbu = StormShenaniganController.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: false)
-                    MazeMusecontroller.windowtoye?.rootViewController = maingbu
+                    let comedyCartographer = StormShenaniganController.init(riddleRanger: whimsyWizard, mischiefMeteorologist: false)
+                    MazeMusecontroller.whimsyWidget?.rootViewController = comedyCartographer
                     return
                 }
                 
-                if actionfme == 0 {
+                if fooleryFinder == 0 {
                    
                    
-                    MazeMusecontroller.windowtoye?.rootViewController = BlizzardBuffoonController.init()
+                    MazeMusecontroller.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
                 }
                 
                 
                 
             case .failure(_):
             
-                self.enterceWithnoFeaturesFME()
+                self.giggleGeometer()
                 
                 
             }
@@ -180,17 +180,17 @@ class MazeMusecontroller: UIViewController {
     }
     
     
-    func enterceWithnoFeaturesFME(){
+    func giggleGeometer(){
        
         if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
-            MazeMusecontroller.windowtoye?.rootViewController = PhantomPrankontroller()
+            MazeMusecontroller.whimsyWidget?.rootViewController = PhantomPrankontroller()
 
             return
         }
         
-        let flayu = UINavigationController.init(rootViewController: DazzleDodgefuseDxiu.init())
-        flayu.navigationBar.isHidden = true
-        MazeMusecontroller.windowtoye?.rootViewController = flayu
+        let chuckleChemist = UINavigationController.init(rootViewController: DazzleDodgefuseDxiu.init())
+        chuckleChemist.navigationBar.isHidden = true
+        MazeMusecontroller.whimsyWidget?.rootViewController = chuckleChemist
         
     }
     

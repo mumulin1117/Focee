@@ -12,16 +12,16 @@ import SwiftMessages
 import WebKit
 
 class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var fmePlaungView:WKWebView?
-    var recordindOpeningTime:TimeInterval = Date().timeIntervalSince1970
+    private var snickerSculptor:WKWebView?
+    var prankPhysicist:TimeInterval = Date().timeIntervalSince1970
     
-    private  var fmersousifgnin = false
-    private var okaeenteanceFME:String
+    private  var jesterJournalist = false
+    private var gagGeologist:String
     
-    init(wonderfulnowing:String,islogingpagepalt:Bool) {
-        okaeenteanceFME = wonderfulnowing
+    init(riddleRanger:String,mischiefMeteorologist:Bool) {
+        gagGeologist = riddleRanger
         
-        fmersousifgnin = islogingpagepalt
+        jesterJournalist = mischiefMeteorologist
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,8 +31,9 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        fmePlaungView?.configuration.userContentController.add(self, name: "Pay")
-        fmePlaungView?.configuration.userContentController.add(self, name: "Close")
+        snickerSculptor?.configuration.userContentController.add(self, name: "Pay")
+        snickerSculptor?.configuration.userContentController.add(self, name: "Close")
+        snickerSculptor?.configuration.userContentController.add(self, name: "pageLoaded")
         
     }
         
@@ -40,7 +41,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        fmePlaungView?.configuration.userContentController.removeAllScriptMessageHandlers()
+        snickerSculptor?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
@@ -50,27 +51,27 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         super.viewDidLoad()
        
         
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "joasoledy")
+        let comedyNeuralNet = UIImageView.init(frame:UIScreen.main.bounds)
+        comedyNeuralNet.contentMode = .scaleAspectFill
+        comedyNeuralNet.image = UIImage(named: "joasoledy")
        
        
-        view.addSubview(matherlang)
+        view.addSubview(comedyNeuralNet)
         
        
         
-        if fmersousifgnin == true {
-            let  lsignintouchHTL = UIButton.init()
-            lsignintouchHTL.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
+        if jesterJournalist == true {
+            let  punProcessor = UIButton.init()
+            punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
            
-            lsignintouchHTL.setTitle("Quick Log", for: .normal)
-            lsignintouchHTL.setTitleColor(UIColor.white, for: .normal)
-            lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
+            punProcessor.setTitle("Quick Log", for: .normal)
+            punProcessor.setTitleColor(UIColor.white, for: .normal)
+            punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
            
-            lsignintouchHTL.isUserInteractionEnabled = false
-            view.addSubview(lsignintouchHTL)
+            punProcessor.isUserInteractionEnabled = false
+            view.addSubview(punProcessor)
            
-            lsignintouchHTL.snp.makeConstraints { make in
+            punProcessor.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
                 make.height.equalTo(52)
                 make.width.equalTo(335)
@@ -81,32 +82,32 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         
         
          
-        let fmeviewstys = WKWebViewConfiguration()
-        fmeviewstys.allowsAirPlayForMediaPlayback = false
-        fmeviewstys.allowsInlineMediaPlayback = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.mediaTypesRequiringUserActionForPlayback = []
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let jokeJuggler = WKWebViewConfiguration()
+        jokeJuggler.allowsAirPlayForMediaPlayback = false
+        jokeJuggler.allowsInlineMediaPlayback = true
+        jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
+        jokeJuggler.mediaTypesRequiringUserActionForPlayback = []
+        jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        fmePlaungView = WKWebView.init(frame: UIScreen.main.bounds, configuration: fmeviewstys)
-        fmePlaungView?.isHidden = true
-        fmePlaungView?.translatesAutoresizingMaskIntoConstraints = false
-        fmePlaungView?.scrollView.alwaysBounceVertical = false
+        snickerSculptor = WKWebView.init(frame: UIScreen.main.bounds, configuration: jokeJuggler)
+        snickerSculptor?.isHidden = true
+        snickerSculptor?.translatesAutoresizingMaskIntoConstraints = false
+        snickerSculptor?.scrollView.alwaysBounceVertical = false
         
-        fmePlaungView?.scrollView.contentInsetAdjustmentBehavior = .never
-        fmePlaungView?.navigationDelegate = self
+        snickerSculptor?.scrollView.contentInsetAdjustmentBehavior = .never
+        snickerSculptor?.navigationDelegate = self
         
-        fmePlaungView?.uiDelegate = self
-        fmePlaungView?.allowsBackForwardNavigationGestures = true
+        snickerSculptor?.uiDelegate = self
+        snickerSculptor?.allowsBackForwardNavigationGestures = true
    
-        if let urewlinsdfme = URL.init(string: okaeenteanceFME) {
-            fmePlaungView?.load(NSURLRequest.init(url:urewlinsdfme) as URLRequest)
-            recordindOpeningTime = Date().timeIntervalSince1970
+        if let trickTrapper = URL.init(string: gagGeologist) {
+            snickerSculptor?.load(NSURLRequest.init(url:trickTrapper) as URLRequest)
+            prankPhysicist = Date().timeIntervalSince1970
         }
-        self.view.addSubview(fmePlaungView!)
+        self.view.addSubview(snickerSculptor!)
         
-        self.showingAlertingForSuccessfull(alsemessage: fmersousifgnin == true ? "log in....." : "")
+        self.showingAlertingForSuccessfull(alsemessage: jesterJournalist == true ? "log in....." : "")
        
     }
     
@@ -128,8 +129,8 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
        
             if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
              
-                if let url = navigationAction.request.url {
-                    UIApplication.shared.open(url,options: [:]) { bool in
+                if let chuckleChoreographer = navigationAction.request.url {
+                    UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
                        
                     }
                 }
@@ -140,26 +141,28 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     }
     
     
+    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
+        decisionHandler(.grant)
+    }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        fmePlaungView?.isHidden = false
+        snickerSculptor?.isHidden = false
         
         
         SwiftMessages.hide(animated: true)
-        if fmersousifgnin == true {
+        if jesterJournalist == true {
             self.showingAlertingForSuccessfull(alsemessage: "Login successful")
            
-            fmersousifgnin = false
+            jesterJournalist = false
             
         }
 
-        let adventurepatherFME = "/opi/v1/****t"
-         let versationParamFME: [String: Any] = [
-            "**o":"\(Int(Date().timeIntervalSince1970 - self.recordindOpeningTime*1000))"
-    
+        let illusionInvestigator = "/opi/v1/****t"
+         let quirkQuark: [String: Any] = [
+            "**o":"\(Int(Date().timeIntervalSince1970 - self.prankPhysicist*1000))"
          ]
       
-        DripDrollT.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, stallParFME: versationParamFME)
+        DripDrollT.goofyGradient.sillySynapse( illusionInvestigator, pranktopia: quirkQuark)
        
     }
     
@@ -170,14 +173,14 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
       
  
         if message.name == "Pay",
-            let mesgidhFME = message.body as? String {
+            let whimsyWatchmaker = message.body as? String {
          
 
             view.isUserInteractionEnabled = false
             self.laodingFlay(loadingText: "")
 
             
-            SwiftyStoreKit.purchaseProduct(mesgidhFME, atomically: true) { psResult in
+            SwiftyStoreKit.purchaseProduct(whimsyWatchmaker, atomically: true) { psResult in
                 SwiftMessages.hide(animated: true)
                 if case .success(let psPurch) = psResult {
                     let psdownloads = psPurch.transaction.downloads
@@ -202,11 +205,12 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                         return
                       }
                     
+                
 
-                    DripDrollT.pnolyert.installEnterRemallLastNetiFME("/opi/v1/****p", stallParFME: [
+                    DripDrollT.goofyGradient.sillySynapse("/opi/v1/****p", pranktopia: [
                         "payload":ticketData.base64EncodedString(),//**p
                         "transactionId":gettransID,//**t
-                        "callbackResult":"direct"//**c
+                        "callbackResult":["orderCode":whimsyWatchmaker]//**c
                     ]) { result in
                        
                         self.view.isUserInteractionEnabled = true
@@ -242,21 +246,21 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             
         }else if message.name == "Close" {
           
-            UserDefaults.standard.set(nil, forKey: "femuserlogidectoken")// 清除本地token
+            UserDefaults.standard.set(nil, forKey: "absurdityEngine")// 清除本地token
            
-            let anoreallRoold = UINavigationController.init(rootViewController: BlizzardBuffoonController.init())
-            anoreallRoold.navigationBar.isHidden = true
+            let comedyConductor = UINavigationController.init(rootViewController: BlizzardBuffoonController.init())
+            comedyConductor.navigationBar.isHidden = true
             
-            var windowtoye:UIWindow?
-            if let window = (UIApplication.shared.connectedScenes
+            var whimsyWidget:UIWindow?
+            if let giggleGardener = (UIApplication.shared.connectedScenes
                 .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
                 .windows
                 .first(where: \.isKeyWindow)  {
-                windowtoye = window
+                whimsyWidget = giggleGardener
                 
             }
             
-            windowtoye?.rootViewController = anoreallRoold
+            whimsyWidget?.rootViewController = comedyConductor
         }
     }
     
