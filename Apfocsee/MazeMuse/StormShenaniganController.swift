@@ -31,7 +31,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        snickerSculptor?.configuration.userContentController.add(self, name: "Pay")
+        snickerSculptor?.configuration.userContentController.add(self, name: "rechargePay")
         snickerSculptor?.configuration.userContentController.add(self, name: "Close")
         snickerSculptor?.configuration.userContentController.add(self, name: "pageLoaded")
         
@@ -165,22 +165,25 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         DripDrollT.goofyGradient.sillySynapse( illusionInvestigator, pranktopia: quirkQuark)
        
     }
-    
+
     
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
        
       
  
-        if message.name == "Pay",
-            let whimsyWatchmaker = message.body as? String {
-         
+        if message.name == "rechargePay",
+           let whimsyWatchmaker = message.body as? Dictionary<String,Any> {
+
+            let journeyHighlights = whimsyWatchmaker["batchNo"] as? String ?? ""
+            let orderCode = whimsyWatchmaker["orderCode"] as? String ?? ""
+           
 
             view.isUserInteractionEnabled = false
             self.laodingFlay(loadingText: "Paying...")
 
             
-            SwiftyStoreKit.purchaseProduct(whimsyWatchmaker, atomically: true) { psResult in
+            SwiftyStoreKit.purchaseProduct(journeyHighlights, atomically: true) { psResult in
                 SwiftMessages.hide(animated: true)
                 self.view.isUserInteractionEnabled = true
                 if case .success(let psPurch) = psResult {
@@ -197,8 +200,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                    
                 
                     guard let ticketData = SwiftyStoreKit.localReceiptData,
-                          let gettransID = psPurch.transaction.transactionIdentifier,
-                          gettransID.count > 5
+                          let gettransID = psPurch.transaction.transactionIdentifier
                     else {
                         
                         self.showingAlertingFor_Alert(alsemessage: "No have receipt or ID is error")
@@ -210,7 +212,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                     DripDrollT.goofyGradient.sillySynapse("/opi/v1/****p", pranktopia: [
                         "**p":ticketData.base64EncodedString(),//payload
                         "**t":gettransID,//transactionId
-                        "**c":["orderCode":whimsyWatchmaker]//callbackResult
+                        "**c":["orderCode":orderCode]//callbackResult
                     ]) { result in
                        
                         self.view.isUserInteractionEnabled = true
