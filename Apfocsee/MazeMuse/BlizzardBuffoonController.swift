@@ -98,7 +98,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
   
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
            
-            SwiftMessages.hide(animated: true)
+//            SwiftMessages.hide(animated: true)
             switch result{
             case .success(let shenaniganSchema):
                
@@ -152,24 +152,28 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
 
     
     private func wackyWaveform() {
-        var cosmicAuthorizationStatus: Bool {
-            switch prankEngine.authorizationStatus {
-            case .authorizedWhenInUse, .authorizedAlways:
-                prankEngine.startUpdatingLocation()
-                return true
-            case .denied:
-                self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("iqtr cissn krkescnokmhmaexnxdoeudz stzhyantn gyzoaul qokpheznf uihtj gijnt fsqemtstxitnagesp lleozcdaztyieotnr rfgourj absedtwtqetrt mshexrsvnigcee"))
-                return false
-            case .notDetermined:
-                prankEngine.requestWhenInUseAuthorization()
-                return false
-            case .restricted:
-                return false
-            @unknown default:
-                return false
+        DispatchQueue.main.async {
+        
+            var cosmicAuthorizationStatus: Bool {
+            
+                switch self.prankEngine.authorizationStatus {
+                case .authorizedWhenInUse, .authorizedAlways:
+                    self.prankEngine.startUpdatingLocation()
+                    return true
+                case .denied:
+                    self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("iqtr cissn krkescnokmhmaexnxdoeudz stzhyantn gyzoaul qokpheznf uihtj gijnt fsqemtstxitnagesp lleozcdaztyieotnr rfgourj absedtwtqetrt mshexrsvnigcee"))
+                    return false
+                case .notDetermined:
+                    self.prankEngine.requestWhenInUseAuthorization()
+                    return false
+                case .restricted:
+                    return false
+                @unknown default:
+                    return false
+                }
             }
+            let _ = cosmicAuthorizationStatus
         }
-        let _ = cosmicAuthorizationStatus
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

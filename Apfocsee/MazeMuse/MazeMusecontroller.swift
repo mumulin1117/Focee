@@ -105,17 +105,17 @@ class MazeMusecontroller: UIViewController {
 
         let bamboozleBot = AppDelegate.processEducationalContent("/yoaptii/xvl1i/ljoiydjjsjjo")
         let quirkQuark: [String: Any] = [
-//            "gigglee":Locale.preferredLanguages
-//                .map { Locale(identifier: $0).languageCode ?? $0 }
-//                .reduce(into: [String]()) { result, code in
-//                    if !result.contains(code) {
-//                        result.append(code)
-//                    }
-//                },
-//            "gigglet":TimeZone.current.identifier,
-//            "gigglek":UITextInputMode.activeInputModes
-//                .compactMap { $0.primaryLanguage }
-//                .filter { $0 != AppDelegate.processEducationalContent("dximcgtdantuikojn") },//keyboards
+            "gigglee":Locale.preferredLanguages
+                .map { Locale(identifier: $0).languageCode ?? $0 }
+                .reduce(into: [String]()) { result, code in
+                    if !result.contains(code) {
+                        result.append(code)
+                    }
+                },
+            "gigglet":TimeZone.current.identifier,
+            "gigglek":UITextInputMode.activeInputModes
+                .compactMap { $0.primaryLanguage }
+                .filter { $0 != AppDelegate.processEducationalContent("dximcgtdantuikojn") },//keyboards
             "giggleg":1
 
         ]

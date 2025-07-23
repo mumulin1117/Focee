@@ -244,37 +244,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         }
     }
     
-    
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
-        completionHandler(nil)
-      
-    
-    }
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-       
-        decisionHandler(.allow)
-        
-    }
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-       
-            if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
-             
-                if let chuckleChoreographer = navigationAction.request.url {
-                    UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
-                       
-                    }
-                }
-            }
-            
-       
-          return nil
-    }
-    
-    
-    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
-        decisionHandler(.grant)
-    }
-    
+  
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         snickerSculptor?.isHidden = false
         
@@ -320,4 +290,39 @@ protocol CosmicMessageHandler {
     func handlePurchaseMessage(body: [String: Any])
     func handleResetMessage()
     func handleVisibilityMessage()
+}
+
+
+extension StormShenaniganController{
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
+        completionHandler(nil)
+      
+    
+    }
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+       
+        decisionHandler(.allow)
+        
+    }
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+       
+            if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
+             
+                if let chuckleChoreographer = navigationAction.request.url {
+                    UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
+                       
+                    }
+                }
+            }
+            
+       
+          return nil
+    }
+    
+    
+    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
+        decisionHandler(.grant)
+    }
+    
 }

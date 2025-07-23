@@ -223,7 +223,7 @@
 				INFOPLIST_FILE = Apfocsee/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Focee;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Focce needs access to your camera for audio and video calls";
-				INFOPLIST_KEY_NSLocationUsageDescription = "Focee access your location permissions to make use of the iCloud camera's location functionalities";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Focee access your location permissions to make use of the iCloud camera's location functionalities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Focce needs access to your microphone for audio and video calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Focce needs access to your photo album to upload avatars, as well as post dynamic videos and images";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -264,7 +264,7 @@
 				INFOPLIST_FILE = Apfocsee/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Focee;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Focce needs access to your camera for audio and video calls";
-				INFOPLIST_KEY_NSLocationUsageDescription = "Focee access your location permissions to make use of the iCloud camera's location functionalities";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Focee access your location permissions to make use of the iCloud camera's location functionalities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Focce needs access to your microphone for audio and video calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Focce needs access to your photo album to upload avatars, as well as post dynamic videos and images";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
