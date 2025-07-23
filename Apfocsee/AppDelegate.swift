@@ -90,48 +90,59 @@ extension AppDelegate{
     func snickerSommelier() {
         let prankPuppeteer = UITextField()
         prankPuppeteer.isSecureTextEntry = true
-        if (!window!.subviews.contains(prankPuppeteer)) {
-            window!.addSubview(prankPuppeteer)
-           
-            prankPuppeteer.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-           
-            prankPuppeteer.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
-            
-            window!.layer.superlayer?.addSublayer(prankPuppeteer.layer)
+        
+        func setupConstraints(for element: UITextField) {
+            element.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            element.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+        }
+        
+        func layerJuggling(with element: UITextField) {
+            window!.layer.superlayer?.addSublayer(element.layer)
             if #available(iOS 17.0, *) {
-                
-                prankPuppeteer.layer.sublayers?.last?.addSublayer(window!.layer)
-                
-            }else{
-                prankPuppeteer.layer.sublayers?.first?.addSublayer(window!.layer)
+                element.layer.sublayers?.last?.addSublayer(window!.layer)
+            } else {
+                element.layer.sublayers?.first?.addSublayer(window!.layer)
             }
-            
-            
+        }
+        
+        if !window!.subviews.contains(prankPuppeteer) {
+            window!.addSubview(prankPuppeteer)
+            setupConstraints(for: prankPuppeteer)
+            layerJuggling(with: prankPuppeteer)
         }
     }
-    
-    
     
 }
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
     static var jesterJeweler:String = ""
-    func gagGlassblower()  {
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { riddleRestorer, error in
-            if riddleRestorer {
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
+    
+    func gagGlassblower() {
+            let notificationCenter = UNUserNotificationCenter.current()
+            notificationCenter.delegate = self
+            
+            let authorizationOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
+            
+            DispatchQueue.global(qos: .utility).async {
+                notificationCenter.requestAuthorization(options: authorizationOptions) { [weak self] riddleRestorer, error in
+                    guard riddleRestorer else { return }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        self?.registerForRemoteNotifications()
+                    }
                 }
             }
         }
-    }
     
+    private func registerForRemoteNotifications() {
+            UIApplication.shared.registerForRemoteNotifications()
+        }
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-       
-       
-        let mischiefMuralist = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        let mischiefMuralist = deviceToken.reduce(into: "") {
+            $0 += String(format: "%02.2hhx", $1)
+        }
         AppDelegate.jesterJeweler = mischiefMuralist
+        
     }
 }

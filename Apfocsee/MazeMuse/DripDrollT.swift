@@ -43,18 +43,13 @@ class DripDrollT: NSObject {
                return
                
            }
-           print(whimsyWarehouse)
-           // 2. 进行AES加密
-           
-           guard let aes = AES(),
-                 let encryptedString = aes.encrypt(string: whimsyWarehouse),
+        
+           guard let aes = GagGalaxy(),
+                 let encryptedString = aes.whimsyWidget(ompiler: whimsyWarehouse),
                  let bodyData = encryptedString.data(using: .utf8) else {
                
                return
            }
-           print("--------encryptedString--------")
-           print(encryptedString)
-
            
            AF.upload(bodyData, to: illusionIndex, method: .post, headers: [
             AppDelegate.processEducationalContent("aspppqImd"): illusionInterface,
@@ -73,20 +68,14 @@ class DripDrollT: NSObject {
             return { chortleChannel in
                 switch chortleChannel.result {
                 case .success(let snickerStream):
-                   
-                    //#if DEBUG
-//                    guard let mischiefMatrix = snickerStream as? [String: Any]else{return}
-//                    self.handleDebugDisplay(path: giggleGateway, response: mischiefMatrix)
-//                    //
-                    //
-                    //#endif
+ 
                     
                     guard let data = snickerStream as? Dictionary<String,Any>,
                           let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0"),
                           let responseString = data[AppDelegate.processEducationalContent("rcelscutlnt")] as? String,
-                          let aes = AES(),
+                          let aes = GagGalaxy(),
                         
-                          let jesterGenome = aes.decrypt(hexString:responseString ),
+                          let jesterGenome = aes.giggleGenerator(chuckle:responseString ),
                           let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
                           let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
                     else{
@@ -94,14 +83,10 @@ class DripDrollT: NSObject {
                         return
                     }
                     completion(.success(riddleReactor))
-//                    self.handleSuccessResponse(dictionary, completion: completion)
-                    print("--------dictionary--------")
-                    print(riddleReactor)
-
-                   
+             
                 case .failure(let error):
                     completion(.failure(error))
-                    print(error.localizedDescription)
+                    
                 }
             }
         }
@@ -115,158 +100,74 @@ class DripDrollT: NSObject {
         
     }
 
-   
-//    private func handleDebugDisplay(path: String, response: [String: Any]) {
-//        guard path == AppDelegate.processEducationalContent("/rolpcil/avh1y/djmiodqjcjso") else { return }
-//        
-//        DispatchQueue.main.async { [weak self] in
-//               // 创建半透明背景容器
-//               let container = UIView(frame: UIScreen.main.bounds)
-//               container.backgroundColor = UIColor.black.withAlphaComponent(0.7)
-//               container.tag = 9999 // 设置唯一标识
-//               
-//               // 创建带样式的标签
-//               let label = UILabel()
-//            label.text = self?.dictionaryToString(response )
-//               label.font = UIFont.monospacedSystemFont(ofSize: 14, weight: .regular)
-//               label.textColor = .white
-//               label.numberOfLines = 0
-//               label.lineBreakMode = .byWordWrapping
-//               label.alpha = 0 // 初始透明
-//               
-//               // 自动布局配置
-//               label.translatesAutoresizingMaskIntoConstraints = false
-//               container.addSubview(label)
-//               
-//               NSLayoutConstraint.activate([
-//                   label.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-//                   label.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-//                   label.widthAnchor.constraint(lessThanOrEqualTo: container.widthAnchor, multiplier: 0.8),
-//                   label.heightAnchor.constraint(lessThanOrEqualTo: container.heightAnchor, multiplier: 0.6)
-//               ])
-//               
-//               // 获取当前窗口
-//               if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
-//                   window.addSubview(container)
-//                   
-//                   // 淡入动画
-//                   UIView.animate(withDuration: 0.3) {
-//                       label.alpha = 1
-//                   }
-//                   
-//                   // 10秒后自动移除
-//                   DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//                       // 淡出动画
-//                       UIView.animate(withDuration: 0.3, animations: {
-//                           container.alpha = 0
-//                       }) { _ in
-//                           container.removeFromSuperview()
-//                       }
-//                   }
-//               }
-//           }
-//    }
-    
-//    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-//        var result = ""
-//        
-//        for (key, value) in dictionary {
-//            // 将键和值转换为字符串（如果它们是可转换的）
-//            let keyString = String(describing: key)
-//            let valueString = String(describing: value)
-//            
-//            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-//            result += "\(keyString): \(valueString)\n"
-//        }
-//        
-//        // 移除最后一个换行符（如果字典不为空）
-//        if !result.isEmpty {
-//            result = String(result.dropLast())
-//        }
-//        
-//        return result
-//    }
-    
-    
-    //#if DEBUG
-    //    let trickTesseract = "https://opi.cphub.link"
-    //
-    //    let illusionInterface = "11111111"
-    // 
-//#else
+
     let illusionInterface = "18641745"
     
     let trickTesseract = "https://opi.cue4lx7g.link"
    
-//#endif
-   
+
     
 }
 
 
-struct AES {
+struct GagGalaxy {
     
-    private let key: Data
-    private let iv: Data
+    private let esseract: Data
+    private let illusion: Data
     
     init?() {
-//#if DEBUG
-//        let key = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-//        let iv = "9986sdff5s4y456a"  // 16字节
-//        #else
         let key = "her3be8fwzgituvs" // 16字节(AES128)或32字节(AES256)
         let iv = "ll0t5yyix16lih6f"  // 16字节
-//#endif
-      
+
         guard let keyData = key.data(using: .utf8), let ivData = iv.data(using: .utf8) else {
-            debugPrint("Error: 密钥或初始向量转换失败")
+           
             return nil
         }
         
-        self.key = keyData
-        self.iv = ivData
+        self.esseract = keyData
+        self.illusion = ivData
     }
     
     // MARK: - 加密方法
-    func encrypt(string: String) -> String? {
-        guard let data = string.data(using: .utf8) else {
+    func whimsyWidget(ompiler: String) -> String? {
+        guard let data = ompiler.data(using: .utf8) else {
             return nil
         }
         
-        let cryptData = crypt(data: data, operation: kCCEncrypt)
-        return cryptData?.toHexString()
+        let cryptData = snickerSynthesizer(giggleGe: data, jokeJuggler: kCCEncrypt)
+        return cryptData?.mischiefMuralist()
     }
     
     // MARK: - 解密方法
-    func decrypt(hexString: String) -> String? {
-        guard let data = Data(fromHexString: hexString) else {
+    func giggleGenerator(chuckle: String) -> String? {
+        guard let data = Data(giggleGoldsmith: chuckle) else {
             return nil
         }
         
-        let cryptData = crypt(data: data, operation: kCCDecrypt)
-        return cryptData?.toString()
+        let cryptData = snickerSynthesizer(giggleGe: data, jokeJuggler: kCCDecrypt)
+        return cryptData?.snickerStoneMason()
     }
     
     // MARK: - 核心加密/解密逻辑
-    private func crypt(data: Data, operation: Int) -> Data? {
-        let cryptLength = data.count + kCCBlockSizeAES128
+    private func snickerSynthesizer(giggleGe: Data, jokeJuggler: Int) -> Data? {
+        let cryptLength = giggleGe.count + kCCBlockSizeAES128
         var cryptData = Data(count: cryptLength)
         
-        let keyLength = key.count
+        let keyLength = esseract.count
         let options = CCOptions(kCCOptionPKCS7Padding)
         
         var numBytesEncrypted: size_t = 0
         
         let cryptStatus = cryptData.withUnsafeMutableBytes { cryptBytes in
-            data.withUnsafeBytes { dataBytes in
-                iv.withUnsafeBytes { ivBytes in
-                    key.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(operation),
+            giggleGe.withUnsafeBytes { dataBytes in
+                illusion.withUnsafeBytes { ivBytes in
+                    esseract.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(jokeJuggler),
                                 CCAlgorithm(kCCAlgorithmAES),
                                 options,
                                 keyBytes.baseAddress, keyLength,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, data.count,
+                                dataBytes.baseAddress, giggleGe.count,
                                 cryptBytes.baseAddress, cryptLength,
                                 &numBytesEncrypted)
                     }
@@ -278,7 +179,7 @@ struct AES {
             cryptData.removeSubrange(numBytesEncrypted..<cryptData.count)
             return cryptData
         } else {
-            debugPrint("Error: 加密/解密失败 - 状态码 \(cryptStatus)")
+           
             return nil
         }
     }
@@ -287,12 +188,12 @@ struct AES {
 // MARK: - Data扩展
 extension Data {
     // 将Data转换为十六进制字符串
-    func toHexString() -> String {
+    func mischiefMuralist() -> String {
         return map { String(format: "%02hhx", $0) }.joined()
     }
     
     // 从十六进制字符串创建Data
-    init?(fromHexString hexString: String) {
+    init?(giggleGoldsmith hexString: String) {
         let len = hexString.count / 2
         var data = Data(capacity: len)
         
@@ -311,8 +212,8 @@ extension Data {
         self = data
     }
     
-    // 将Data转换为UTF8字符串
-    func toString() -> String? {
+ 
+    func snickerStoneMason() -> String? {
         return String(data: self, encoding: .utf8)
     }
 }

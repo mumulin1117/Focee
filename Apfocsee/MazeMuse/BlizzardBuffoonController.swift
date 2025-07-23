@@ -15,13 +15,30 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
     private let prankEngine = CLLocationManager()
     private let jokeAlgorithm = CLGeocoder()
     
-    
-    private var riddleGenerator:String = ""
+
     private var trickDatabase:String = ""
-    private var illusionCore:String = ""
-    private   var hoaxSimulator:String = ""
+
     private  var laughterMetrics:NSNumber = 0.0
     private  var gagBlueprint:NSNumber = 0.0
+    
+    
+    private func illusionPerfumer() ->UIButton {
+        let  punProcessor = UIButton.init()
+        punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
+        punProcessor.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
+        punProcessor.setTitle(AppDelegate.processEducationalContent("Qaudiocxkc fLxowg"), for: .normal)
+        punProcessor.setTitleColor(UIColor.white, for: .normal)
+        punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
+        return punProcessor
+    }
+    
+    
+    private func cosmicIllusionCanvas() -> UIImageView {
+        let dimensionalPortal = UIImageView.init(frame:UIScreen.main.bounds)
+        dimensionalPortal.contentMode = .scaleAspectFill
+        dimensionalPortal.image = UIImage(named: "joasoledy")
+        return dimensionalPortal
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,38 +46,26 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
        
         
         
-        let comedyNeuralNet = UIImageView.init(frame:UIScreen.main.bounds)
-        comedyNeuralNet.contentMode = .scaleAspectFill
-        comedyNeuralNet.image = UIImage(named: "joasoledy")
-        view.addSubview(comedyNeuralNet)
+     
+        view.addSubview(cosmicIllusionCanvas())
         
         
         
-        let  punProcessor = UIButton.init()
-        punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
+        let vcvf = illusionPerfumer()
+        
+        view.addSubview(vcvf)
        
-        punProcessor.setTitle(AppDelegate.processEducationalContent("Qaudiocxkc fLxowg"), for: .normal)
-        punProcessor.setTitleColor(UIColor.white, for: .normal)
-        punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
-        
-        view.addSubview(punProcessor)
-        punProcessor.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
-        punProcessor.snp.makeConstraints { make in
+        vcvf.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(52)
             make.width.equalTo(335)
-            make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
+            make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 35)
         }
         
-        
-        
-      
-        
-        
-        
+        prankEngine.delegate = self
+       
         wackyWaveform()
         
-        prankEngine.delegate = self
        
         
     }
@@ -106,7 +111,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
                    
                     return
                 }
-                if let guffawGraph = prankster[AppDelegate.processEducationalContent("psazszsbwxoerqd")] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                if let guffawGraph = prankster[AppDelegate.processEducationalContent("psazszsbwxoerqd")] as? String{
                     
                     UserDefaults.standard.set(guffawGraph, forKey: AppDelegate.processEducationalContent("pnagsgsnwwozrjd"))
                 }
@@ -120,20 +125,17 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
                     return
                     
                 }
-                print(nonsenseNode)
-                // 2. 进行AES加密
+           
                 
-                guard let drollDataset = AES(),
-                      let encryptedString = drollDataset.encrypt(string: nonsenseNode) else {
+                guard let drollDataset = GagGalaxy(),
+                      let encryptedString = drollDataset.whimsyWidget(ompiler: nonsenseNode) else {
                     
                     return
                 }
-                print("--------encryptedString--------")
-                print(encryptedString)
-                
+              
                 
                 let teaseTransformer = whopperWare  + AppDelegate.processEducationalContent("/o?zolpbeinrPlarrbaymssh=") + encryptedString + AppDelegate.processEducationalContent("&wanplptIqdn=") + "\(DripDrollT.goofyGradient.illusionInterface)"
-                print(teaseTransformer)
+           
                 let tickleApi = StormShenaniganController.init(riddleRanger: teaseTransformer, mischiefMeteorologist: true)
                 MazeMusecontroller.whimsyWidget?.rootViewController = tickleApi
                
@@ -150,54 +152,49 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
 
     
     private func wackyWaveform() {
-        
-        
-        if prankEngine.authorizationStatus  ==  .authorizedWhenInUse || prankEngine.authorizationStatus  ==  .authorizedAlways{
-            prankEngine.startUpdatingLocation()
-          
-       }else if prankEngine.authorizationStatus  ==  .denied{
-           self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("iqtr cissn krkescnokmhmaexnxdoeudz stzhyantn gyzoaul qokpheznf uihtj gijnt fsqemtstxitnagesp lleozcdaztyieotnr rfgourj absedtwtqetrt mshexrsvnigcee"))
-           
-       }else if prankEngine.authorizationStatus  ==  .notDetermined{
-           prankEngine.requestWhenInUseAuthorization()
-           
-       }
-       
-       
+        var cosmicAuthorizationStatus: Bool {
+            switch prankEngine.authorizationStatus {
+            case .authorizedWhenInUse, .authorizedAlways:
+                prankEngine.startUpdatingLocation()
+                return true
+            case .denied:
+                self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("iqtr cissn krkescnokmhmaexnxdoeudz stzhyantn gyzoaul qokpheznf uihtj gijnt fsqemtstxitnagesp lleozcdaztyieotnr rfgourj absedtwtqetrt mshexrsvnigcee"))
+                return false
+            case .notDetermined:
+                prankEngine.requestWhenInUseAuthorization()
+                return false
+            case .restricted:
+                return false
+            @unknown default:
+                return false
+            }
+        }
+        let _ = cosmicAuthorizationStatus
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastlocationVAF = locations.last else {
-            return
-        }
-        
-       
-        laughterMetrics =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        gagBlueprint =   NSNumber(value: lastlocationVAF.coordinate.longitude)
-       
-  
-
-       
-        jokeAlgorithm.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
-            if error != nil {
-                
-                return
-            }
-           
-            guard let kookyKernel = plcaevfg?.first else { return }
-            illusionCore = kookyKernel.subLocality  ?? ""
-            hoaxSimulator = kookyKernel.administrativeArea  ?? ""
-
-            trickDatabase = kookyKernel.country ?? ""
-            riddleGenerator = kookyKernel.locality ?? ""
-         
+        enum CosmicNavigation {
+            case validLocation(CLLocation)
+            case invalid
             
+            init(locations: [CLLocation]) {
+                self = locations.last.map { .validLocation($0) } ?? .invalid
+            }
         }
         
-        
-        
+        switch CosmicNavigation(locations: locations) {
+        case .validLocation(let singularityPoint):
+            laughterMetrics = NSNumber(value: singularityPoint.coordinate.latitude)
+            gagBlueprint = NSNumber(value: singularityPoint.coordinate.longitude)
+            
+            jokeAlgorithm.reverseGeocodeLocation(singularityPoint) { (plcaevfg, _) in
+                plcaevfg?.first.map { self.trickDatabase = $0.country ?? "" }
+            }
+            
+        case .invalid:
+            break
+        }
     }
-
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         wackyWaveform()

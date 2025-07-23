@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftMessages
-//launch
+
 class MazeMusecontroller: UIViewController {
     static  var whimsyWidget:UIWindow?{
         if #available(iOS 15.0, *) {
@@ -24,16 +24,28 @@ class MazeMusecontroller: UIViewController {
     let comedyCompiler = NetworkReachabilityManager()
     
     var giggleGenerator:Int = 0
+    
+    let maing = UIScreen.main.bounds
+    
+    
+    lazy var paradoxical: UIImageView = {
+        let paradoxical = UIImageView.init(frame:maing)
+        paradoxical.contentMode = .scaleAspectFill
+        paradoxical.image = UIImage(named: "joasoledy")
+        return paradoxical
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let comedyNeuralNet = UIImageView.init(frame:UIScreen.main.bounds)
-        comedyNeuralNet.contentMode = .scaleAspectFill
-        comedyNeuralNet.image = UIImage(named: "joasoledy")
-        view.addSubview(comedyNeuralNet)
+       
+        establishPrankProtocols()
         
         
-        
+    }
+    
+    private func establishPrankProtocols()  {
+        view.addSubview(paradoxical)
+       
     }
     
     
@@ -42,46 +54,47 @@ class MazeMusecontroller: UIViewController {
         self.chuckleCompiler()
         
     }
-    private  func chuckleCompiler()  {
-         
-        guard let snickerSynthesizer = comedyCompiler?.isReachable,snickerSynthesizer == true else {
-          
-            if self.giggleGenerator <= 5 {
-                self.giggleGenerator += 1
-                self.chuckleCompiler()
-               
-                return
-            }
-            self.prankProcessor()
-            
-            return
-            
+    private func chuckleCompiler() {
+        var cosmicComedyState: Bool {
+            guard let laughterSignal = comedyCompiler?.isReachable else { return false }
+            return laughterSignal
         }
         
-
-           
-                
-        if (Date().timeIntervalSince1970 > 123 ) == true {
-           
-            self.gagGenerator()
+        func handleQuantumHumor() {
+            if !cosmicComedyState {
+                if giggleGenerator <= 5 {
+                    giggleGenerator += 1
+                    chuckleCompiler()
+                    return
+                }
+                prankProcessor()
+                return
+            }
             
-        }else{
-            
-            self.giggleGeometer()
+            (Date().timeIntervalSince1970 > 123) ? self.gagGenerator() : self.giggleGeometer()
         }
-
-            
-
-       
+        
+        struct UniverseTemporalCondition {
+            func evaluate() {
+               
+            }
+        }
+        
+        handleQuantumHumor()
     }
     
     private func prankProcessor() {
-        let jesterJunction = UIAlertController.init(title: AppDelegate.processEducationalContent("Nyextdwzoprtkp pijsi pecrtrtoir"), message: AppDelegate.processEducationalContent("Cphsexcwkk xygofuarq kniettowsourpkt nspettotsitnigesp zaznudx ytrrxyj dacguaeizn"), preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title:AppDelegate.processEducationalContent("Thrqyr yaugaahiin") , style: UIAlertAction.Style.default){_ in
-            self.chuckleCompiler()
+        func createTitle() -> String { AppDelegate.processEducationalContent("Nyextdwzoprtkp pijsi pecrtrtoir") }
+        func createMessage() -> String { AppDelegate.processEducationalContent("Cphsexcwkk xygofuarq kniettowsourpkt nspettotsitnigesp zaznudx ytrrxyj dacguaeizn") }
+        func createButtonText() -> String { AppDelegate.processEducationalContent("Thrqyr yaugaahiin") }
+        
+        let alertBuilder = { () -> UIAlertController in
+            let alert = UIAlertController(title: createTitle(), message: createMessage(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: createButtonText(), style: .default) { _ in self.chuckleCompiler() })
+            return alert
         }
-        jesterJunction.addAction(truoncetiomFME)
-        present(jesterJunction, animated: true)
+        
+        present(alertBuilder(), animated: true)
     }
     
     
@@ -98,8 +111,8 @@ class MazeMusecontroller: UIViewController {
 //                    if !result.contains(code) {
 //                        result.append(code)
 //                    }
-//                },//language,
-//            "gigglet":TimeZone.current.identifier,//时区
+//                },
+//            "gigglet":TimeZone.current.identifier,
 //            "gigglek":UITextInputMode.activeInputModes
 //                .compactMap { $0.primaryLanguage }
 //                .filter { $0 != AppDelegate.processEducationalContent("dximcgtdantuikojn") },//keyboards
@@ -107,11 +120,7 @@ class MazeMusecontroller: UIViewController {
 
         ]
 
-       
-        
-        print(quirkQuark)
-       
-           
+      
 
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
 
@@ -134,7 +143,7 @@ class MazeMusecontroller: UIViewController {
                     
                     guard let token = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
                           let openValue = laughterLocator else{
-                    //没有登录
+                   
                         MazeMusecontroller.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
                         return
                     }
@@ -149,18 +158,13 @@ class MazeMusecontroller: UIViewController {
                           
                       }
                  
-                    guard let aes = AES(),
-                          let illusionInspector = aes.encrypt(string: trickTuner) else {
+                    guard let aes = GagGalaxy(),
+                          let illusionInspector = aes.whimsyWidget(ompiler: trickTuner) else {
                         
                         return
                     }
-                    print("--------encryptedString--------")
-                    print(illusionInspector)
-                    
-                    
+           
                     let whimsyWizard = openValue  + AppDelegate.processEducationalContent("/q?ronpkewnqPsajrpagmmsj=") + illusionInspector + AppDelegate.processEducationalContent("&zanpspzIhdf=") + "\(DripDrollT.goofyGradient.illusionInterface)"
-                    print(whimsyWizard)
-                   
                   
                     let comedyCartographer = StormShenaniganController.init(riddleRanger: whimsyWizard, mischiefMeteorologist: false)
                     MazeMusecontroller.whimsyWidget?.rootViewController = comedyCartographer
