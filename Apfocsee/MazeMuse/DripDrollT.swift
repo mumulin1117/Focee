@@ -22,9 +22,7 @@ class DripDrollT: NSObject {
         
     }
 
-    
-    // MARK: - 私有方法
-   
+
   
     // MARK: - 网络请求优化
        func sillySynapse(_ trickTopology: String,

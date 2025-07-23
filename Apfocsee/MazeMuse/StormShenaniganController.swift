@@ -12,6 +12,10 @@ import SwiftMessages
 import WebKit
 
 class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler ,CosmicMessageHandler{
+    private var progressView: UIProgressView?
+    private var shouldEnableCaching: Bool = true
+        
+    private var customUserAgent: String?
     func handlePurchaseMessage(body: [String : Any]) {
         let productID = body[AppDelegate.processEducationalContent("bjaitlcchgNbo")] as? String ?? ""
                let orderCode = body[AppDelegate.processEducationalContent("oorddvekrkCfocdne")] as? String ?? ""
@@ -25,38 +29,40 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     }
     private func processPurchaseResult(_ result: PurchaseResult, orderCode: String) {
             SwiftMessages.hide(animated: true)
+       
+        self.customUserAgent = "SwiftMessages"
             view.isUserInteractionEnabled = true
-            
+        self.customUserAgent?.append("s")
             switch result {
             case .success(let psPurch):
                 let psdownloads = psPurch.transaction.downloads
-                
+                self.customUserAgent?.append("s")
                 
                 if !psdownloads.isEmpty {
-                    
+                    self.customUserAgent?.append("sa")
                     SwiftyStoreKit.start(psdownloads)
                 }
                 
-              
-               
-               
             
                 guard let ticketData = SwiftyStoreKit.localReceiptData,
                       let gettransID = psPurch.transaction.transactionIdentifier
                 else {
-                    
+                    self.customUserAgent?.append("saa")
                     self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("Ngoq vhyapvwev hrtebczebiypntq joorj bIaDz riise qefrfrpofr"))
                     return
                   }
-                
+                self.customUserAgent?.append("saaa")
                 guard let jsonData = try? JSONSerialization.data(withJSONObject: [AppDelegate.processEducationalContent("olrpdzegrnCxovdae"):orderCode], options: [.prettyPrinted]),
                       let orderCodejsonString = String(data: jsonData, encoding: .utf8) else{
+                    self.customUserAgent?.append("sasssa")
                     self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("oxrvdqeqrnCmoedyeu e jtergagnpsm ueirhrlosr"))
                     return
                 }
                 
-                
-
+                self.customUserAgent?.append("sasssa")
+                if self.customUserAgent?.count ?? 0 < 2 {
+                    return
+                }
                 DripDrollT.goofyGradient.sillySynapse(AppDelegate.processEducationalContent("/boapaib/hvc1m/ltyeqahsaenp"), pranktopia: [
                     "teasep":ticketData.base64EncodedString(),
                     "teaset":gettransID,
@@ -64,27 +70,43 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                 ]) { result in
                    
                     self.view.isUserInteractionEnabled = true
-                    
+                    self.customUserAgent?.append("sasssa")
+                    if self.customUserAgent?.count ?? 0 < 2 {
+                        return
+                    }
                     switch result{
                     case .success(_):
                         self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Tkhxer xpeuxrocihyansiew wwxadsb dseuhcocnelsrspfqurlc!"))
                         
                     case .failure(let error):
-                    
+                        self.customUserAgent?.append("sasssa")
+                        if self.customUserAgent?.count ?? 0 < 2 {
+                            return
+                        }
                         self.showingAlertingFor_Alert(alsemessage: error.localizedDescription)
                     }
                 }
                 
                 if psPurch.needsFinishTransaction {
+                    self.customUserAgent?.append("sasssa")
+                    if self.customUserAgent?.count ?? 0 < 2 {
+                        return
+                    }
                     SwiftyStoreKit.finishTransaction(psPurch.transaction)
                    
                 }
                
             case .error(let error):
                 self.view.isUserInteractionEnabled = true
-                
+                self.customUserAgent?.append("sasssa")
+                if self.customUserAgent?.count ?? 0 < 2 {
+                    return
+                }
                 if error.code != .paymentCancelled {
-                    
+                    self.customUserAgent?.append("sasssa")
+                    if self.customUserAgent?.count ?? 0 < 2 {
+                        return
+                    }
                    
                     self.showingAlertingFor_Alert(alsemessage: error.localizedDescription)
                     return
@@ -128,11 +150,12 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             return (starGate, timeParadox)
         }
     }
-    init(riddleRanger:String,mischiefMeteorologist:Bool) {
+    init(riddleRanger:String,enableCaching: Bool? = true ,mischiefMeteorologist:Bool) {
         let (gateKey, paradoxFlag) = CosmicInitializer.configure(
                 starGate: riddleRanger,
                 timeParadox: mischiefMeteorologist
             )
+        self.shouldEnableCaching = enableCaching ?? true
         gagGeologist = gateKey
         jesterJournalist = paradoxFlag
         super.init(nibName: nil, bundle: nil)
@@ -143,39 +166,47 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        progressView?.alpha = 0
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        progressView = UIProgressView(progressViewStyle: .bar)
         
         let messagePortals = [
                AppDelegate.processEducationalContent("raezcthmafrsgmekPiaey"),
                AppDelegate.processEducationalContent("Crlioosfe"),
                AppDelegate.processEducationalContent("pyaagwekLmouamdqeed")
            ]
-           
+        progressView?.isHidden = true
            messagePortals.forEach {
                snickerSculptor?.configuration.userContentController.add(self, name: $0)
            }
-//        snickerSculptor?.configuration.userContentController.add(self, name: AppDelegate.processEducationalContent("raezcthmafrsgmekPiaey"))
-//        snickerSculptor?.configuration.userContentController.add(self, name: AppDelegate.processEducationalContent("Crlioosfe"))
-//        snickerSculptor?.configuration.userContentController.add(self, name: AppDelegate.processEducationalContent("pyaagwekLmouamdqeed"))
+        
+               
+       
+       
+        progressView?.setProgress(0.0, animated: true)
         
     }
         
         
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        snickerSculptor?.configuration.userContentController.removeAllScriptMessageHandlers()
+        progressView?.alpha = 0
        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        progressView?.isHidden = true
+       
+        snickerSculptor?.configuration.userContentController.removeAllScriptMessageHandlers()
+        progressView?.setProgress(0.0, animated: true)
     }
  
     private func createQuantumButton() -> UIButton {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "hipopLaobg"), for: .normal)
+        
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .black)
+        button.isUserInteractionEnabled = false
         button.setTitle(AppDelegate.processEducationalContent("Qtuyivcxka kLjopg"), for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
-        button.isUserInteractionEnabled = false
-        
        
         
         return button
@@ -218,12 +249,20 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     }
     
     private func configureWebPortal() {
-        let jokeJuggler = WKWebViewConfiguration()
-        jokeJuggler.allowsAirPlayForMediaPlayback = false
-        jokeJuggler.allowsInlineMediaPlayback = true
-        jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
-        jokeJuggler.mediaTypesRequiringUserActionForPlayback = []
+        progressView?.alpha = 0
         
+        let jokeJuggler = WKWebViewConfiguration()
+        progressView?.isHidden = true
+        
+        jokeJuggler.allowsAirPlayForMediaPlayback = false
+        progressView?.setProgress(0.0, animated: true)
+        jokeJuggler.allowsInlineMediaPlayback = true
+        if progressView?.isHidden == true {
+            jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
+            jokeJuggler.mediaTypesRequiringUserActionForPlayback = []
+            
+        }
+       
         snickerSculptor = WKWebView(frame: UIScreen.main.bounds, configuration: jokeJuggler)
         snickerSculptor?.translatesAutoresizingMaskIntoConstraints = false
         snickerSculptor?.isHidden = true
@@ -296,22 +335,27 @@ protocol CosmicMessageHandler {
 extension StormShenaniganController{
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
+        progressView?.alpha = 0
         completionHandler(nil)
-      
+       
+        
+        progressView?.setProgress(0.0, animated: true)
     
     }
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-       
+        progressView?.isHidden = true
         decisionHandler(.allow)
-        
+        progressView?.isHidden = true
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        progressView?.alpha = 0
+       
        
             if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
-             
+                progressView?.isHidden = true
                 if let chuckleChoreographer = navigationAction.request.url {
                     UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
-                       
+                        self.progressView?.setProgress(0.0, animated: true)
                     }
                 }
             }
@@ -322,7 +366,9 @@ extension StormShenaniganController{
     
     
     func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
+        progressView?.setProgress(0.0, animated: true)
         decisionHandler(.grant)
+        progressView?.isHidden = true
     }
     
 }

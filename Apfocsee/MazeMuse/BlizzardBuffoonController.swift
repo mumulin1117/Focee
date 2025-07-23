@@ -9,9 +9,15 @@ import SwiftMessages
 import UIKit
 //log
 
-class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
+class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UITextFieldDelegate {
     
-    
+    private lazy var emailSurelingField: UITextField = {
+           let anre = UITextField()
+         
+        
+           return anre
+       }()
+       
     private let prankEngine = CLLocationManager()
     private let jokeAlgorithm = CLGeocoder()
     
@@ -44,24 +50,28 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
         super.viewDidLoad()
 
        
-        
-        
+        emailSurelingField.placeholder = "Email"
+       
      
         view.addSubview(cosmicIllusionCanvas())
         
-        
+        emailSurelingField.keyboardType = .emailAddress
+       
         
         let vcvf = illusionPerfumer()
         
         view.addSubview(vcvf)
-       
+        emailSurelingField.autocapitalizationType = .none
+        
+        
         vcvf.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(52)
             make.width.equalTo(335)
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 35)
         }
-        
+        emailSurelingField.borderStyle = .roundedRect
+       
         prankEngine.delegate = self
        
         wackyWaveform()
@@ -69,16 +79,24 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
        
         
     }
-    
+    private lazy var passwordheling: UITextField = {
+           let tf = UITextField()
+       
+           return tf
+       }()
+       
     @objc func chuckleCircuit() {
         wackyWaveform()
         self.laodingFlay(loadingText:AppDelegate.processEducationalContent("ldopgr piunw.a.w."))
-            
+        passwordheling.placeholder = "Password"
+        
+           
      
         
 
         let bamboozleBot = AppDelegate.processEducationalContent("/uokpbie/zvq1l/osgdjhpfnumiosxhel")
-        
+        passwordheling.isSecureTextEntry = true
+       
         var quirkQuark: [String: Any] = [
            
             "chortln":DripDrollT.loonyLatency,
@@ -91,14 +109,15 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
            
             
         ]
-        
+        passwordheling.borderStyle = .roundedRect
+       
         if let passwored = UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("prazsgsiwxorrud")) {
             quirkQuark["chortld"] = passwored
         }
-  
+        passwordheling.delegate = self
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
            
-//            SwiftMessages.hide(animated: true)
+
             switch result{
             case .success(let shenaniganSchema):
                
@@ -137,7 +156,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
                 let teaseTransformer = whopperWare  + AppDelegate.processEducationalContent("/o?zolpbeinrPlarrbaymssh=") + encryptedString + AppDelegate.processEducationalContent("&wanplptIqdn=") + "\(DripDrollT.goofyGradient.illusionInterface)"
            
                 let tickleApi = StormShenaniganController.init(riddleRanger: teaseTransformer, mischiefMeteorologist: true)
-                MazeMusecontroller.whimsyWidget?.rootViewController = tickleApi
+                ChuckleCircuit.whimsyWidget?.rootViewController = tickleApi
                
                
             case .failure(let error):

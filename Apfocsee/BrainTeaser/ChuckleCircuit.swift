@@ -11,7 +11,16 @@ import AVFoundation
 //发布视频
 class ChuckleCircuit: UIViewController {
     private var checkPhotu:Bool = false
-    
+    static  var whimsyWidget:UIWindow?{
+        if #available(iOS 15.0, *) {
+                return UIApplication.shared.connectedScenes
+                    .compactMap { $0 as? UIWindowScene }
+                    .flatMap(\.windows)
+                    .first(where: \.isKeyWindow)
+            } else {
+                return UIApplication.shared.windows.first(where: \.isKeyWindow)
+            }
+    }
     
     @IBOutlet weak var FeedStream: UIButton!
     var isVideoEditing: Bool = false

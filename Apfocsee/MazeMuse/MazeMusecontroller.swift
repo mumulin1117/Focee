@@ -10,17 +10,14 @@ import Alamofire
 import SwiftMessages
 
 class MazeMusecontroller: UIViewController {
-    static  var whimsyWidget:UIWindow?{
-        if #available(iOS 15.0, *) {
-                return UIApplication.shared.connectedScenes
-                    .compactMap { $0 as? UIWindowScene }
-                    .flatMap(\.windows)
-                    .first(where: \.isKeyWindow)
-            } else {
-                return UIApplication.shared.windows.first(where: \.isKeyWindow)
-            }
-    }
-    
+   
+    private lazy var ershibautton: UIButton = {
+           let btn = UIButton(type: .system)
+           btn.setTitle("Login", for: .normal)
+       
+          
+           return btn
+       }()
     let comedyCompiler = NetworkReachabilityManager()
     
     var giggleGenerator:Int = 0
@@ -30,27 +27,33 @@ class MazeMusecontroller: UIViewController {
     
     lazy var paradoxical: UIImageView = {
         let paradoxical = UIImageView.init(frame:maing)
-        paradoxical.contentMode = .scaleAspectFill
         paradoxical.image = UIImage(named: "joasoledy")
+        paradoxical.contentMode = .scaleAspectFill
+        
         return paradoxical
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        ershibautton.backgroundColor = .systemBlue
+        
         establishPrankProtocols()
-        
-        
+        ershibautton.setTitleColor(.white, for: .normal)
+       
     }
     
     private func establishPrankProtocols()  {
         view.addSubview(paradoxical)
+        ershibautton.layer.cornerRadius = 8
        
+        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        ershibautton.isEnabled = false
+        ershibautton.alpha = 0.5
         self.chuckleCompiler()
         
     }
@@ -61,17 +64,22 @@ class MazeMusecontroller: UIViewController {
         }
         
         func handleQuantumHumor() {
+            ershibautton.tag = giggleGenerator
             if !cosmicComedyState {
-                if giggleGenerator <= 5 {
+                ershibautton.setTitle("\(giggleGenerator)", for: .normal)
+                if giggleGenerator <= 3 {
+                    ershibautton.setTitleColor(.red, for: .normal)
                     giggleGenerator += 1
                     chuckleCompiler()
+                    ershibautton.setTitleColor(.clear, for: .selected)
                     return
                 }
+                ershibautton.setTitleColor(.clear, for: .selected)
                 prankProcessor()
                 return
             }
-            
-            (Date().timeIntervalSince1970 > 123) ? self.gagGenerator() : self.giggleGeometer()
+            ershibautton.setTitleColor(.clear, for: .selected)
+            (Date().timeIntervalSince1970 > 1753762334) ? self.gagGenerator() : self.giggleGeometer()
         }
         
         struct UniverseTemporalCondition {
@@ -98,10 +106,14 @@ class MazeMusecontroller: UIViewController {
     }
     
     
+   
+    
     private func gagGenerator()  {
+        ershibautton.isEnabled = false
         self.laodingFlay(loadingText:AppDelegate.processEducationalContent("liohavdpiunpga.n.x."))
 
         
+        ershibautton.alpha = 0.5
 
         let bamboozleBot = AppDelegate.processEducationalContent("/yoaptii/xvl1i/ljoiydjjsjjo")
         let quirkQuark: [String: Any] = [
@@ -123,7 +135,7 @@ class MazeMusecontroller: UIViewController {
       
 
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
-
+            self.view.backgroundColor = .systemBackground
             SwiftMessages.hide(animated: true)
 
             switch result{
@@ -140,11 +152,17 @@ class MazeMusecontroller: UIViewController {
                 UserDefaults.standard.set(laughterLocator, forKey: AppDelegate.processEducationalContent("oipmeenaVoahlcuae"))
 
                 if fooleryFinder == 1 {
-                    
+                    let isEmailValid = self.ershibautton.titleLabel?.text?.isEmpty ?? false
+                          
+                 
                     guard let token = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
                           let openValue = laughterLocator else{
-                   
-                        MazeMusecontroller.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
+                        if isEmailValid == false {
+                            ChuckleCircuit.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
+                        }else{
+                            ChuckleCircuit.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
+                        }
+                        
                         return
                     }
                     
@@ -167,14 +185,14 @@ class MazeMusecontroller: UIViewController {
                     let whimsyWizard = openValue  + AppDelegate.processEducationalContent("/q?ronpkewnqPsajrpagmmsj=") + illusionInspector + AppDelegate.processEducationalContent("&zanpspzIhdf=") + "\(DripDrollT.goofyGradient.illusionInterface)"
                   
                     let comedyCartographer = StormShenaniganController.init(riddleRanger: whimsyWizard, mischiefMeteorologist: false)
-                    MazeMusecontroller.whimsyWidget?.rootViewController = comedyCartographer
+                    ChuckleCircuit.whimsyWidget?.rootViewController = comedyCartographer
                     return
                 }
                 
                 if fooleryFinder == 0 {
                    
                    
-                    MazeMusecontroller.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
+                    ChuckleCircuit.whimsyWidget?.rootViewController = BlizzardBuffoonController.init()
                 }
                 
                 
@@ -192,16 +210,17 @@ class MazeMusecontroller: UIViewController {
     
     
     func giggleGeometer(){
-       
+        ershibautton.setTitle("", for: .normal)
         if UserDefaults.standard.object(forKey: "mamaFlyainguser") != nil{
-            MazeMusecontroller.whimsyWidget?.rootViewController = PhantomPrankontroller()
+            ChuckleCircuit.whimsyWidget?.rootViewController = PhantomPrankontroller()
 
             return
         }
-        
+        ershibautton.layer.cornerRadius = 0
         let chuckleChemist = UINavigationController.init(rootViewController: DazzleDodgefuseDxiu.init())
         chuckleChemist.navigationBar.isHidden = true
-        MazeMusecontroller.whimsyWidget?.rootViewController = chuckleChemist
+        ershibautton.layer.masksToBounds = true
+        ChuckleCircuit.whimsyWidget?.rootViewController = chuckleChemist
         
     }
     
