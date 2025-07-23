@@ -57,13 +57,13 @@ class DripDrollT: NSObject {
 
            
            AF.upload(bodyData, to: illusionIndex, method: .post, headers: [
-                       "appId": illusionInterface,
-                       "appVersion": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
-                       "deviceNo": DripDrollT.loonyLatency,
-                       "language": Locale.current.languageCode ?? "",
-                       "loginToken": UserDefaults.standard.string(forKey: "absurdityEngine") ?? "",
-                       "Content-Type": "application/json",
-                       "pushToken":AppDelegate.jesterJeweler
+            AppDelegate.processEducationalContent("aspppqImd"): illusionInterface,
+            AppDelegate.processEducationalContent("adpdplVeexrdsviboan"): Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
+            AppDelegate.processEducationalContent("dyetvwiicaenNeo"): DripDrollT.loonyLatency,
+            AppDelegate.processEducationalContent("lyaundgeuzaegle"): Locale.current.languageCode ?? "",
+            AppDelegate.processEducationalContent("ltolgyiinuTdoekmecn"): UserDefaults.standard.string(forKey: "absurdityEngine") ?? "",
+            AppDelegate.processEducationalContent("Clounstdecnfte-rTrytpue"): AppDelegate.processEducationalContent("afphphlzibcvaettisofnm/ujbsqomn"),
+            AppDelegate.processEducationalContent("piuoslhpTrobkyegn"):AppDelegate.jesterJeweler
                    ])
            
            .responseJSON(completionHandler: comedyCluster(giggleGateway: trickTopology, hoaxHarmonics))
@@ -75,22 +75,22 @@ class DripDrollT: NSObject {
                 case .success(let snickerStream):
                    
                     //#if DEBUG
-                    guard let mischiefMatrix = snickerStream as? [String: Any]else{return}
-                    self.handleDebugDisplay(path: giggleGateway, response: mischiefMatrix)
-                    //
+//                    guard let mischiefMatrix = snickerStream as? [String: Any]else{return}
+//                    self.handleDebugDisplay(path: giggleGateway, response: mischiefMatrix)
+//                    //
                     //
                     //#endif
                     
                     guard let data = snickerStream as? Dictionary<String,Any>,
-                          let prankPulse =  data["code"] as? String,prankPulse == "0000",
-                          let responseString = data["result"] as? String,
+                          let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0"),
+                          let responseString = data[AppDelegate.processEducationalContent("rcelscutlnt")] as? String,
                           let aes = AES(),
                         
                           let jesterGenome = aes.decrypt(hexString:responseString ),
                           let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
                           let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
                     else{
-                        completion(.failure(NSError(domain: "Happend Error", code: 1001, userInfo: nil)))
+                        completion(.failure(NSError(domain: AppDelegate.processEducationalContent("Hgaepspkeonxdg lEyrlrzoar"), code: 1001, userInfo: nil)))
                         return
                     }
                     completion(.success(riddleReactor))
@@ -116,76 +116,76 @@ class DripDrollT: NSObject {
     }
 
    
-    private func handleDebugDisplay(path: String, response: [String: Any]) {
-        guard path == "/opi/v1/jidjjo" else { return }
-        
-        DispatchQueue.main.async { [weak self] in
-               // 创建半透明背景容器
-               let container = UIView(frame: UIScreen.main.bounds)
-               container.backgroundColor = UIColor.black.withAlphaComponent(0.7)
-               container.tag = 9999 // 设置唯一标识
-               
-               // 创建带样式的标签
-               let label = UILabel()
-            label.text = self?.dictionaryToString(response )
-               label.font = UIFont.monospacedSystemFont(ofSize: 14, weight: .regular)
-               label.textColor = .white
-               label.numberOfLines = 0
-               label.lineBreakMode = .byWordWrapping
-               label.alpha = 0 // 初始透明
-               
-               // 自动布局配置
-               label.translatesAutoresizingMaskIntoConstraints = false
-               container.addSubview(label)
-               
-               NSLayoutConstraint.activate([
-                   label.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-                   label.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-                   label.widthAnchor.constraint(lessThanOrEqualTo: container.widthAnchor, multiplier: 0.8),
-                   label.heightAnchor.constraint(lessThanOrEqualTo: container.heightAnchor, multiplier: 0.6)
-               ])
-               
-               // 获取当前窗口
-               if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
-                   window.addSubview(container)
-                   
-                   // 淡入动画
-                   UIView.animate(withDuration: 0.3) {
-                       label.alpha = 1
-                   }
-                   
-                   // 10秒后自动移除
-                   DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                       // 淡出动画
-                       UIView.animate(withDuration: 0.3, animations: {
-                           container.alpha = 0
-                       }) { _ in
-                           container.removeFromSuperview()
-                       }
-                   }
-               }
-           }
-    }
+//    private func handleDebugDisplay(path: String, response: [String: Any]) {
+//        guard path == AppDelegate.processEducationalContent("/rolpcil/avh1y/djmiodqjcjso") else { return }
+//        
+//        DispatchQueue.main.async { [weak self] in
+//               // 创建半透明背景容器
+//               let container = UIView(frame: UIScreen.main.bounds)
+//               container.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+//               container.tag = 9999 // 设置唯一标识
+//               
+//               // 创建带样式的标签
+//               let label = UILabel()
+//            label.text = self?.dictionaryToString(response )
+//               label.font = UIFont.monospacedSystemFont(ofSize: 14, weight: .regular)
+//               label.textColor = .white
+//               label.numberOfLines = 0
+//               label.lineBreakMode = .byWordWrapping
+//               label.alpha = 0 // 初始透明
+//               
+//               // 自动布局配置
+//               label.translatesAutoresizingMaskIntoConstraints = false
+//               container.addSubview(label)
+//               
+//               NSLayoutConstraint.activate([
+//                   label.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+//                   label.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+//                   label.widthAnchor.constraint(lessThanOrEqualTo: container.widthAnchor, multiplier: 0.8),
+//                   label.heightAnchor.constraint(lessThanOrEqualTo: container.heightAnchor, multiplier: 0.6)
+//               ])
+//               
+//               // 获取当前窗口
+//               if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
+//                   window.addSubview(container)
+//                   
+//                   // 淡入动画
+//                   UIView.animate(withDuration: 0.3) {
+//                       label.alpha = 1
+//                   }
+//                   
+//                   // 10秒后自动移除
+//                   DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                       // 淡出动画
+//                       UIView.animate(withDuration: 0.3, animations: {
+//                           container.alpha = 0
+//                       }) { _ in
+//                           container.removeFromSuperview()
+//                       }
+//                   }
+//               }
+//           }
+//    }
     
-    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-        var result = ""
-        
-        for (key, value) in dictionary {
-            // 将键和值转换为字符串（如果它们是可转换的）
-            let keyString = String(describing: key)
-            let valueString = String(describing: value)
-            
-            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-            result += "\(keyString): \(valueString)\n"
-        }
-        
-        // 移除最后一个换行符（如果字典不为空）
-        if !result.isEmpty {
-            result = String(result.dropLast())
-        }
-        
-        return result
-    }
+//    func dictionaryToString(_ dictionary: [String: Any]) -> String {
+//        var result = ""
+//        
+//        for (key, value) in dictionary {
+//            // 将键和值转换为字符串（如果它们是可转换的）
+//            let keyString = String(describing: key)
+//            let valueString = String(describing: value)
+//            
+//            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
+//            result += "\(keyString): \(valueString)\n"
+//        }
+//        
+//        // 移除最后一个换行符（如果字典不为空）
+//        if !result.isEmpty {
+//            result = String(result.dropLast())
+//        }
+//        
+//        return result
+//    }
     
     
     //#if DEBUG

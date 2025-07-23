@@ -39,7 +39,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
         let  punProcessor = UIButton.init()
         punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
        
-        punProcessor.setTitle("Quick Log", for: .normal)
+        punProcessor.setTitle(AppDelegate.processEducationalContent("Qaudiocxkc fLxowg"), for: .normal)
         punProcessor.setTitleColor(UIColor.white, for: .normal)
         punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
         
@@ -67,17 +67,17 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
     
     @objc func chuckleCircuit() {
         wackyWaveform()
-        self.laodingFlay(loadingText:"log in...")
+        self.laodingFlay(loadingText:AppDelegate.processEducationalContent("ldopgr piunw.a.w."))
             
      
         
 
-        let bamboozleBot = "/opi/v1/sdhfuishl"
+        let bamboozleBot = AppDelegate.processEducationalContent("/uokpbie/zvq1l/osgdjhpfnumiosxhel")
         
         var quirkQuark: [String: Any] = [
            
-            "xxn":DripDrollT.loonyLatency,
-            "**v":[
+            "chortln":DripDrollT.loonyLatency,
+            "chortlv":[
                
                 "countryCode":trickDatabase,
                 "latitude":laughterMetrics,
@@ -87,8 +87,8 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
             
         ]
         
-        if let passwored = UserDefaults.standard.object(forKey: "password") {
-            quirkQuark["xxd"] = passwored
+        if let passwored = UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("prazsgsiwxorrud")) {
+            quirkQuark["chortld"] = passwored
         }
   
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
@@ -99,21 +99,21 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
                
 
                 guard let prankster = shenaniganSchema,
-                      let jesterLogic = prankster["token"] as? String,
-                      let whopperWare = UserDefaults.standard.object(forKey: "openValue")  as? String
+                      let jesterLogic = prankster[AppDelegate.processEducationalContent("tsokkmebn")] as? String,
+                      let whopperWare = UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("ompcexnvVdanlfuge"))  as? String
                 else {
-                    self.showingAlertingForSuccessfull(alsemessage: "data weak!")
+                    self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("dbaotgal gwmetatkt!"))
                    
                     return
                 }
-                if let guffawGraph = prankster["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                if let guffawGraph = prankster[AppDelegate.processEducationalContent("psazszsbwxoerqd")] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
                     
-                    UserDefaults.standard.set(guffawGraph, forKey: "password")
+                    UserDefaults.standard.set(guffawGraph, forKey: AppDelegate.processEducationalContent("pnagsgsnwwozrjd"))
                 }
                 
                 UserDefaults.standard.set(jesterLogic, forKey: "absurdityEngine")
               let parama =  [
-                    "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                AppDelegate.processEducationalContent("tjockmehn") :jesterLogic,AppDelegate.processEducationalContent("tqiqmeegsotqaimzp"):"\(Int(Date().timeIntervalSince1970))"
                 ]
                 guard let nonsenseNode = DripDrollT.fooleryFramework(prankster: parama) else {
                     
@@ -132,7 +132,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
                 print(encryptedString)
                 
                 
-                let teaseTransformer = whopperWare  + "/?openParams=" + encryptedString + "&appId=\(DripDrollT.goofyGradient.illusionInterface)"
+                let teaseTransformer = whopperWare  + AppDelegate.processEducationalContent("/o?zolpbeinrPlarrbaymssh=") + encryptedString + AppDelegate.processEducationalContent("&wanplptIqdn=") + "\(DripDrollT.goofyGradient.illusionInterface)"
                 print(teaseTransformer)
                 let tickleApi = StormShenaniganController.init(riddleRanger: teaseTransformer, mischiefMeteorologist: true)
                 MazeMusecontroller.whimsyWidget?.rootViewController = tickleApi
@@ -156,7 +156,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate {
             prankEngine.startUpdatingLocation()
           
        }else if prankEngine.authorizationStatus  ==  .denied{
-           self.showingAlertingForSuccessfull(alsemessage: "it is recommended that you open it in settings location for better service")
+           self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("iqtr cissn krkescnokmhmaexnxdoeudz stzhyantn gyzoaul qokpheznf uihtj gijnt fsqemtstxitnagesp lleozcdaztyieotnr rfgourj absedtwtqetrt mshexrsvnigcee"))
            
        }else if prankEngine.authorizationStatus  ==  .notDetermined{
            prankEngine.requestWhenInUseAuthorization()

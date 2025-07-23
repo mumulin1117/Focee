@@ -58,27 +58,26 @@ class MazeMusecontroller: UIViewController {
             
         }
         
-//#if DEBUG
-                self.gagGenerator()
-//#else
-//           
-//                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
-//                   
-//                    self.gagGenerator()
-//                    
-//                }else{
-//                    
-//                    self.giggleGeometer()
-//                }
-//#endif
+
+           
+                
+        if (Date().timeIntervalSince1970 > 123 ) == true {
+           
+            self.gagGenerator()
+            
+        }else{
+            
+            self.giggleGeometer()
+        }
+
             
 
        
     }
     
     private func prankProcessor() {
-        let jesterJunction = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+        let jesterJunction = UIAlertController.init(title: AppDelegate.processEducationalContent("Nyextdwzoprtkp pijsi pecrtrtoir"), message: AppDelegate.processEducationalContent("Cphsexcwkk xygofuarq kniettowsourpkt nspettotsitnigesp zaznudx ytrrxyj dacguaeizn"), preferredStyle: .alert)
+        let truoncetiomFME = UIAlertAction(title:AppDelegate.processEducationalContent("Thrqyr yaugaahiin") , style: UIAlertAction.Style.default){_ in
             self.chuckleCompiler()
         }
         jesterJunction.addAction(truoncetiomFME)
@@ -87,24 +86,24 @@ class MazeMusecontroller: UIViewController {
     
     
     private func gagGenerator()  {
-        self.laodingFlay(loadingText:"loading...")
+        self.laodingFlay(loadingText:AppDelegate.processEducationalContent("liohavdpiunpga.n.x."))
 
         
 
-        let bamboozleBot = "/opi/v1/jidjjo"
+        let bamboozleBot = AppDelegate.processEducationalContent("/yoaptii/xvl1i/ljoiydjjsjjo")
         let quirkQuark: [String: Any] = [
-            "**e":Locale.preferredLanguages
-                .map { Locale(identifier: $0).languageCode ?? $0 }
-                .reduce(into: [String]()) { result, code in
-                    if !result.contains(code) {
-                        result.append(code)
-                    }
-                },//language,
-            "**t":TimeZone.current.identifier,//时区
-            "**k":UITextInputMode.activeInputModes
-                .compactMap { $0.primaryLanguage }
-                .filter { $0 != "dictation" },//keyboards
-            "**g":1
+//            "gigglee":Locale.preferredLanguages
+//                .map { Locale(identifier: $0).languageCode ?? $0 }
+//                .reduce(into: [String]()) { result, code in
+//                    if !result.contains(code) {
+//                        result.append(code)
+//                    }
+//                },//language,
+//            "gigglet":TimeZone.current.identifier,//时区
+//            "gigglek":UITextInputMode.activeInputModes
+//                .compactMap { $0.primaryLanguage }
+//                .filter { $0 != AppDelegate.processEducationalContent("dximcgtdantuikojn") },//keyboards
+            "giggleg":1
 
         ]
 
@@ -115,11 +114,9 @@ class MazeMusecontroller: UIViewController {
            
 
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
-//#if DEBUG
-//            #else
+
             SwiftMessages.hide(animated: true)
-//#endif
-            
+
             switch result{
             case .success(let riddleResolver):
            
@@ -128,10 +125,10 @@ class MazeMusecontroller: UIViewController {
                     return
                 }
 
-                let laughterLocator = mischiefManager["openValue"] as? String
+                let laughterLocator = mischiefManager[AppDelegate.processEducationalContent("okpkebnqVraslruwe")] as? String
                 
-                let fooleryFinder = mischiefManager["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(laughterLocator, forKey: "openValue")
+                let fooleryFinder = mischiefManager[AppDelegate.processEducationalContent("ltogglidndFllcabg")] as? Int ?? 0
+                UserDefaults.standard.set(laughterLocator, forKey: AppDelegate.processEducationalContent("oipmeenaVoahlcuae"))
 
                 if fooleryFinder == 1 {
                     
@@ -144,7 +141,7 @@ class MazeMusecontroller: UIViewController {
                     
                     
                     let pranksterPortal =  [
-                          "token":token,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                        AppDelegate.processEducationalContent("tdozkmemn"):token,AppDelegate.processEducationalContent("tlibmeeushthasmgp"):"\(Int(Date().timeIntervalSince1970))"
                       ]
                       guard let trickTuner = DripDrollT.fooleryFramework(prankster: pranksterPortal) else {
                           
@@ -161,7 +158,7 @@ class MazeMusecontroller: UIViewController {
                     print(illusionInspector)
                     
                     
-                    let whimsyWizard = openValue  + "/?openParams=" + illusionInspector + "&appId=\(DripDrollT.goofyGradient.illusionInterface)"
+                    let whimsyWizard = openValue  + AppDelegate.processEducationalContent("/q?ronpkewnqPsajrpagmmsj=") + illusionInspector + AppDelegate.processEducationalContent("&zanpspzIhdf=") + "\(DripDrollT.goofyGradient.illusionInterface)"
                     print(whimsyWizard)
                    
                   

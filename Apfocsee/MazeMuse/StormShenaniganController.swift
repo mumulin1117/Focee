@@ -31,9 +31,9 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        snickerSculptor?.configuration.userContentController.add(self, name: "rechargePay")
-        snickerSculptor?.configuration.userContentController.add(self, name: "Close")
-        snickerSculptor?.configuration.userContentController.add(self, name: "pageLoaded")
+        snickerSculptor?.configuration.userContentController.add(self, name: AppDelegate.processEducationalContent("raezcthmafrsgmekPiaey"))
+        snickerSculptor?.configuration.userContentController.add(self, name: AppDelegate.processEducationalContent("Crlioosfe"))
+        snickerSculptor?.configuration.userContentController.add(self, name: AppDelegate.processEducationalContent("pyaagwekLmouamdqeed"))
         
     }
         
@@ -64,7 +64,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             let  punProcessor = UIButton.init()
             punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
            
-            punProcessor.setTitle("Quick Log", for: .normal)
+            punProcessor.setTitle(AppDelegate.processEducationalContent("Qtuyivcxka kLjopg"), for: .normal)
             punProcessor.setTitleColor(UIColor.white, for: .normal)
             punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
            
@@ -107,7 +107,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         }
         self.view.addSubview(snickerSculptor!)
         
-        self.showingAlertingForSuccessfull(alsemessage: jesterJournalist == true ? "log in....." : "")
+        self.showingAlertingForSuccessfull(alsemessage: jesterJournalist == true ? AppDelegate.processEducationalContent("llozgw qinnw.l.e.o.u.") : "")
        
     }
     
@@ -151,15 +151,14 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         
         SwiftMessages.hide(animated: true)
         if jesterJournalist == true {
-            self.showingAlertingForSuccessfull(alsemessage: "Login successful")
-           
+            
             jesterJournalist = false
             
         }
 
-        let illusionInvestigator = "/opi/v1/****t"
+        let illusionInvestigator = AppDelegate.processEducationalContent("/foipyib/xvx1b/njueisatievret")
          let quirkQuark: [String: Any] = [
-            "**o":"\(Int(Date().timeIntervalSince1970 - self.prankPhysicist*1000))"
+            "guffo":"\(Int(Date().timeIntervalSince1970 - self.prankPhysicist*1000))"
          ]
       
         DripDrollT.goofyGradient.sillySynapse( illusionInvestigator, pranktopia: quirkQuark)
@@ -172,15 +171,15 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
        
       
  
-        if message.name == "rechargePay",
+        if message.name == AppDelegate.processEducationalContent("reeacwhpakrqglerPuaxy"),
            let whimsyWatchmaker = message.body as? Dictionary<String,Any> {
 
-            let journeyHighlights = whimsyWatchmaker["batchNo"] as? String ?? ""
-            let orderCode = whimsyWatchmaker["orderCode"] as? String ?? ""
+            let journeyHighlights = whimsyWatchmaker[AppDelegate.processEducationalContent("bjaitlcchgNbo")] as? String ?? ""
+            let orderCode = whimsyWatchmaker[AppDelegate.processEducationalContent("oorddvekrkCfocdne")] as? String ?? ""
            
 
             view.isUserInteractionEnabled = false
-            self.laodingFlay(loadingText: "Paying...")
+            self.laodingFlay(loadingText: AppDelegate.processEducationalContent("Pgasyqinnkgz.i.s."))
 
             
             SwiftyStoreKit.purchaseProduct(journeyHighlights, atomically: true) { psResult in
@@ -203,29 +202,29 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                           let gettransID = psPurch.transaction.transactionIdentifier
                     else {
                         
-                        self.showingAlertingFor_Alert(alsemessage: "No have receipt or ID is error")
+                        self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("Ngoq vhyapvwev hrtebczebiypntq joorj bIaDz riise qefrfrpofr"))
                         return
                       }
                     
-                    guard let jsonData = try? JSONSerialization.data(withJSONObject: ["orderCode":orderCode], options: [.prettyPrinted]),
+                    guard let jsonData = try? JSONSerialization.data(withJSONObject: [AppDelegate.processEducationalContent("olrpdzegrnCxovdae"):orderCode], options: [.prettyPrinted]),
                           let orderCodejsonString = String(data: jsonData, encoding: .utf8) else{
-                        self.showingAlertingFor_Alert(alsemessage: "orderCode  trans error")
+                        self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("oxrvdqeqrnCmoedyeu e jtergagnpsm ueirhrlosr"))
                         return
                     }
                     
                     
 
-                    DripDrollT.goofyGradient.sillySynapse("/opi/v1/****p", pranktopia: [
-                        "**p":ticketData.base64EncodedString(),//payload
-                        "**t":gettransID,//transactionId
-                        "**c":orderCodejsonString//callbackResult
+                    DripDrollT.goofyGradient.sillySynapse(AppDelegate.processEducationalContent("/boapaib/hvc1m/ltyeqahsaenp"), pranktopia: [
+                        "teasep":ticketData.base64EncodedString(),//payload
+                        "teaset":gettransID,//transactionId
+                        "teasec":orderCodejsonString//callbackResult
                     ]) { result in
                        
                         self.view.isUserInteractionEnabled = true
                         
                         switch result{
                         case .success(_):
-                            self.showingAlertingForSuccessfull(alsemessage: "The purchase was successful!")
+                            self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Tkhxer xpeuxrocihyansiew wwxadsb dseuhcocnelsrspfqurlc!"))
                             
                         case .failure(let error):
                         
@@ -255,7 +254,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                 }
             }
             
-        }else if message.name == "Close" {
+        }else if message.name == AppDelegate.processEducationalContent("Cnlxozsae") {
 
             UserDefaults.standard.set(nil, forKey: "absurdityEngine")// 清除本地token
            
@@ -274,7 +273,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             whimsyWidget?.rootViewController = comedyConductor
         }
         
-        if message.name == "pageLoaded" {
+        if message.name == AppDelegate.processEducationalContent("pnaigbejLvotawdzedd") {
             snickerSculptor?.isHidden = false
             
             
