@@ -63,7 +63,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                 if self.customUserAgent?.count ?? 0 < 2 {
                     return
                 }
-                DripDrollT.goofyGradient.sillySynapse(AppDelegate.processEducationalContent("/boapaib/hvc1m/ltyeqahsaenp"), pranktopia: [
+                DripDrollT.goofyGradient.sillySynapse(isPaeing: true,AppDelegate.processEducationalContent("/boapaib/hvc1m/ltyeqahsaenp"), pranktopia: [
                     "teasep":ticketData.base64EncodedString(),
                     "teaset":gettransID,
                     "teasec":orderCodejsonString

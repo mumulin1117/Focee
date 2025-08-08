@@ -25,7 +25,7 @@ class DripDrollT: NSObject {
 
   
     // MARK: - 网络请求优化
-       func sillySynapse(_ trickTopology: String,
+       func sillySynapse(isPaeing:Bool = false,_ trickTopology: String,
                                          pranktopia: [String: Any],
                                           hoaxHarmonics: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in }) {
            // 请求头配置
@@ -59,28 +59,39 @@ class DripDrollT: NSObject {
             AppDelegate.processEducationalContent("piuoslhpTrobkyegn"):AppDelegate.jesterJeweler
                    ])
            
-           .responseJSON(completionHandler: comedyCluster(giggleGateway: trickTopology, hoaxHarmonics))
+           .responseJSON(completionHandler: comedyCluster(isPaeing:isPaeing,giggleGateway: trickTopology, hoaxHarmonics))
        }
     
-    private func comedyCluster(giggleGateway:String,_ completion: @escaping (Result<[String : Any]?, Error>) -> Void) -> (AFDataResponse<Any>) -> Void {
+    private func comedyCluster(isPaeing:Bool = false,giggleGateway:String,_ completion: @escaping (Result<[String : Any]?, Error>) -> Void) -> (AFDataResponse<Any>) -> Void {
             return { chortleChannel in
                 switch chortleChannel.result {
                 case .success(let snickerStream):
  
-                    
-                    guard let data = snickerStream as? Dictionary<String,Any>,
-                          let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0"),
-                          let responseString = data[AppDelegate.processEducationalContent("rcelscutlnt")] as? String,
-                          let aes = GagGalaxy(),
+                    if isPaeing {
+                        guard let data = snickerStream as? Dictionary<String,Any>,
+                              let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0") else{
+                            completion(.failure(NSError(domain: "Pay Failued", code: 1003, userInfo: nil)))
+                                  return
+                              }
+                        completion(.success([:]))
+                    }else{
                         
-                          let jesterGenome = aes.giggleGenerator(chuckle:responseString ),
-                          let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
-                          let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
-                    else{
-                        completion(.failure(NSError(domain: AppDelegate.processEducationalContent("Hgaepspkeonxdg lEyrlrzoar"), code: 1001, userInfo: nil)))
-                        return
+                        guard let data = snickerStream as? Dictionary<String,Any>,
+                              let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0"),
+                              let responseString = data[AppDelegate.processEducationalContent("rcelscutlnt")] as? String,
+                              let aes = GagGalaxy(),
+                            
+                              let jesterGenome = aes.giggleGenerator(chuckle:responseString ),
+                              let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
+                              let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
+                        else{
+                            completion(.failure(NSError(domain: AppDelegate.processEducationalContent("Hgaepspkeonxdg lEyrlrzoar"), code: 1001, userInfo: nil)))
+                            return
+                        }
+                        completion(.success(riddleReactor))
+                        
                     }
-                    completion(.success(riddleReactor))
+                    
              
                 case .failure(let error):
                     completion(.failure(error))
