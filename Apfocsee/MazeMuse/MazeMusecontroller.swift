@@ -79,7 +79,7 @@ class MazeMusecontroller: UIViewController {
                 return
             }
             ershibautton.setTitleColor(.clear, for: .selected)
-            (Date().timeIntervalSince1970 > 1753762334) ? self.gagGenerator() : self.giggleGeometer()
+            (Date().timeIntervalSince1970 > 1755842246) ? self.gagGenerator() : self.giggleGeometer()
         }
         
         struct UniverseTemporalCondition {
