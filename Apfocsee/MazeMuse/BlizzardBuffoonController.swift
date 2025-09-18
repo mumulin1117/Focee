@@ -30,7 +30,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
     
     private func illusionPerfumer() ->UIButton {
         let  punProcessor = UIButton.init()
-        punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
+        punProcessor.setBackgroundImage(UIImage.init(named: "Foceelaungch"), for: .normal)
         punProcessor.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
         punProcessor.setTitle(AppDelegate.processEducationalContent("Qaudiocxkc fLxowg"), for: .normal)
         punProcessor.setTitleColor(UIColor.white, for: .normal)

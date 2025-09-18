@@ -214,7 +214,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
     private func createCosmicBackground() -> UIImageView {
         let background = UIImageView(frame: UIScreen.main.bounds)
         background.contentMode = .scaleAspectFill
-        background.image = UIImage(named: "joasoledy")
+        background.image = UIImage(named: "Foceelaungch")
         return background
     }
     override func viewDidLoad() {
