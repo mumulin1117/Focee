@@ -7,7 +7,7 @@
 import CoreLocation
 import SwiftMessages
 import UIKit
-//log
+
 
 class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UITextFieldDelegate {
     
@@ -42,7 +42,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
     private func cosmicIllusionCanvas() -> UIImageView {
         let dimensionalPortal = UIImageView.init(frame:UIScreen.main.bounds)
         dimensionalPortal.contentMode = .scaleAspectFill
-        dimensionalPortal.image = UIImage(named: "joasoledy")
+        dimensionalPortal.image = UIImage(named: "Focejfui")
         return dimensionalPortal
     }
     
