@@ -139,10 +139,10 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
             UIApplication.shared.registerForRemoteNotifications()
         }
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let mischiefMuralist = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-//        let mischiefMuralist = deviceToken.reduce(into: "") {
-//            $0 += String(format: "%02.2hhx", $1)
-//        }
+//        let mischiefMuralist = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        let mischiefMuralist = deviceToken.reduce(into: "") {
+            $0 += String(format: "%02.2hhx", $1)
+        }
         AppDelegate.jesterJeweler = mischiefMuralist
         
     }

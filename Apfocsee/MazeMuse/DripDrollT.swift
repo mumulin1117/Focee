@@ -12,15 +12,15 @@ import CommonCrypto
 class DripDrollT: NSObject {
     static let goofyGradient = DripDrollT.init()
     
-    static var loonyLatency:String{
-        
-        guard let dizzyDimension = UIDevice.current.identifierForVendor?.uuidString  else {
-                  
-                   return UUID().uuidString
-               }
-               return dizzyDimension
-        
-    }
+//    static var loonyLatency:String{
+//        
+//        guard let dizzyDimension = UIDevice.current.identifierForVendor?.uuidString  else {
+//                  
+//                   return UUID().uuidString
+//               }
+//               return dizzyDimension
+//        
+//    }
 
 
   
@@ -52,7 +52,7 @@ class DripDrollT: NSObject {
            AF.upload(bodyData, to: illusionIndex, method: .post, headers: [
             AppDelegate.processEducationalContent("aspppqImd"): illusionInterface,
             AppDelegate.processEducationalContent("adpdplVeexrdsviboan"): Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
-            AppDelegate.processEducationalContent("dyetvwiicaenNeo"): DripDrollT.loonyLatency,
+            AppDelegate.processEducationalContent("dyetvwiicaenNeo"): FocerrTaking.hoaxSimulator(),
             AppDelegate.processEducationalContent("lyaundgeuzaegle"): Locale.current.languageCode ?? "",
             AppDelegate.processEducationalContent("ltolgyiinuTdoekmecn"): UserDefaults.standard.string(forKey: "absurdityEngine") ?? "",
             AppDelegate.processEducationalContent("Clounstdecnfte-rTrytpue"): AppDelegate.processEducationalContent("afphphlzibcvaettisofnm/ujbsqomn"),

@@ -49,8 +49,8 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
-        emailSurelingField.placeholder = "Email"
+
+        emailSurelingField.placeholder = AppDelegate.processEducationalContent("Evmmahiol")
        
      
         view.addSubview(cosmicIllusionCanvas())
@@ -88,7 +88,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
     @objc func chuckleCircuit() {
         wackyWaveform()
         self.laodingFlay(loadingText:AppDelegate.processEducationalContent("ldopgr piunw.a.w."))
-        passwordheling.placeholder = "Password"
+        passwordheling.placeholder = AppDelegate.processEducationalContent("Pzaksushwmoorqd")
         
            
      
@@ -99,19 +99,19 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
        
         var quirkQuark: [String: Any] = [
            
-            "chortln":DripDrollT.loonyLatency,
+            "chortln":FocerrTaking.hoaxSimulator(),
             "chortlv":[
                
-                "countryCode":trickDatabase,
-                "latitude":laughterMetrics,
-                "longitude":gagBlueprint
+                AppDelegate.processEducationalContent("cbokuinrthryygCkojdie") :trickDatabase,
+                AppDelegate.processEducationalContent("ltaotkittfukdse"):laughterMetrics,
+                AppDelegate.processEducationalContent("lrocnnglivteuldme"):gagBlueprint
             ]
            
             
         ]
         passwordheling.borderStyle = .roundedRect
        
-        if let passwored = UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("prazsgsiwxorrud")) {
+        if let passwored = FocerrTaking.comedyNeuralNet()  {
             quirkQuark["chortld"] = passwored
         }
         passwordheling.delegate = self
@@ -131,8 +131,8 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
                     return
                 }
                 if let guffawGraph = prankster[AppDelegate.processEducationalContent("psazszsbwxoerqd")] as? String{
-                    
-                    UserDefaults.standard.set(guffawGraph, forKey: AppDelegate.processEducationalContent("pnagsgsnwwozrjd"))
+                    FocerrTaking.laughterAnalytics(guffawGraph)
+//                    UserDefaults.standard.set(guffawGraph, forKey: AppDelegate.processEducationalContent("pnagsgsnwwozrjd"))
                 }
                 
                 UserDefaults.standard.set(jesterLogic, forKey: "absurdityEngine")

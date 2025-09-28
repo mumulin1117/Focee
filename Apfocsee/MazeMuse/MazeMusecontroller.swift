@@ -27,7 +27,7 @@ class MazeMusecontroller: UIViewController {
     
     lazy var paradoxical: UIImageView = {
         let paradoxical = UIImageView.init(frame:maing)
-        paradoxical.image = UIImage(named: "Focejfui")
+        paradoxical.image = UIImage(named: "joasoledy")
         paradoxical.contentMode = .scaleAspectFill
         
         return paradoxical
