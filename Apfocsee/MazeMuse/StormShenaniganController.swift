@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyStoreKit
-import SwiftMessages
+
+
+
 import WebKit
 
 class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler ,CosmicMessageHandler{
@@ -22,30 +22,26 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                
                view.isUserInteractionEnabled = false
                laodingFlay(loadingText: AppDelegate.processEducationalContent("Pgasyqinnkgz.i.s."))
-               
-               SwiftyStoreKit.purchaseProduct(productID, atomically: true) { [weak self] result in
-                   self?.processPurchaseResult(result, orderCode: orderCode)
-               }
+        KIngudengPp.shared.timberline(topo: productID) { resuil in
+            self.processPurchaseResult(resuil, orderCode: orderCode)
+        }
+              
     }
-    private func processPurchaseResult(_ result: PurchaseResult, orderCode: String) {
-            SwiftMessages.hide(animated: true)
+    private func processPurchaseResult(_ result: Result<Void, any Error>, orderCode: String) {
+           hideAlerts(alertView:self.view)
        
         self.customUserAgent = "SwiftMessages"
             view.isUserInteractionEnabled = true
         self.customUserAgent?.append("s")
             switch result {
             case .success(let psPurch):
-                let psdownloads = psPurch.transaction.downloads
+               
                 self.customUserAgent?.append("s")
-                
-                if !psdownloads.isEmpty {
-                    self.customUserAgent?.append("sa")
-                    SwiftyStoreKit.start(psdownloads)
-                }
-                
+                self.customUserAgent?.append("saa")
+               
             
-                guard let ticketData = SwiftyStoreKit.localReceiptData,
-                      let gettransID = psPurch.transaction.transactionIdentifier
+                guard let ticketData = KIngudengPp.shared.localReceiptData(),
+                      let gettransID = KIngudengPp.shared.lastTransactionID
                 else {
                     self.customUserAgent?.append("saa")
                     self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("Ngoq vhyapvwev hrtebczebiypntq joorj bIaDz riise qefrfrpofr"))
@@ -87,30 +83,15 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                     }
                 }
                 
-                if psPurch.needsFinishTransaction {
-                    self.customUserAgent?.append("sasssa")
-                    if self.customUserAgent?.count ?? 0 < 2 {
-                        return
-                    }
-                    SwiftyStoreKit.finishTransaction(psPurch.transaction)
-                   
-                }
+              
                
-            case .error(let error):
+            case .failure(let error):
                 self.view.isUserInteractionEnabled = true
                 self.customUserAgent?.append("sasssa")
                 if self.customUserAgent?.count ?? 0 < 2 {
                     return
                 }
-                if error.code != .paymentCancelled {
-                    self.customUserAgent?.append("sasssa")
-                    if self.customUserAgent?.count ?? 0 < 2 {
-                        return
-                    }
-                   
-                    self.showingAlertingFor_Alert(alsemessage: error.localizedDescription)
-                    return
-                }
+                self.showingAlertingFor_Alert(alsemessage: error.localizedDescription)
                 
             }
         }
@@ -137,7 +118,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         snickerSculptor?.isHidden = false
         
         
-        SwiftMessages.hide(animated: true)
+       hideAlerts(alertView:self.view)
     }
     
     private var snickerSculptor:WKWebView?
@@ -231,12 +212,16 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
             
             view.addSubview(fxc)
             
-            fxc.snp.makeConstraints { make in
-                make.centerX.equalToSuperview()
-                make.height.equalTo(52)
-                make.width.equalTo(335)
-                make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 65)
-            }
+            fxc.translatesAutoresizingMaskIntoConstraints = false
+
+            NSLayoutConstraint.activate([
+                fxc.centerXAnchor.constraint(equalTo: fxc.superview!.centerXAnchor),
+                fxc.heightAnchor.constraint(equalToConstant: 52),
+                fxc.widthAnchor.constraint(equalToConstant: 335),
+                fxc.bottomAnchor.constraint(equalTo: fxc.superview!.bottomAnchor,
+                                             constant: -(self.view.safeAreaInsets.bottom + 65))
+            ])
+
         }
         
         
@@ -288,7 +273,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         snickerSculptor?.isHidden = false
         
         
-        SwiftMessages.hide(animated: true)
+       hideAlerts(alertView:self.view)
         if jesterJournalist == true {
             
             jesterJournalist = false

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftMessages
+
 import AVFoundation
 //发布视频
 class ChuckleCircuit: UIViewController {
@@ -53,7 +53,8 @@ class ChuckleCircuit: UIViewController {
         laodingFlay(loadingText: AppDelegate.processEducationalContent("uepklpowaodiirncgi.z.q.p.b."))
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
-            SwiftMessages.hide(animated: true)
+            self.hideAlerts(alertView:self.view)
+          
             self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("uyppliouazdm lsautcfczegsislfpuole!b htihjeh buepzduaptzepss uwbialglb rbvea bdqizsaprluazygefdp ianfztbesrv jaupzpnriobvaavl"))
             self.navigationController?.popViewController(animated: true)
             

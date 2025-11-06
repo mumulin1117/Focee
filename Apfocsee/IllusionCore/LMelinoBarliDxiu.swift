@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftMessages
+
 protocol SideMenuDelegate{
    func didSelectMenuItem()
 }
@@ -52,7 +52,7 @@ class LMelinoBarliDxiu: APCENEvcer {
                         self.laodingFlay(loadingText:  AppDelegate.processEducationalContent("Doedluentsisnzgy.o.f.u.m."))
                         
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: { [self] in
-                            SwiftMessages.hide(animated: true)
+                           hideAlerts(alertView:self.view)
                             sendPrankTemplateMessage()
                             self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Dyeylyextnet dsrulcockezswsjfvuplj!"))
                            

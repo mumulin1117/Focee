@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SnapKit
+
 
 import AVFoundation
 class AionsultViodeCell: UICollectionViewCell {

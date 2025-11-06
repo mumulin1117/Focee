@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftMessages
+
 
 class QuirkRiddleoingApro: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     private var checkPhotu:Bool = false
@@ -110,7 +110,7 @@ class QuirkRiddleoingApro: UIViewController,UINavigationControllerDelegate, UIIm
         laodingFlay(loadingText: AppDelegate.processEducationalContent("uepklpowaodiirncgi.z.q.p.b."))
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
-            SwiftMessages.hide(animated: true)
+            self.hideAlerts(alertView:self.view)
             self.showingAlertingForSuccessfull(alsemessage:AppDelegate.processEducationalContent("uyppliouazdm lsautcfczegsislfpuole!b htihjeh buepzduaptzepss uwbialglb rbvea bdqizsaprluazygefdp ianfztbesrv jaupzpnriobvaavl"))
             self.navigationController?.popViewController(animated: true)
             

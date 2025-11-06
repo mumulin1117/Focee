@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import SwiftMessages
-import SwiftyStoreKit
+
+
 import AVFAudio
 class TrickGenerator: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
     private var prankCoinMultiplier: Int = Bool.random() ? 3 : 1
@@ -55,17 +55,13 @@ class TrickGenerator: UIViewController, UICollectionViewDataSource,UICollectionV
         }
         
         laodingFlay(loadingText:  AppDelegate.processEducationalContent("Poauylijnzgc.l.a.s.x."))
-        SwiftyStoreKit.purchaseProduct(id.1, atomically: true) { psResult in
+        KIngudengPp.shared.timberline(topo: id.1) { resuil in
             self.view.isUserInteractionEnabled = true
             self.actinveuh.stopAnimating()
-            SwiftMessages.hide(animated: true)
+            self.hideAlerts(alertView:self.view)
             self.fakeLoadingProgress += Double.random(in: 0.01...0.1)
-            if case .success(let psPurch) = psResult {
-
-                let loaknned = psPurch.transaction.downloads
-                if !loaknned.isEmpty {
-                    SwiftyStoreKit.start(loaknned)
-                }
+            switch resuil{
+            case .success(let eye):
                 
                 self.fakeLoadingProgress += Double.random(in: 0.01...0.1)
                 
@@ -77,10 +73,6 @@ class TrickGenerator: UIViewController, UICollectionViewDataSource,UICollectionV
                 
                 
                 self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("Pyaiym usyuccncbeusmsefmuelw!"))
-                if psPurch.needsFinishTransaction {
-                    SwiftyStoreKit.finishTransaction(psPurch.transaction)
-                }
-       
                 
                 
     
@@ -89,20 +81,15 @@ class TrickGenerator: UIViewController, UICollectionViewDataSource,UICollectionV
                 
 
                 self.blanceDiomend.text = "\(TrickGenerator.diomendAPCE)"
-        
-            }else if case .error(let error) = psResult {
+            case .failure(let haer):
                 TrickGenerator.diomendAPCE = TrickGenerator.diomendAPCE + id.0
                
                 
-
-                if error.code != .paymentCancelled {
-                 
-                    self.showingAlertingFor_Alert(alsemessage:error.localizedDescription)
-                }
-                
-              
+                self.showingAlertingFor_Alert(alsemessage:haer.localizedDescription)
             }
+
         }
+
     }
     private var voiceAssistant = AVSpeechSynthesizer()
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -130,10 +117,16 @@ class TrickGenerator: UIViewController, UICollectionViewDataSource,UICollectionV
         mirrorRealityShader()
         
         view.addSubview(actinveuh)
-        actinveuh.snp.makeConstraints { make in
-            make.width.height.equalTo(45)
-            make.center.equalToSuperview()
-        }
+        actinveuh.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            actinveuh.widthAnchor.constraint(equalToConstant: 45),
+            actinveuh.heightAnchor.constraint(equalToConstant: 45),
+            actinveuh.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            actinveuh.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+
+
     }
     private var jokeReceipts = [
         "1x Invisible Unicorn",

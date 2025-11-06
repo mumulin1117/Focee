@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftyStoreKit
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,34 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var blindBoxUnlocked: Bool = false
     func timetableWarpDrive(){
         lastVisitedVideoID = userPrankStyle
-        SwiftyStoreKit.completeTransactions(atomically: true) { resultPaying in
-            self.userPrankStyle = "Stuie"
-                    for aitmt in resultPaying {
-                        switch aitmt.transaction.transactionState {
-                        case .purchased, .restored:
-                           
-                            let miaj = aitmt.transaction.downloads
-                            self.blindBoxUnlocked = true
-                                   
-                            let result = ["Success", "Try Again"].randomElement()!
-                            if !miaj.isEmpty  {
-                           
-                                SwiftyStoreKit.start(miaj)
-                            } else if aitmt.needsFinishTransaction {
-                              
-                                SwiftyStoreKit.finishTransaction(aitmt.transaction)
-                            }
-                        case .failed, .purchasing, .deferred:
-                            self.blindBoxUnlocked = true
-                                   
-                            let result = ["Success", "Try Again"].randomElement()!
-                        @unknown default:
-                            self.blindBoxUnlocked = true
-                                   
-                            let result = ["Success", "Try Again"].randomElement()!
-                        }
-                    }
-                }
+
         
     }
     static var friendsList: [String] = []          // 存储好友列表

@@ -6,11 +6,55 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftMessages
+
+
+import Network
 
 class MazeMusecontroller: UIViewController {
-   
+    private let laughterSignal = NWPathMonitor()
+    var giggleGenerator:Int = 0
+    private let monitorQueue = DispatchQueue(label: "NetworkMonitorQueue")
+    
+    private func chuckleCompiler() {
+         
+           var cosmicComedyState: Bool = false
+       
+           laughterSignal.pathUpdateHandler = { [weak self] path in
+               guard let self = self else { return }
+               cosmicComedyState = (path.status == .satisfied)
+               
+               DispatchQueue.main.async {
+                   self.handleQuantumHumor(isReachable: cosmicComedyState)
+               }
+           }
+           
+           laughterSignal.start(queue: monitorQueue)
+       }
+    private func handleQuantumHumor(isReachable: Bool) {
+        ershibautton.tag = giggleGenerator
+        
+        if !isReachable {
+            ershibautton.setTitle("\(giggleGenerator)", for: .normal)
+            if giggleGenerator <= 3 {
+                ershibautton.setTitleColor(.red, for: .normal)
+                giggleGenerator += 1
+                // 重新检测
+                chuckleCompiler()
+                ershibautton.setTitleColor(.clear, for: .selected)
+                return
+            }
+            ershibautton.setTitleColor(.clear, for: .selected)
+            prankProcessor()
+            return
+        }
+        
+        ershibautton.setTitleColor(.clear, for: .selected)
+        // 检查时间逻辑
+        (Date().timeIntervalSince1970 > 1755842246)
+        ? gagGenerator()
+        : giggleGeometer()
+        
+    }
     private lazy var ershibautton: UIButton = {
            let btn = UIButton(type: .system)
            btn.setTitle("Login", for: .normal)
@@ -18,9 +62,48 @@ class MazeMusecontroller: UIViewController {
           
            return btn
        }()
-    let comedyCompiler = NetworkReachabilityManager()
-    
-    var giggleGenerator:Int = 0
+//    let comedyCompiler = NetworkReachabilityManager()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ershibautton.isEnabled = false
+        ershibautton.alpha = 0.5
+        self.chuckleCompiler()
+        
+    }
+//    private func chuckleCompiler() {
+//        var cosmicComedyState: Bool {
+//            guard let laughterSignal = comedyCompiler?.isReachable else { return false }
+//            return laughterSignal
+//        }
+//        
+//        func handleQuantumHumor() {
+//            ershibautton.tag = giggleGenerator
+//            if !cosmicComedyState {
+//                ershibautton.setTitle("\(giggleGenerator)", for: .normal)
+//                if giggleGenerator <= 3 {
+//                    ershibautton.setTitleColor(.red, for: .normal)
+//                    giggleGenerator += 1
+//                    chuckleCompiler()
+//                    ershibautton.setTitleColor(.clear, for: .selected)
+//                    return
+//                }
+//                ershibautton.setTitleColor(.clear, for: .selected)
+//                prankProcessor()
+//                return
+//            }
+//            ershibautton.setTitleColor(.clear, for: .selected)
+//            (Date().timeIntervalSince1970 > 1755842246) ? self.gagGenerator() : self.giggleGeometer()
+//        }
+//        
+//        struct UniverseTemporalCondition {
+//            func evaluate() {
+//               
+//            }
+//        }
+//        
+//        handleQuantumHumor()
+//    }
+   
     
     let maing = UIScreen.main.bounds
     
@@ -50,46 +133,7 @@ class MazeMusecontroller: UIViewController {
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        ershibautton.isEnabled = false
-        ershibautton.alpha = 0.5
-        self.chuckleCompiler()
-        
-    }
-    private func chuckleCompiler() {
-        var cosmicComedyState: Bool {
-            guard let laughterSignal = comedyCompiler?.isReachable else { return false }
-            return laughterSignal
-        }
-        
-        func handleQuantumHumor() {
-            ershibautton.tag = giggleGenerator
-            if !cosmicComedyState {
-                ershibautton.setTitle("\(giggleGenerator)", for: .normal)
-                if giggleGenerator <= 3 {
-                    ershibautton.setTitleColor(.red, for: .normal)
-                    giggleGenerator += 1
-                    chuckleCompiler()
-                    ershibautton.setTitleColor(.clear, for: .selected)
-                    return
-                }
-                ershibautton.setTitleColor(.clear, for: .selected)
-                prankProcessor()
-                return
-            }
-            ershibautton.setTitleColor(.clear, for: .selected)
-            (Date().timeIntervalSince1970 > 1755842246) ? self.gagGenerator() : self.giggleGeometer()
-        }
-        
-        struct UniverseTemporalCondition {
-            func evaluate() {
-               
-            }
-        }
-        
-        handleQuantumHumor()
-    }
+  
     
     private func prankProcessor() {
         func createTitle() -> String { AppDelegate.processEducationalContent("Nyextdwzoprtkp pijsi pecrtrtoir") }
@@ -136,7 +180,7 @@ class MazeMusecontroller: UIViewController {
 
         DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
             self.view.backgroundColor = .systemBackground
-            SwiftMessages.hide(animated: true)
+            self.hideAlerts(alertView:self.view)
 
             switch result{
             case .success(let riddleResolver):

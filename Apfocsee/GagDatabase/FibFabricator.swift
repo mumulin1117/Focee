@@ -38,17 +38,29 @@ class GuffawGadget: UIViewController {
         // 添加子控制器
         addChild(sideMenuVC)
         view.addSubview(sideMenuVC.view)
-        sideMenuVC.view.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        sideMenuVC.view.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            sideMenuVC.view.topAnchor.constraint(equalTo: sideMenuVC.view.superview!.topAnchor),
+            sideMenuVC.view.leadingAnchor.constraint(equalTo: sideMenuVC.view.superview!.leadingAnchor),
+            sideMenuVC.view.trailingAnchor.constraint(equalTo: sideMenuVC.view.superview!.trailingAnchor),
+            sideMenuVC.view.bottomAnchor.constraint(equalTo: sideMenuVC.view.superview!.bottomAnchor)
+        ])
+
         sideMenuVC.didMove(toParent: self)
         
         addChild(mainNavController)
         view.addSubview(mainNavController.view)
         mainNavController.didMove(toParent: self)
-        mainNavController.view.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        mainNavController.view.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            mainNavController.view.topAnchor.constraint(equalTo: mainNavController.view.superview!.topAnchor),
+            mainNavController.view.leadingAnchor.constraint(equalTo: mainNavController.view.superview!.leadingAnchor),
+            mainNavController.view.trailingAnchor.constraint(equalTo: mainNavController.view.superview!.trailingAnchor),
+            mainNavController.view.bottomAnchor.constraint(equalTo: mainNavController.view.superview!.bottomAnchor)
+        ])
+
        
     }
     

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftMessages
+
 
 //个人中心
 class SparkleShenanigan: FooceeSenConrer {
@@ -233,7 +233,7 @@ class FooceeSenConrer: UIViewController {
             self.laodingFlay(loadingText: AppDelegate.processEducationalContent("Bzlbohcxkeignpgs.x.s.k.v."))
             
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
-                SwiftMessages.hide(animated: true)
+                self.hideAlerts(alertView:self.view)
                 PhantomPrankontroller.allFlayDatu = PhantomPrankontroller.allFlayDatu.filter({ APCEuserFlauy in
                     APCEuserFlauy.blindbox_IOPD != Iod
                 })

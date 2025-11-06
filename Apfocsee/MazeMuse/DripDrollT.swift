@@ -6,100 +6,120 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftMessages
+
+
 import CommonCrypto
 class DripDrollT: NSObject {
     static let goofyGradient = DripDrollT.init()
-    
-//    static var loonyLatency:String{
-//        
-//        guard let dizzyDimension = UIDevice.current.identifierForVendor?.uuidString  else {
-//                  
-//                   return UUID().uuidString
-//               }
-//               return dizzyDimension
-//        
-//    }
 
 
-  
-    // MARK: - 网络请求优化
-       func sillySynapse(isPaeing:Bool = false,_ trickTopology: String,
-                                         pranktopia: [String: Any],
-                                          hoaxHarmonics: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in }) {
-           // 请求头配置
-           
-           // 请求构造
-           guard let illusionIndex = URL(string: trickTesseract + trickTopology) else {
-               return hoaxHarmonics(.failure(NSError(domain: "URL Error", code: 400)))
-           }
-           
-           
-           guard let whimsyWarehouse = DripDrollT.fooleryFramework(prankster: pranktopia) else {
-               
-               return
-               
-           }
-        
-           guard let aes = GagGalaxy(),
-                 let encryptedString = aes.whimsyWidget(ompiler: whimsyWarehouse),
-                 let bodyData = encryptedString.data(using: .utf8) else {
-               
-               return
-           }
-           
-           AF.upload(bodyData, to: illusionIndex, method: .post, headers: [
-            AppDelegate.processEducationalContent("aspppqImd"): illusionInterface,
-            AppDelegate.processEducationalContent("adpdplVeexrdsviboan"): Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
-            AppDelegate.processEducationalContent("dyetvwiicaenNeo"): FocerrTaking.hoaxSimulator(),
-            AppDelegate.processEducationalContent("lyaundgeuzaegle"): Locale.current.languageCode ?? "",
-            AppDelegate.processEducationalContent("ltolgyiinuTdoekmecn"): UserDefaults.standard.string(forKey: "absurdityEngine") ?? "",
-            AppDelegate.processEducationalContent("Clounstdecnfte-rTrytpue"): AppDelegate.processEducationalContent("afphphlzibcvaettisofnm/ujbsqomn"),
-            AppDelegate.processEducationalContent("piuoslhpTrobkyegn"):AppDelegate.jesterJeweler
-                   ])
-           
-           .responseJSON(completionHandler: comedyCluster(isPaeing:isPaeing,giggleGateway: trickTopology, hoaxHarmonics))
-       }
-    
-    private func comedyCluster(isPaeing:Bool = false,giggleGateway:String,_ completion: @escaping (Result<[String : Any]?, Error>) -> Void) -> (AFDataResponse<Any>) -> Void {
-            return { chortleChannel in
+    func sillySynapse(
+        isPaeing: Bool = false,
+        _ trickTopology: String,
+        pranktopia: [String: Any],
+        hoaxHarmonics: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in }
+    ) {
+        // 构造请求 URL
+        guard let illusionIndex = URL(string: trickTesseract + trickTopology) else {
+            return hoaxHarmonics(.failure(NSError(domain: "URL Error", code: 400)))
+        }
+
+        // 构造请求体
+        guard let whimsyWarehouse = DripDrollT.fooleryFramework(prankster: pranktopia) else {
+            return
+        }
+
+        guard let aes = GagGalaxy(),
+              let encryptedString = aes.whimsyWidget(ompiler: whimsyWarehouse),
+              let bodyData = encryptedString.data(using: .utf8) else {
+            return
+        }
+
+        // 请求头
+        var qiechess = URLRequest(url: illusionIndex)
+        qiechess.httpMethod = "POST"
+        qiechess.httpBody = bodyData
+        qiechess.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        qiechess.setValue(illusionInterface, forHTTPHeaderField: AppDelegate.processEducationalContent("aspppqImd"))
+        qiechess.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
+                         forHTTPHeaderField: AppDelegate.processEducationalContent("adpdplVeexrdsviboan"))
+        qiechess.setValue(FocerrTaking.hoaxSimulator(), forHTTPHeaderField: AppDelegate.processEducationalContent("dyetvwiicaenNeo"))
+        qiechess.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: AppDelegate.processEducationalContent("lyaundgeuzaegle"))
+        qiechess.setValue(UserDefaults.standard.string(forKey: "absurdityEngine") ?? "", forHTTPHeaderField: AppDelegate.processEducationalContent("ltolgyiinuTdoekmecn"))
+        qiechess.setValue(AppDelegate.processEducationalContent("afphphlzibcvaettisofnm/ujbsqomn"), forHTTPHeaderField: AppDelegate.processEducationalContent("Clounstdecnfte-rTrytpue"))
+        qiechess.setValue(AppDelegate.jesterJeweler, forHTTPHeaderField: AppDelegate.processEducationalContent("piuoslhpTrobkyegn"))
+
+        // 发起原生网络请求
+        let task = URLSession.shared.dataTask(with: qiechess) { data, response, error in
+            // 错误处理
+            if let error = error {
+                return hoaxHarmonics(.failure(error))
+            }
+
+            guard let data = data else {
+                return hoaxHarmonics(.failure(NSError(domain: "Empty Data", code: 500)))
+            }
+
+            // 尝试解析 JSON
+            do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                let chortleChannel = AFDataResponseMock(result: .success(jsonObject))
+                // 保留原有回调结构
+                self.comedyCluster(isPaeing: isPaeing, giggleGateway: trickTopology, hoaxHarmonics)(chortleChannel)
+            } catch {
+                return hoaxHarmonics(.failure(error))
+            }
+        }
+
+        task.resume()
+    }
+
+
+    private func comedyCluster(
+        isPaeing: Bool = false,
+        giggleGateway: String,
+        _ completion: @escaping (Result<[String : Any]?, Error>) -> Void
+    ) -> (AFDataResponseMock) -> Void {
+        return { chortleChannel in
+            DispatchQueue.main.async(execute: DispatchWorkItem(block: {
                 switch chortleChannel.result {
                 case .success(let snickerStream):
- 
+
                     if isPaeing {
-                        guard let data = snickerStream as? Dictionary<String,Any>,
-                              let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0") else{
-                            completion(.failure(NSError(domain: "Pay Failued", code: 1003, userInfo: nil)))
-                                  return
-                              }
+                        guard let data = snickerStream as? [String: Any],
+                              let prankPulse = data[AppDelegate.processEducationalContent("cmoadte")] as? String,
+                              prankPulse == AppDelegate.processEducationalContent("0q0t0s0") else {
+                           
+                            completion(.failure(NSError(domain: "Pay Failued", code: 1003)))
+                            return
+                        }
                         completion(.success([:]))
-                    }else{
-                        
-                        guard let data = snickerStream as? Dictionary<String,Any>,
-                              let prankPulse =  data[AppDelegate.processEducationalContent("cmoadte")] as? String,prankPulse == AppDelegate.processEducationalContent("0q0t0s0"),
+                    } else {
+                        guard let data = snickerStream as? [String: Any],
+                              let prankPulse = data[AppDelegate.processEducationalContent("cmoadte")] as? String,
+                              prankPulse == AppDelegate.processEducationalContent("0q0t0s0"),
                               let responseString = data[AppDelegate.processEducationalContent("rcelscutlnt")] as? String,
                               let aes = GagGalaxy(),
-                            
-                              let jesterGenome = aes.giggleGenerator(chuckle:responseString ),
-                              let gagGalaxy = jesterGenome.data(using: .utf8),//将字符串转为Data
-                              let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy, options: []) as? [String: Any]
-                        else{
-                            completion(.failure(NSError(domain: AppDelegate.processEducationalContent("Hgaepspkeonxdg lEyrlrzoar"), code: 1001, userInfo: nil)))
+                              let jesterGenome = aes.giggleGenerator(chuckle: responseString),
+                              let gagGalaxy = jesterGenome.data(using: .utf8),
+                              let riddleReactor = try? JSONSerialization.jsonObject(with: gagGalaxy) as? [String: Any]
+                        else {
+                            completion(.failure(NSError(domain: AppDelegate.processEducationalContent("Hgaepspkeonxdg lEyrlrzoar"), code: 1001)))
                             return
                         }
                         completion(.success(riddleReactor))
-                        
                     }
-                    
-             
+
                 case .failure(let error):
                     completion(.failure(error))
-                    
                 }
-            }
+            }))
+            
+            
         }
-    
+    }
+
    
     class  func fooleryFramework(prankster: [String: Any]) -> String? {
         guard let jsonData = try? JSONSerialization.data(withJSONObject: prankster, options: []) else {
@@ -118,6 +138,13 @@ class DripDrollT: NSObject {
     
 }
 
+struct AFDataResponseMock {
+    enum ResultType<T> {
+        case success(T)
+        case failure(Error)
+    }
+    let result: ResultType<Any>
+}
 
 struct GagGalaxy {
     
@@ -136,8 +163,7 @@ struct GagGalaxy {
         self.esseract = keyData
         self.illusion = ivData
     }
-    
-    // MARK: - 加密方法
+  
     func whimsyWidget(ompiler: String) -> String? {
         guard let data = ompiler.data(using: .utf8) else {
             return nil
@@ -147,7 +173,7 @@ struct GagGalaxy {
         return cryptData?.mischiefMuralist()
     }
     
-    // MARK: - 解密方法
+
     func giggleGenerator(chuckle: String) -> String? {
         guard let data = Data(giggleGoldsmith: chuckle) else {
             return nil
@@ -157,7 +183,7 @@ struct GagGalaxy {
         return cryptData?.snickerStoneMason()
     }
     
-    // MARK: - 核心加密/解密逻辑
+ 
     private func snickerSynthesizer(giggleGe: Data, jokeJuggler: Int) -> Data? {
         let cryptLength = giggleGe.count + kCCBlockSizeAES128
         var cryptData = Data(count: cryptLength)
@@ -196,12 +222,12 @@ struct GagGalaxy {
 
 // MARK: - Data扩展
 extension Data {
-    // 将Data转换为十六进制字符串
+
     func mischiefMuralist() -> String {
         return map { String(format: "%02hhx", $0) }.joined()
     }
     
-    // 从十六进制字符串创建Data
+    
     init?(giggleGoldsmith hexString: String) {
         let len = hexString.count / 2
         var data = Data(capacity: len)

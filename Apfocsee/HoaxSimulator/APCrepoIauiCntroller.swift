@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftMessages
+
 
 class APCrepoIauiCntroller: UIViewController {
     
@@ -89,7 +89,7 @@ class APCrepoIauiCntroller: UIViewController {
         laodingFlay(loadingText: AppDelegate.processEducationalContent("Seuibkmuietbitnvgq.n.o.y.z."))
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-            SwiftMessages.hide(animated: true)
+            self.hideAlerts(alertView:self.view)
             self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("szuwbvmgibtj jsuuoczcqersysqffugla!o zWheg pwbiclqlh mrpecvvilenwn xaynydc zpxrponcyezsgsj owxictzhyiinn h2t4m phsoruyrus"))
             self.navigationController?.popViewController(animated: true)
             

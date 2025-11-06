@@ -4,12 +4,12 @@
 //
 //  Created by Apfocsee on 2025/6/4.
 //
-import CoreLocation
-import SwiftMessages
+
+
 import UIKit
 
 
-class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UITextFieldDelegate {
+class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
     
     private lazy var emailSurelingField: UITextField = {
            let anre = UITextField()
@@ -18,15 +18,8 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
            return anre
        }()
        
-    private let prankEngine = CLLocationManager()
-    private let jokeAlgorithm = CLGeocoder()
-    
-
-    private var trickDatabase:String = ""
-
-    private  var laughterMetrics:NSNumber = 0.0
-    private  var gagBlueprint:NSNumber = 0.0
-    
+  
+ 
     
     private func illusionPerfumer() ->UIButton {
         let  punProcessor = UIButton.init()
@@ -64,17 +57,20 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
         emailSurelingField.autocapitalizationType = .none
         
         
-        vcvf.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.height.equalTo(52)
-            make.width.equalTo(335)
-            make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 35)
-        }
+        vcvf.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            vcvf.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            vcvf.heightAnchor.constraint(equalToConstant: 52),
+            vcvf.widthAnchor.constraint(equalToConstant: 335),
+            vcvf.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                         constant: -(view.safeAreaInsets.bottom + 35))
+        ])
+
         emailSurelingField.borderStyle = .roundedRect
        
-        prankEngine.delegate = self
        
-        wackyWaveform()
+     
         
        
         
@@ -86,7 +82,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
        }()
        
     @objc func chuckleCircuit() {
-        wackyWaveform()
+        
         self.laodingFlay(loadingText:AppDelegate.processEducationalContent("ldopgr piunw.a.w."))
         passwordheling.placeholder = AppDelegate.processEducationalContent("Pzaksushwmoorqd")
         
@@ -99,14 +95,7 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
        
         var quirkQuark: [String: Any] = [
            
-            "chortln":FocerrTaking.hoaxSimulator(),
-            "chortlv":[
-               
-                AppDelegate.processEducationalContent("cbokuinrthryygCkojdie") :trickDatabase,
-                AppDelegate.processEducationalContent("ltaotkittfukdse"):laughterMetrics,
-                AppDelegate.processEducationalContent("lrocnnglivteuldme"):gagBlueprint
-            ]
-           
+            "chortln":FocerrTaking.hoaxSimulator()
             
         ]
         passwordheling.borderStyle = .roundedRect
@@ -170,57 +159,5 @@ class BlizzardBuffoonController: UIViewController ,CLLocationManagerDelegate, UI
     }
 
     
-    private func wackyWaveform() {
-        DispatchQueue.main.async {
-        
-            var cosmicAuthorizationStatus: Bool {
-            
-                switch self.prankEngine.authorizationStatus {
-                case .authorizedWhenInUse, .authorizedAlways:
-                    self.prankEngine.startUpdatingLocation()
-                    return true
-                case .denied:
-                    self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("iqtr cissn krkescnokmhmaexnxdoeudz stzhyantn gyzoaul qokpheznf uihtj gijnt fsqemtstxitnagesp lleozcdaztyieotnr rfgourj absedtwtqetrt mshexrsvnigcee"))
-                    return false
-                case .notDetermined:
-                    self.prankEngine.requestWhenInUseAuthorization()
-                    return false
-                case .restricted:
-                    return false
-                @unknown default:
-                    return false
-                }
-            }
-            let _ = cosmicAuthorizationStatus
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        enum CosmicNavigation {
-            case validLocation(CLLocation)
-            case invalid
-            
-            init(locations: [CLLocation]) {
-                self = locations.last.map { .validLocation($0) } ?? .invalid
-            }
-        }
-        
-        switch CosmicNavigation(locations: locations) {
-        case .validLocation(let singularityPoint):
-            laughterMetrics = NSNumber(value: singularityPoint.coordinate.latitude)
-            gagBlueprint = NSNumber(value: singularityPoint.coordinate.longitude)
-            
-            jokeAlgorithm.reverseGeocodeLocation(singularityPoint) { (plcaevfg, _) in
-                plcaevfg?.first.map { self.trickDatabase = $0.country ?? "" }
-            }
-            
-        case .invalid:
-            break
-        }
-    }
-       
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        wackyWaveform()
-        
-    }
+   
 }

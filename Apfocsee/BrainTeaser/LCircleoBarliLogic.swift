@@ -7,7 +7,7 @@
 
 import UIKit
 
-import SwiftMessages
+
 
 class LCircleoBarliLogic: APCENEvcer,UICollectionViewDataSource,UICollectionViewDelegate{
     
@@ -219,7 +219,7 @@ class LCircleoBarliLogic: APCENEvcer,UICollectionViewDataSource,UICollectionView
             self.laodingFlay(loadingText: AppDelegate.processEducationalContent("Bzlbohcxkeignpgs.x.s.k.v."))
             
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
-                SwiftMessages.hide(animated: true)
+                self.hideAlerts(alertView:self.view)
                 PhantomPrankontroller.allFlayDatu = PhantomPrankontroller.allFlayDatu.filter({ APCEuserFlauy in
                     APCEuserFlauy.blindbox_IOPD != Iod
                 })

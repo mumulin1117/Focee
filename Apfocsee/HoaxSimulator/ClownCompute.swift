@@ -4,7 +4,7 @@
 //
 //  Created by Apfocsee on 2025/4/10.
 //
-import SnapKit
+
 import UIKit
 //发送消息
 class ClownCompute: FooceeSenConrer, UITableViewDelegate,UITableViewDataSource {
@@ -211,26 +211,32 @@ class APCATalkCell: UITableViewCell {
         conterinJLbl.numberOfLines = 0
 
         
-        apca.snp.makeConstraints { make in
-            make.width.height.equalTo(36)
-            make.trailing.equalToSuperview()
-            make.top.equalToSuperview().offset(16)
-        }
-        
-        conterinJLbl.snp.makeConstraints { make in
-            make.trailing.equalTo(apca.snp.leading).offset(-24)
-            make.width.greaterThanOrEqualTo(70)
-            make.width.lessThanOrEqualTo(200)
-            make.top.equalToSuperview().offset(11 + 16)
-            make.bottom.equalToSuperview().offset(-11  - 16)
-        }
-        
-        singleijbiew.snp.makeConstraints { make in
-//            make.center.equalTo(conterinJLbl)
-            make.leading.equalTo(conterinJLbl.snp.leading).offset(-12)
-            make.trailing.equalTo(conterinJLbl.snp.trailing).offset(12)
-            make.top.equalTo(conterinJLbl.snp.top).offset(-12)
-            make.bottom.equalTo(conterinJLbl.snp.bottom).offset(12)
-        }
+        apca.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            apca.widthAnchor.constraint(equalToConstant: 36),
+            apca.heightAnchor.constraint(equalToConstant: 36),
+            apca.trailingAnchor.constraint(equalTo: apca.superview!.trailingAnchor),
+            apca.topAnchor.constraint(equalTo: apca.superview!.topAnchor, constant: 16)
+        ])
+
+        conterinJLbl.translatesAutoresizingMaskIntoConstraints = false
+        singleijbiew.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            // conterinJLbl 约束
+            conterinJLbl.trailingAnchor.constraint(equalTo: apca.leadingAnchor, constant: -24),
+            conterinJLbl.widthAnchor.constraint(greaterThanOrEqualToConstant: 70),
+            conterinJLbl.widthAnchor.constraint(lessThanOrEqualToConstant: 200),
+            conterinJLbl.topAnchor.constraint(equalTo: conterinJLbl.superview!.topAnchor, constant: 11 + 16),
+            conterinJLbl.bottomAnchor.constraint(equalTo: conterinJLbl.superview!.bottomAnchor, constant: -11 - 16),
+            
+            // singleijbiew 约束
+            singleijbiew.leadingAnchor.constraint(equalTo: conterinJLbl.leadingAnchor, constant: -12),
+            singleijbiew.trailingAnchor.constraint(equalTo: conterinJLbl.trailingAnchor, constant: 12),
+            singleijbiew.topAnchor.constraint(equalTo: conterinJLbl.topAnchor, constant: -12),
+            singleijbiew.bottomAnchor.constraint(equalTo: conterinJLbl.bottomAnchor, constant: 12)
+        ])
+
     }
 }
