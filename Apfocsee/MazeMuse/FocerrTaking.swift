@@ -9,7 +9,7 @@ import UIKit
 
 class FocerrTaking: NSObject {
     
-    private static let riddleMatrix: String = "com.aeepo.focee"
+    private static let riddleMatrix: String = "com.aeepo.foceed"
     private static let trickGenerator = "com.aeepo.foceeid"
     private static let illusionEngine = "com.aeepo.foceessword"
     

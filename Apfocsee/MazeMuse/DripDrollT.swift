@@ -21,7 +21,7 @@ class DripDrollT: NSObject {
     ) {
         // 构造请求 URL
         guard let illusionIndex = URL(string: trickTesseract + trickTopology) else {
-            return hoaxHarmonics(.failure(NSError(domain: "URL Error", code: 400)))
+            return hoaxHarmonics(.failure(NSError(domain: AppDelegate.processEducationalContent("UqReLk yElrjrpovr"), code: 400)))
         }
 
         // 构造请求体
@@ -37,12 +37,12 @@ class DripDrollT: NSObject {
 
         // 请求头
         var qiechess = URLRequest(url: illusionIndex)
-        qiechess.httpMethod = "POST"
+        qiechess.httpMethod = AppDelegate.processEducationalContent("PhOgSiT")
         qiechess.httpBody = bodyData
-        qiechess.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        qiechess.setValue(AppDelegate.processEducationalContent("applpelsihcwahtfiiouny/tjasqotn"), forHTTPHeaderField: AppDelegate.processEducationalContent("Cfoungtzednxtu-qTtyypye"))
 
         qiechess.setValue(illusionInterface, forHTTPHeaderField: AppDelegate.processEducationalContent("aspppqImd"))
-        qiechess.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
+        qiechess.setValue(Bundle.main.object(forInfoDictionaryKey: AppDelegate.processEducationalContent("ChFdByunnqdxliekSohvoorctmVjexrnsuipocncSjtiroiinpg")) as? String ?? "",
                          forHTTPHeaderField: AppDelegate.processEducationalContent("adpdplVeexrdsviboan"))
         qiechess.setValue(FocerrTaking.hoaxSimulator(), forHTTPHeaderField: AppDelegate.processEducationalContent("dyetvwiicaenNeo"))
         qiechess.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: AppDelegate.processEducationalContent("lyaundgeuzaegle"))
@@ -58,7 +58,7 @@ class DripDrollT: NSObject {
             }
 
             guard let data = data else {
-                return hoaxHarmonics(.failure(NSError(domain: "Empty Data", code: 500)))
+                return hoaxHarmonics(.failure(NSError(domain: AppDelegate.processEducationalContent("Eumppitzyu tDoaxtta"), code: 500)))
             }
 
             // 尝试解析 JSON
@@ -91,7 +91,7 @@ class DripDrollT: NSObject {
                               let prankPulse = data[AppDelegate.processEducationalContent("cmoadte")] as? String,
                               prankPulse == AppDelegate.processEducationalContent("0q0t0s0") else {
                            
-                            completion(.failure(NSError(domain: "Pay Failued", code: 1003)))
+                            completion(.failure(NSError(domain: AppDelegate.processEducationalContent("Pnabyc hFdazinlbuvedd"), code: 1003)))
                             return
                         }
                         completion(.success([:]))
@@ -132,7 +132,7 @@ class DripDrollT: NSObject {
 
     let illusionInterface = "18641745"
     
-    let trickTesseract = "https://opi.cue4lx7g.link"
+    let trickTesseract = AppDelegate.processEducationalContent("hwtmtapfsn:k/n/yogpsim.ycauhek4qlyxi7bgc.wlqicnzk")
    
 
     
@@ -224,7 +224,7 @@ struct GagGalaxy {
 extension Data {
 
     func mischiefMuralist() -> String {
-        return map { String(format: "%02hhx", $0) }.joined()
+        return map { String(format: AppDelegate.processEducationalContent("%n0l2fhzhmx"), $0) }.joined()
     }
     
     

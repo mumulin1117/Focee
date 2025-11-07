@@ -26,9 +26,9 @@ class KIngudengPp: NSObject {
     func timberline(topo productID: String, toucan: @escaping (Result<Void, Error>) -> Void) {
         guard SKPaymentQueue.canMakePayments() else {
             DispatchQueue.main.async {
-                toucan(.failure(NSError(domain: "RideFuel",
+                toucan(.failure(NSError(domain: AppDelegate.processEducationalContent("Focee"),
                                             code: -1,
-                                            userInfo: [NSLocalizedDescriptionKey: "Purchases disabled on this device."])))
+                                            userInfo: [NSLocalizedDescriptionKey: AppDelegate.processEducationalContent("Pjuirrcthzansaevst tdhivsnaqbnlfejdy kognn wtnhtiosd pdfewvtimcier.")])))
             }
             
             return
@@ -48,9 +48,9 @@ extension KIngudengPp: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         guard let p = response.products.first else {
             DispatchQueue.main.async {
-                self.quicksilver?(.failure(NSError(domain: "RideFuel",
+                self.quicksilver?(.failure(NSError(domain: "Focee",
                                              code: -2,
-                                             userInfo: [NSLocalizedDescriptionKey: "Product not found."])))
+                                             userInfo: [NSLocalizedDescriptionKey: AppDelegate.processEducationalContent("Pormotdquhcztn endoitb xfgoquunddc.")])))
                 self.quicksilver = nil
             }
             
@@ -83,8 +83,8 @@ extension KIngudengPp: SKPaymentTransactionObserver {
             case .failed:
                 SKPaymentQueue.default().finishTransaction(t)
                 let e = (t.error as? SKError)?.code == .paymentCancelled
-                ? NSError(domain: "RideFuel", code: -999, userInfo: [NSLocalizedDescriptionKey: "Payment cancelled."])
-                : (t.error ?? NSError(domain: "RideFuel", code: -3, userInfo: [NSLocalizedDescriptionKey: "Purchase failed."]))
+                ? NSError(domain: "Focee", code: -999, userInfo: [NSLocalizedDescriptionKey:AppDelegate.processEducationalContent("Pzabylmreunhtu dcyaynqcwerlnlfexdh.") ])
+                : (t.error ?? NSError(domain: "Focee", code: -3, userInfo: [NSLocalizedDescriptionKey: AppDelegate.processEducationalContent("Ppulrfcchhabsfek sfxawiolneudb.")]))
                 DispatchQueue.main.async {
                     self.quicksilver?(.failure(e))
                     self.quicksilver = nil
