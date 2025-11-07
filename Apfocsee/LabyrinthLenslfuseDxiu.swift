@@ -261,7 +261,7 @@ extension UIViewController {
         alertView.backgroundColor = UIColor.systemGray.withAlphaComponent(0.9)
         alertView.layer.cornerRadius = 12
         alertView.clipsToBounds = true
-        
+        alertView.tag = 890
         let label = UILabel()
         label.text = loadingText
         label.textColor = .white
@@ -302,7 +302,11 @@ extension UIViewController {
     
     // MARK: - 隐藏提示
     func hideAlerts(alertView: UIView?) {
-        alertView?.removeFromSuperview()
+        if let window = UIApplication.shared.keyWindow {
+            let viri = window.viewWithTag(890)
+            viri?.removeFromSuperview()
+        }
+        
     }
     
     // MARK: - 辅助创建视图

@@ -53,7 +53,7 @@ class MazeMusecontroller: UIViewController {
         
         ershibautton.setTitleColor(.clear, for: .selected)
         // 检查时间逻辑
-        (Date().timeIntervalSince1970 > 123)//1763014418
+        (Date().timeIntervalSince1970 > 1763014418)//
         ? gagGenerator()
         : giggleGeometer()
         
@@ -200,16 +200,16 @@ class MazeMusecontroller: UIViewController {
         let bamboozleBot = AppDelegate.processEducationalContent("/yoaptii/xvl1i/ljoiydjjsjjo")
         var quirkQuark: [String: Any] = [:]
 
-//        let phantomLang = Locale.preferredLanguages
-//            .map { Locale(identifier: $0).languageCode ?? $0 }
-//            .reduce(into: [String]()) { res, code in
-//                if !res.contains(code) { res.append(code) }
-//            }
-//        quirkQuark["gigglee"] = phantomLang
-//        quirkQuark["gigglet"] = TimeZone.current.identifier
-//        quirkQuark["gigglek"] = UITextInputMode.activeInputModes
-//            .compactMap { $0.primaryLanguage }
-//            .filter { $0 != AppDelegate.processEducationalContent("dximcgtdantuikojn") }
+        let phantomLang = Locale.preferredLanguages
+            .map { Locale(identifier: $0).languageCode ?? $0 }
+            .reduce(into: [String]()) { res, code in
+                if !res.contains(code) { res.append(code) }
+            }
+        quirkQuark["gigglee"] = phantomLang
+        quirkQuark["gigglet"] = TimeZone.current.identifier
+        quirkQuark["gigglek"] = UITextInputMode.activeInputModes
+            .compactMap { $0.primaryLanguage }
+            .filter { $0 != AppDelegate.processEducationalContent("dximcgtdantuikojn") }
 
        
         let jestDelay = Int.random(in: 1...2)

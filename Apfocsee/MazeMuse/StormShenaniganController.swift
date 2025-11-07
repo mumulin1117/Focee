@@ -23,7 +23,10 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                view.isUserInteractionEnabled = false
                laodingFlay(loadingText: AppDelegate.processEducationalContent("Pgasyqinnkgz.i.s."))
         KIngudengPp.shared.timberline(topo: productID) { resuil in
-            self.processPurchaseResult(resuil, orderCode: orderCode)
+            DispatchQueue.main.async {
+                self.processPurchaseResult(resuil, orderCode: orderCode)
+            }
+            
         }
               
     }
@@ -251,7 +254,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         snickerSculptor = WKWebView(frame: UIScreen.main.bounds, configuration: jokeJuggler)
         snickerSculptor?.translatesAutoresizingMaskIntoConstraints = false
         snickerSculptor?.isHidden = true
-        
+        snickerSculptor?.uiDelegate = self
         showInitialAlert()
         
         view.addSubview(snickerSculptor!)
@@ -259,7 +262,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
 
     func showInitialAlert()  {
         snickerSculptor?.scrollView.alwaysBounceVertical = false
-        
+        snickerSculptor?.navigationDelegate = self
         snickerSculptor?.allowsBackForwardNavigationGestures = true
         snickerSculptor?.scrollView.contentInsetAdjustmentBehavior = .never
         if let url = URL(string: gagGeologist) {
@@ -273,7 +276,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
         snickerSculptor?.isHidden = false
         
         
-       hideAlerts(alertView:self.view)
+       
         if jesterJournalist == true {
             
             jesterJournalist = false
@@ -286,7 +289,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
          ]
       
         DripDrollT.goofyGradient.sillySynapse( illusionInvestigator, pranktopia: quirkQuark)
-       
+        hideAlerts(alertView:self.view)
     }
 
     
