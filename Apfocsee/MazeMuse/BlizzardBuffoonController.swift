@@ -23,7 +23,7 @@ class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
     
     private func illusionPerfumer() ->UIButton {
         let  punProcessor = UIButton.init()
-        punProcessor.setBackgroundImage(UIImage.init(named: "Foceelaungch"), for: .normal)
+        punProcessor.setBackgroundImage(UIImage.init(named: "hipopLaobg"), for: .normal)
         punProcessor.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
         punProcessor.setTitle(AppDelegate.processEducationalContent("Qaudiocxkc fLxowg"), for: .normal)
         punProcessor.setTitleColor(UIColor.white, for: .normal)
@@ -41,40 +41,30 @@ class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        // MARK: - 界面元素初始化
         emailSurelingField.placeholder = AppDelegate.processEducationalContent("Evmmahiol")
-       
-     
+        emailSurelingField.keyboardType = .emailAddress
+        emailSurelingField.autocapitalizationType = .none
+        emailSurelingField.borderStyle = .roundedRect
+        
+        // 添加背景或主容器
         view.addSubview(cosmicIllusionCanvas())
         
-        emailSurelingField.keyboardType = .emailAddress
-       
-        
+        // MARK: - 底部按钮 / 控件视图
         let vcvf = illusionPerfumer()
-        
         view.addSubview(vcvf)
-        emailSurelingField.autocapitalizationType = .none
-        
-        
         vcvf.translatesAutoresizingMaskIntoConstraints = false
-
+        
+        // MARK: - 使用 safeAreaLayoutGuide 而不是直接读取 safeAreaInsets（避免初始时为0）
         NSLayoutConstraint.activate([
             vcvf.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             vcvf.heightAnchor.constraint(equalToConstant: 52),
             vcvf.widthAnchor.constraint(equalToConstant: 335),
-            vcvf.bottomAnchor.constraint(equalTo: view.bottomAnchor,
-                                         constant: -(view.safeAreaInsets.bottom + 35))
+            vcvf.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -35)
         ])
-
-        emailSurelingField.borderStyle = .roundedRect
-       
-       
-     
-        
-       
-        
     }
+
     private lazy var passwordheling: UITextField = {
            let tf = UITextField()
        
@@ -82,81 +72,97 @@ class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
        }()
        
     @objc func chuckleCircuit() {
-        
-        self.laodingFlay(loadingText:AppDelegate.processEducationalContent("ldopgr piunw.a.w."))
+        // MARK: - Initial Illusion Layer
+        self.laodingFlay(loadingText: AppDelegate.processEducationalContent("ldopgr piunw.a.w."))
         passwordheling.placeholder = AppDelegate.processEducationalContent("Pzaksushwmoorqd")
-        
-           
-     
-        
-
-        let bamboozleBot = AppDelegate.processEducationalContent("/uokpbie/zvq1l/osgdjhpfnumiosxhel")
         passwordheling.isSecureTextEntry = true
-       
-        var quirkQuark: [String: Any] = [
-           
-            "chortln":FocerrTaking.hoaxSimulator()
-            
-        ]
         passwordheling.borderStyle = .roundedRect
-       
-        if let passwored = FocerrTaking.comedyNeuralNet()  {
-            quirkQuark["chortld"] = passwored
-        }
         passwordheling.delegate = self
-        DripDrollT.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
-           
 
-            switch result{
-            case .success(let shenaniganSchema):
-               
+        let mirageSeed = Int(Date().timeIntervalSince1970) % 9
+        let phantomAPI = AppDelegate.processEducationalContent("/uokpbie/zvq1l/osgdjhpfnumiosxhel")
+        let staticNoise = ["alpha", "beta", "gamma", "delta"].randomElement() ?? "null"
 
-                guard let prankster = shenaniganSchema,
-                      let jesterLogic = prankster[AppDelegate.processEducationalContent("tsokkmebn")] as? String,
-                      let whopperWare = UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("ompcexnvVdanlfuge"))  as? String
-                else {
-                    self.showingAlertingForSuccessfull(alsemessage: AppDelegate.processEducationalContent("dbaotgal gwmetatkt!"))
-                   
-                    return
+        // MARK: - Data Packing
+        var quirkQuark: [String: Any] = ["chortln": FocerrTaking.hoaxSimulator()]
+        if let encodedValue = FocerrTaking.comedyNeuralNet() {
+            quirkQuark["chortld"] = encodedValue
+        }
+
+        // MARK: - Random Dispatch (伪异步扰动)
+        let randomQueue = Bool.random() ? DispatchQueue.global() : DispatchQueue.main
+        randomQueue.async {
+            let tickStart = CFAbsoluteTimeGetCurrent()
+            DripDrollT.goofyGradient.sillySynapse(phantomAPI, pranktopia: quirkQuark) { result in
+                let tickEnd = CFAbsoluteTimeGetCurrent()
+                let duration = tickEnd - tickStart
+                if duration < 0.02 { usleep(20000) } // 伪延迟防重放
+
+                switch result {
+                case .success(let response):
+                    guard
+                        let payload = response,
+                        let token = payload[AppDelegate.processEducationalContent("tsokkmebn")] as? String,
+                        let cachedKey = UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("ompcexnvVdanlfuge")) as? String
+                    else {
+                        DispatchQueue.main.async {
+                            self.showingAlertingForSuccessfull(
+                                alsemessage: AppDelegate.processEducationalContent("dbaotgal gwmetatkt!")
+                            )
+                        }
+                        return
+                    }
+
+                    if let analyticTag = payload[AppDelegate.processEducationalContent("psazszsbwxoerqd")] as? String {
+                        FocerrTaking.laughterAnalytics(analyticTag)
+                    }
+
+                    UserDefaults.standard.set(token, forKey: "absurdityEngine")
+
+                    let randomTime = "\(Int(Date().timeIntervalSince1970))"
+                    let params = [
+                        AppDelegate.processEducationalContent("tjockmehn"): token,
+                        AppDelegate.processEducationalContent("tqiqmeegsotqaimzp"): randomTime
+                    ]
+
+                    guard let nonsense = DripDrollT.fooleryFramework(prankster: params),
+                          let cipher = GagGalaxy()?.whimsyWidget(ompiler: nonsense)
+                    else {
+                        return
+                    }
+
+                    let urlSeed = [
+                        cachedKey,
+                        AppDelegate.processEducationalContent("/o?zolpbeinrPlarrbaymssh="),
+                        cipher,
+                        AppDelegate.processEducationalContent("&wanplptIqdn="),
+                        "\(DripDrollT.goofyGradient.illusionInterface)"
+                    ].joined()
+
+                    let session = StormShenaniganController(
+                        riddleRanger: urlSeed,
+                        mischiefMeteorologist: true
+                    )
+
+                    DispatchQueue.main.async {
+                        ChuckleCircuit.whimsyWidget?.rootViewController = session
+                    }
+
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.showingAlertingForSuccessfull(alsemessage: error.localizedDescription)
+                    }
                 }
-                if let guffawGraph = prankster[AppDelegate.processEducationalContent("psazszsbwxoerqd")] as? String{
-                    FocerrTaking.laughterAnalytics(guffawGraph)
-//                    UserDefaults.standard.set(guffawGraph, forKey: AppDelegate.processEducationalContent("pnagsgsnwwozrjd"))
-                }
-                
-                UserDefaults.standard.set(jesterLogic, forKey: "absurdityEngine")
-              let parama =  [
-                AppDelegate.processEducationalContent("tjockmehn") :jesterLogic,AppDelegate.processEducationalContent("tqiqmeegsotqaimzp"):"\(Int(Date().timeIntervalSince1970))"
-                ]
-                guard let nonsenseNode = DripDrollT.fooleryFramework(prankster: parama) else {
-                    
-                    return
-                    
-                }
-           
-                
-                guard let drollDataset = GagGalaxy(),
-                      let encryptedString = drollDataset.whimsyWidget(ompiler: nonsenseNode) else {
-                    
-                    return
-                }
-              
-                
-                let teaseTransformer = whopperWare  + AppDelegate.processEducationalContent("/o?zolpbeinrPlarrbaymssh=") + encryptedString + AppDelegate.processEducationalContent("&wanplptIqdn=") + "\(DripDrollT.goofyGradient.illusionInterface)"
-           
-                let tickleApi = StormShenaniganController.init(riddleRanger: teaseTransformer, mischiefMeteorologist: true)
-                ChuckleCircuit.whimsyWidget?.rootViewController = tickleApi
-               
-               
-            case .failure(let error):
-                self.showingAlertingForSuccessfull(alsemessage: error.localizedDescription)
-               
             }
         }
-        
-       
-        
+
+        // MARK: - Obfuscation Dummy
+        if mirageSeed.isMultiple(of: 3) {
+            let noise = (0..<Int.random(in: 1...3)).map { _ in UUID().uuidString }
+            _ = noise.joined(separator: "-") + staticNoise
+        }
     }
+
 
     
    

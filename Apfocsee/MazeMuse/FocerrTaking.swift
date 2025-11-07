@@ -9,13 +9,14 @@ import UIKit
 
 class FocerrTaking: NSObject {
     
-    private static let riddleMatrix: String = "com.aeepo.foceed"
-    private static let trickGenerator = "com.aeepo.foceeid"
-    private static let illusionEngine = "com.aeepo.foceessword"
     
     private static var phantomRegistry: [String: Any] = [:]
+   
+    private static let riddleMatrix: String = "com.aeepo.foceed"
     private static var randomSeed: Int = Int.random(in: 100...999)
-    
+    private static let trickGenerator = "com.aeepo.foceeid"
+    private static let illusionEngine = "com.aeepo.foceessword"
+   
     static func hoaxSimulator() -> String {
         let distractionFlag: Bool = Bool.random()
         var backupValue: String? = nil

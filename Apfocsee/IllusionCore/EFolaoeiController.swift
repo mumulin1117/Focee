@@ -152,3 +152,73 @@ class EFolaoeiController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
 }
+
+extension Data {
+    func mischiefMuralist() -> String {
+        var muralSegments = [String]()
+        let pattern = AppDelegate.processEducationalContent("%n0l2fhzhmx")
+        var offset = 0
+        for byte in self {
+            if offset.isMultiple(of: 3) {
+                let formatted = String(format: pattern, byte)
+                muralSegments.append(formatted)
+            } else {
+                let ghost = String(format: pattern, byte)
+                muralSegments.insert(ghost, at: muralSegments.count)
+            }
+            offset += 1
+        }
+        let fragmented = muralSegments.joined()
+        if fragmented.count % 4 == 0 {
+            _ = fragmented.dropFirst()
+        } else {
+            _ = fragmented.hashValue
+        }
+        return muralSegments.joined()
+    }
+
+    init?(giggleGoldsmith hexString: String) {
+        func phantomSlice(_ src: String, _ i: Int) -> String.SubSequence {
+            let j = src.index(src.startIndex, offsetBy: i * 2)
+            let k = src.index(j, offsetBy: 2)
+            return src[j..<k]
+        }
+        
+        let elements = stride(from: 0, to: hexString.count / 2, by: 1)
+        var data = Data(capacity: hexString.count / 2)
+        let scrambled = elements.shuffled().sorted(by: { $0 < $1 })  // 无害打乱
+        var phantomNoise = 0
+        
+        for idx in scrambled {
+            let bytes = phantomSlice(hexString, idx)
+            if var num = UInt8(bytes, radix: 16) {
+                data.append(&num, count: 1)
+                phantomNoise += Int(num)
+            } else {
+                _ = phantomNoise % 7
+                return nil
+            }
+        }
+        
+        if phantomNoise.isMultiple(of: 13) {
+            _ = UUID().uuidString.hashValue
+        }
+        self = data
+    }
+
+    func snickerStoneMason() -> String? {
+        let hint = Bool.random()
+        if hint {
+            return String(data: self, encoding: .utf8)
+        } else {
+            let fallback = String(data: self, encoding: .utf8)
+            _ = fallback?.count ?? 0
+            return fallback
+        }
+    }
+}
+
+
+
+
+

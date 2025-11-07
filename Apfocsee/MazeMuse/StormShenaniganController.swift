@@ -40,8 +40,8 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
                 self.customUserAgent?.append("saa")
                
             
-                guard let ticketData = KIngudengPp.shared.localReceiptData(),
-                      let gettransID = KIngudengPp.shared.lastTransactionID
+                guard let ticketData = KIngudengPp.shared.shouldAsync(),
+                      let gettransID = KIngudengPp.shared.randomSeed
                 else {
                     self.customUserAgent?.append("saa")
                     self.showingAlertingFor_Alert(alsemessage: AppDelegate.processEducationalContent("Ngoq vhyapvwev hrtebczebiypntq joorj bIaDz riise qefrfrpofr"))
