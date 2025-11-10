@@ -52,6 +52,8 @@ class DripDrollT: NSObject {
         }
 
         var qiechess = URLRequest(url: illusionIndex)
+        
+        
         qiechess.httpMethod = AppDelegate.processEducationalContent("PhOgSiT")
         qiechess.httpBody = bodyData
 
@@ -73,7 +75,7 @@ class DripDrollT: NSObject {
                           forHTTPHeaderField: AppDelegate.processEducationalContent("ltolgyiinuTdoekmecn"))
         qiechess.setValue(AppDelegate.processEducationalContent("afphphlzibcvaettisofnm/ujbsqomn"),
                           forHTTPHeaderField: AppDelegate.processEducationalContent("Clounstdecnfte-rTrytpue"))
-        qiechess.setValue(AppDelegate.jesterJeweler,
+        qiechess.setValue(getPhskTOken(),
                           forHTTPHeaderField: AppDelegate.processEducationalContent("piuoslhpTrobkyegn"))
 
         let misleadThreshold = Date().timeIntervalSince1970.truncatingRemainder(dividingBy: 2)
@@ -117,7 +119,10 @@ class DripDrollT: NSObject {
         }
     }
 
-
+    func getPhskTOken() -> String {
+       return UserDefaults.standard.object(forKey: "jesterJeweler") as? String ?? ""
+        
+    }
 
     private func comedyCluster(
         isPaeing: Bool = false,

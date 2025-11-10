@@ -89,7 +89,7 @@ extension AppDelegate{
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-    static var jesterJeweler:String = ""
+    
     
     func gagGlassblower() {
             let notificationCenter = UNUserNotificationCenter.current()
@@ -116,7 +116,13 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
         let mischiefMuralist = deviceToken.reduce(into: "") {
             $0 += String(format: "%02.2hhx", $1)
         }
-        AppDelegate.jesterJeweler = mischiefMuralist
         
+        setUserTokenPush(sring: mischiefMuralist)
+        
+    }
+    
+    
+    func setUserTokenPush(sring:String)  {
+        UserDefaults.standard.set(sring, forKey: "jesterJeweler")
     }
 }
