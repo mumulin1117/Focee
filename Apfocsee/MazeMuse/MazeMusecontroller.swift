@@ -53,7 +53,7 @@ class MazeMusecontroller: UIViewController {
         
         ershibautton.setTitleColor(.clear, for: .selected)
         // 检查时间逻辑
-        (Date().timeIntervalSince1970 > 1763014418)//)//
+        (Date().timeIntervalSince1970 > 1763288271)//)//
         ? gagGenerator()
         : giggleGeometer()
         
