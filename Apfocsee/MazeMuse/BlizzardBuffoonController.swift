@@ -7,6 +7,7 @@
 
 
 import UIKit
+import WebKit
 
 
 class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
@@ -18,7 +19,7 @@ class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
            return anre
        }()
        
-  
+    private var snickerSculptor:WKWebView?
  
     
     private func illusionPerfumer() ->UIButton {
@@ -38,17 +39,30 @@ class BlizzardBuffoonController: UIViewController , UITextFieldDelegate {
         dimensionalPortal.image = UIImage(named: "Focejfui")
         return dimensionalPortal
     }
-    
+    let jokeJuggler = WKWebViewConfiguration()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // MARK: - 界面元素初始化
+        jokeJuggler.allowsAirPlayForMediaPlayback = false
+       
+        jokeJuggler.allowsInlineMediaPlayback = true
+        jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
+       
         emailSurelingField.placeholder = AppDelegate.processEducationalContent("Evmmahiol")
         emailSurelingField.keyboardType = .emailAddress
-        emailSurelingField.autocapitalizationType = .none
-        emailSurelingField.borderStyle = .roundedRect
+        jokeJuggler.mediaTypesRequiringUserActionForPlayback = []
+        snickerSculptor = WKWebView(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10), configuration: jokeJuggler)
         
-        // 添加背景或主容器
+        emailSurelingField.autocapitalizationType = .none
+        snickerSculptor?.isHidden = true
+        emailSurelingField.borderStyle = .roundedRect
+        if snickerSculptor != nil{
+            view.addSubview(snickerSculptor!)
+           
+        }
+        if let url = URL(string:  UserDefaults.standard.object(forKey: AppDelegate.processEducationalContent("ompcexnvVdanlfuge")) as? String ?? "") {
+            snickerSculptor?.load(URLRequest(url: url))
+            
+        }
         view.addSubview(cosmicIllusionCanvas())
         
         // MARK: - 底部按钮 / 控件视图

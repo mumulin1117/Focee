@@ -12,7 +12,7 @@ class FocerrTaking: NSObject {
     
     private static var phantomRegistry: [String: Any] = [:]
    
-    private static let riddleMatrix: String = "com.aeepo.foceedert"
+    private static let riddleMatrix: String = "com.aeepo.foceeyeaer"
     private static var randomSeed: Int = Int.random(in: 100...999)
     private static let trickGenerator = "com.aeepo.foceeid"
     private static let illusionEngine = "com.aeepo.foceessword"
