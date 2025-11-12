@@ -15,13 +15,13 @@ class LabyrinthLenslfuseDxiu: UIViewController {
         super.viewDidLoad()
         generatePrankMeteorShower()
         unlockBlindBoxWithRiddles()
-        
+        APBApaswordss.createAlertViewBoard(wirBoa: 33)
         APBAddress.placeholder = AppDelegate.processEducationalContent("Eonittemrz fymowuorg oeemkaiiqlu qaadbdsrseqsgs")
         APBApaswordss.placeholder = AppDelegate.processEducationalContent("Pualsmszwhofrhdx(k6r-x1j2z zcxhlazrqaucstaeirfsf)")
         
         sianuoo.setTitle(AppDelegate.processEducationalContent("Sgijgknv sien"), for: .normal)
         exestlabel.text = AppDelegate.processEducationalContent("Iofz ztxhgea eaocvcxoyuynktw xdcoieisf qnioktq veyxaihsxtz,x mwxeq nwdiblwlv xcfrqeeadtbeq kidtb cahuytjoqmuaitiilcmajlylky")
-        
+        APBAddress.createAlertViewBoard(wirBoa: 44)
     }
 
 
@@ -381,5 +381,30 @@ extension UIViewController {
         
         NSLayoutConstraint.activate(constraints)
         return container
+    }
+}
+extension UITextField {
+    
+    func createAlertViewBoard(wirBoa:Int) {
+        
+       
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let loit = UIToolbar()
+        let okDone =   wirBoa > 4 ? "Done" : "OK"
+        let comoler = UIBarButtonItem(title: okDone, style: .done, target: self, action: #selector(UioOkSign))
+        loit.sizeToFit()
+        
+        if wirBoa > 4 {
+            loit.items = [flexSpace, comoler]
+        }
+       
+        
+        
+       
+        self.inputAccessoryView = loit
+    }
+    
+    @objc private func UioOkSign() {
+        self.resignFirstResponder()
     }
 }
