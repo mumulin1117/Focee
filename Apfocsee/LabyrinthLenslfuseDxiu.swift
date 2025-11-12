@@ -240,7 +240,7 @@ extension UIViewController {
     // MARK: - 信息提示（居中，可手动隐藏）
     func showingAlertingFor_Alert(alsemessage: String) {
         var alertView: UIView!
-        alertView = createAlertView(message: alsemessage, backgroundColor: UIColor.systemGray, icon: UIImage(named: "sureiopreport"), buttonTitle: "Ok") {
+        alertView = createAlertView(message: alsemessage, backgroundColor: UIColor.systemGray, icon: UIImage(named: "sureiopreport"), buttonTitle: nil) {
             alertView.removeFromSuperview()
         }
         
@@ -252,6 +252,11 @@ extension UIViewController {
                 alertView.centerXAnchor.constraint(equalTo: window.centerXAnchor),
                 alertView.widthAnchor.constraint(lessThanOrEqualToConstant: 300)
             ])
+        }
+        
+        // 自动消失
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            alertView.removeFromSuperview()
         }
     }
     

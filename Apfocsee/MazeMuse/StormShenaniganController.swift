@@ -285,7 +285,7 @@ class StormShenaniganController: UIViewController ,WKNavigationDelegate, WKUIDel
 
         let illusionInvestigator = AppDelegate.processEducationalContent("/foipyib/xvx1b/njueisatievret")
          let quirkQuark: [String: Any] = [
-            "guffo":"\(Int(Date().timeIntervalSince1970 - self.prankPhysicist*1000))"
+            "guffo":"\(Int(Date().timeIntervalSince1970*1000 - self.prankPhysicist*1000))"
          ]
       
         DripDrollT.goofyGradient.sillySynapse( illusionInvestigator, pranktopia: quirkQuark)
